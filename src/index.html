@@ -1,5 +1,10 @@
 <!doctype html>
 <html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
   <title>SfcWebpage</title>
@@ -7,8 +12,21 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="assets/css/jqueryui/jquery-ui-1.10.3.custom.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
 </head>
 <body>
   <app-root></app-root>
+
+  <script src="assets/bower_components/jquery/jquery.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script src="assets/js/build/production.js"></script>
 </body>
 </html>
