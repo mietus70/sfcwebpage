@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {ModalModule, TabsModule} from "ngx-bootstrap";
 
 import {AppComponent} from './app.component';
 import {ElementComponent} from './components/element/element/element.component';
@@ -31,8 +32,8 @@ import {HttpClientModule} from "@angular/common/http";
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    // ModalModule.forRoot(),
-
+    ModalModule.forRoot(),
+    TabsModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
