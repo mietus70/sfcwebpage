@@ -16,6 +16,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { BannerHeaderComponent } from './components/elements/main-elements/banner-header/banner-header.component';
 import { MenuHeaderBottomComponent } from './components/elements/main-elements/menu-header-bottom/menu-header-bottom.component';
+import { NewsComponent } from './components/elements/news/news.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MenuHeaderBottomComponent } from './components/elements/main-elements/m
     MainPageComponent,
     WidgetComponent,
     BannerHeaderComponent,
-    MenuHeaderBottomComponent
+    MenuHeaderBottomComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

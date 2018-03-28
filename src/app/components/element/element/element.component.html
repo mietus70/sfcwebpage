@@ -1,3 +1,9 @@
-<p>
-  element works!
-</p>
+<div class="card">
+  <div class="card__header" *ngIf="is_header">
+    <h4><ng-content select=".element-title"></ng-content></h4>
+  </div>
+  <div class="card__content">
+    <ng-content select=".element-content"></ng-content>
+  </div>
+</div>
+<div class="nk-gap-1"></div>
