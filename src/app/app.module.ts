@@ -14,6 +14,8 @@ import {WidgetComponent} from './components/widget/widget.component';
 import {AppRoutingModule} from './app.routes';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { BannerHeaderComponent } from './components/elements/main-elements/banner-header/banner-header.component';
+import { MenuHeaderBottomComponent } from './components/elements/main-elements/menu-header-bottom/menu-header-bottom.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {HttpClientModule} from "@angular/common/http";
     PageComponent,
     ErrorPageComponent,
     MainPageComponent,
-    WidgetComponent
+    WidgetComponent,
+    BannerHeaderComponent,
+    MenuHeaderBottomComponent
   ],
   imports: [
     BrowserModule,
