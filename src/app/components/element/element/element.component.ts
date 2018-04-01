@@ -1,7 +1,8 @@
-/* Paweł Grzyb 2018
+/**
+ * Created by Paweł Grzyb 01.04.2018
  *
- * Szablon elementów na stronie.
- * tag <element> pobiera poprzez imput ustawienie wyświetlania belki elementu z nazwą.
+ * Page element template.
+ * Tag <element> - gets config title bar.
  */
 
 import {Component, Input, OnInit} from '@angular/core';
@@ -18,8 +19,11 @@ export class ElementComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Config title bar
+   * @type {boolean}
+   */
   @Input()
-    // Ustawienie wyświetlania belki z tytułem
   is_header: boolean = true;
 
 }

@@ -1,3 +1,9 @@
+/**
+ * Created by Paweł Grzyb 01.04.2018
+ *
+ * Ordinary footer.
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

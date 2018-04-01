@@ -1,3 +1,9 @@
+/**
+ * Created by Paweł Grzyb 01.04.2018
+ *
+ * Main page.
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +13,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
