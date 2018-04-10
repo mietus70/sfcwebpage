@@ -21,7 +21,12 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../src/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js",
+        "../src/assets/bower_components/jquery/jquery.js",
+        "../src/assets/js/build/production.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
