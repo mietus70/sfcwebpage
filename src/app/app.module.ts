@@ -17,6 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { BannerHeaderComponent } from './components/elements/main-elements/banner-header/banner-header.component';
 import { MenuHeaderBottomComponent } from './components/elements/main-elements/menu-header-bottom/menu-header-bottom.component';
 import { NewsComponent } from './components/elements/news/news.component';
+import { FirstUppercasePipe } from './pipes/first-uppercase.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NewsComponent } from './components/elements/news/news.component';
     WidgetComponent,
     BannerHeaderComponent,
     MenuHeaderBottomComponent,
-    NewsComponent
+    NewsComponent,
+    FirstUppercasePipe
   ],
   imports: [
     BrowserModule,
