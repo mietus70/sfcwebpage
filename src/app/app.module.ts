@@ -18,6 +18,12 @@ import { BannerHeaderComponent } from './components/elements/main-elements/banne
 import { MenuHeaderBottomComponent } from './components/elements/main-elements/menu-header-bottom/menu-header-bottom.component';
 import { NewsComponent } from './components/elements/news/news.component';
 import { FirstUppercasePipe } from './pipes/first-uppercase.pipe';
+import { OfertaPageComponent } from './components/pages/oferta-page/oferta-page.component';
+import { CennikPageComponent } from './components/pages/cennik-page/cennik-page.component';
+import { GaleriaPageComponent } from './components/pages/galeria-page/galeria-page.component';
+import { KontaktPageComponent } from './components/pages/kontakt-page/kontakt-page.component';
+import { FaqPageComponent } from './components/pages/faq-page/faq-page.component';
+import { GrafikPageComponent } from './components/pages/grafik-page/grafik-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +39,13 @@ import { FirstUppercasePipe } from './pipes/first-uppercase.pipe';
     BannerHeaderComponent,
     MenuHeaderBottomComponent,
     NewsComponent,
-    FirstUppercasePipe
+    FirstUppercasePipe,
+    OfertaPageComponent,
+    CennikPageComponent,
+    GaleriaPageComponent,
+    KontaktPageComponent,
+    FaqPageComponent,
+    GrafikPageComponent
   ],
   imports: [
     BrowserModule,
