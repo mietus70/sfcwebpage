@@ -4,7 +4,8 @@
  * Ordinary top menu.
  */
 
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MyRouterService} from "../../../../services/my-router.service";
 
 @Component({
   selector: 'app-top-menu',
@@ -13,9 +14,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public myRouter: MyRouterService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

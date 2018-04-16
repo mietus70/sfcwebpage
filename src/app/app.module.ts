@@ -14,16 +14,17 @@ import {WidgetComponent} from './components/widget/widget.component';
 import {AppRoutingModule} from './app.routes';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
-import { BannerHeaderComponent } from './components/elements/main-elements/banner-header/banner-header.component';
-import { MenuHeaderBottomComponent } from './components/elements/main-elements/menu-header-bottom/menu-header-bottom.component';
-import { NewsComponent } from './components/elements/news/news.component';
-import { FirstUppercasePipe } from './pipes/first-uppercase.pipe';
-import { OfertaPageComponent } from './components/pages/oferta-page/oferta-page.component';
-import { CennikPageComponent } from './components/pages/cennik-page/cennik-page.component';
-import { GaleriaPageComponent } from './components/pages/galeria-page/galeria-page.component';
-import { KontaktPageComponent } from './components/pages/kontakt-page/kontakt-page.component';
-import { FaqPageComponent } from './components/pages/faq-page/faq-page.component';
-import { GrafikPageComponent } from './components/pages/grafik-page/grafik-page.component';
+import {BannerHeaderComponent} from './components/elements/main-elements/banner-header/banner-header.component';
+import {MenuHeaderBottomComponent} from './components/elements/main-elements/menu-header-bottom/menu-header-bottom.component';
+import {NewsComponent} from './components/elements/news/news.component';
+import {FirstUppercasePipe} from './pipes/first-uppercase.pipe';
+import {OfertaPageComponent} from './components/pages/oferta-page/oferta-page.component';
+import {CennikPageComponent} from './components/pages/cennik-page/cennik-page.component';
+import {GaleriaPageComponent} from './components/pages/galeria-page/galeria-page.component';
+import {KontaktPageComponent} from './components/pages/kontakt-page/kontakt-page.component';
+import {FaqPageComponent} from './components/pages/faq-page/faq-page.component';
+import {GrafikPageComponent} from './components/pages/grafik-page/grafik-page.component';
+import {MyRouterService} from "./services/my-router.service";
 
 @NgModule({
   declarations: [
@@ -55,7 +56,9 @@ import { GrafikPageComponent } from './components/pages/grafik-page/grafik-page.
     ModalModule.forRoot(),
     TabsModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    MyRouterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
