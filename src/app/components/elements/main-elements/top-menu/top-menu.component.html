@@ -14,7 +14,12 @@
                </span>
           <ul class="main-navigation">
 
-            <!--<li class="bread"><a routerLink="{{myRouter.url}}">{{myRouter.url}}</a></li>-->
+            <li class="bread">
+              <a routerLink="{{myRouter.url}}">
+                <span *ngIf="myRouter.url === '/'">HOME</span>
+                <span *ngIf="myRouter.url != '/'">{{myRouter.url}}</span>
+              </a>
+            </li>
 
             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/">HOME</a></li>
             <li routerLinkActive="active"><a routerLink="/oferta">OFERTA</a></li>
@@ -22,7 +27,7 @@
             <li routerLinkActive="active"><a routerLink="/galeria">GALERIA</a></li>
             <li routerLinkActive="active"><a routerLink="/kontakt">KONTAKT</a></li>
             <li routerLinkActive="active"><a routerLink="/faq">FAQ</a></li>
-            <li routerLinkActive="active"><a routerLink="/grafik-zajec">GRAFIK ZAJĘĆ</a></li>
+            <li routerLinkActive="active"><a routerLink="/grafik">GRAFIK</a></li>
           </ul>
         </div><!-- /.inner-top-bottom-10 -->
       </div>

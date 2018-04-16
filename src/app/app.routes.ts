@@ -16,7 +16,7 @@ export const appRoutes: Routes = [
   { path: 'galeria', component: GaleriaPageComponent, data: {} },
   { path: 'kontakt', component: KontaktPageComponent, data: {} },
   { path: 'faq', component: FaqPageComponent, data: {} },
-  { path: 'grafik-zajec', component: GrafikPageComponent, data: {} },
+  { path: 'grafik', component: GrafikPageComponent, data: {} },
 
   { path: 'not-found', component: ErrorPageComponent, data: {} },
   { path: '**', redirectTo: '/not-found', data: {} },
