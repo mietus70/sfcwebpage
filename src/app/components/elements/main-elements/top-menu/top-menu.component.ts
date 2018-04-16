@@ -18,4 +18,21 @@ export class TopMenuComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * Funkcja generująca breadcrumb.
+   * @param   {number}  element_num
+   * @return  {string}
+   */
+  get_breadcrumb_elements(element_num: number) {
+    let link = '';
+    this.myRouter.url.split('/').forEach((element: string, index: number) => {
+      if (index < element_num) {
+        link += element;
+        if (index !== element_num - 1) {
+          link += '/';
+        }
+      }
+    });
+    return link;
+  }
 }
