@@ -25,6 +25,7 @@ import {KontaktPageComponent} from './components/pages/kontakt-page/kontakt-page
 import {FaqPageComponent} from './components/pages/faq-page/faq-page.component';
 import {GrafikPageComponent} from './components/pages/grafik-page/grafik-page.component';
 import {MyRouterService} from "./services/my-router.service";
+import { BannerClassesComponent } from './components/elements/banner-classes/banner-classes.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {MyRouterService} from "./services/my-router.service";
     GaleriaPageComponent,
     KontaktPageComponent,
     FaqPageComponent,
-    GrafikPageComponent
+    GrafikPageComponent,
+    BannerClassesComponent
   ],
   imports: [
     BrowserModule,
