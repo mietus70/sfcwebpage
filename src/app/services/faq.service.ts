@@ -32,13 +32,14 @@ export class FaqService {
   constructor(
     private _http_client: HttpClient
   ) {
-    this.get_faq();
+    this._get_faq();
   }
 
   /**
    * Gets faq from the server.
+   * @private
    */
-  get_faq() {
+  private _get_faq() {
       this._http_client.get<FaqModel[]>(REST_API_GET_FAQ)
         .subscribe((data: FaqModel[]) => {
           this._faq = data;

@@ -25,7 +25,8 @@ import {KontaktPageComponent} from './components/pages/kontakt-page/kontakt-page
 import {FaqPageComponent} from './components/pages/faq-page/faq-page.component';
 import {GrafikPageComponent} from './components/pages/grafik-page/grafik-page.component';
 import {MyRouterService} from "./services/my-router.service";
-import { BannerClassesComponent } from './components/elements/banner-classes/banner-classes.component';
+import {BannerClassesComponent} from './components/elements/banner-classes/banner-classes.component';
+import {FaqService} from "./services/faq.service";
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { BannerClassesComponent } from './components/elements/banner-classes/ban
     TabsModule.forRoot(),
   ],
   providers: [
-    MyRouterService
+    MyRouterService,
+    FaqService
   ],
   bootstrap: [AppComponent]
 })
