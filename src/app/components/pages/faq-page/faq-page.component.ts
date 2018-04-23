@@ -12,11 +12,21 @@ import {FaqModel} from "../../modals/faq.model";
   styleUrls: ['./faq-page.component.css']
 })
 export class FaqPageComponent implements OnInit {
-  faq: FaqModel[] = this._faqService.faq;
+  /**
+   * Gets FAQ table data.
+   * @return {FaqModel[]}
+   */
+  get faqs(): FaqModel[] {
+    return this._faqService.faq;
+  }
 
+  /**
+   * Constructor
+   * @param {FaqService} _faqService
+   */
   constructor(private _faqService: FaqService) { }
 
-  ngOnInit() {
-    console.log(this.faq[0].title);
-  }
+  ngOnInit() {}
 }
+
+
