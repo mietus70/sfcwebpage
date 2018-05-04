@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import {ModalModule, TabsModule} from "ngx-bootstrap";
 
 import {AppComponent} from './app.component';
@@ -27,6 +27,7 @@ import {GrafikPageComponent} from './components/pages/grafik-page/grafik-page.co
 import {MyRouterService} from "./services/my-router.service";
 import {BannerClassesComponent} from './components/elements/banner-classes/banner-classes.component';
 import {FaqService} from "./services/faq.service";
+import {NgxGalleryModule} from "ngx-gallery";
 
 @NgModule({
   declarations: [
@@ -58,11 +59,13 @@ import {FaqService} from "./services/faq.service";
     HttpClientModule,
     ModalModule.forRoot(),
     TabsModule.forRoot(),
+    NgxGalleryModule
   ],
   providers: [
     MyRouterService,
     FaqService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
