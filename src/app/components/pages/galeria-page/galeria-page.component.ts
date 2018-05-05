@@ -16,10 +16,13 @@ export class GaleriaPageComponent implements OnInit {
   ngOnInit() {
     this.galleryOptions = [
       {
-        width: '600px',
-        height: '400px',
+        width: '1100px',
+        height: '800px',
         thumbnailsColumns: 4,
-        imageAnimation: NgxGalleryAnimation.Slide
+        thumbnailsRows: 1,
+        imageInfinityMove: true,
+        imageAnimation: NgxGalleryAnimation.Slide,
+        image: true
       },
       // max-width 800
       {
@@ -34,7 +37,7 @@ export class GaleriaPageComponent implements OnInit {
       // max-width 400
       {
         breakpoint: 400,
-        preview: false
+        preview: true
       }
     ];
 
