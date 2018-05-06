@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
-import 'hammerjs';
+import {Component, OnInit} from '@angular/core';
+import {NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation} from 'ngx-gallery';
 
 @Component({
   selector: 'app-galeria-page',
-  templateUrl: './galeria-page.component.html',
-  styleUrls: ['./galeria-page.component.css']
+  templateUrl: './gallery-page.component.html',
+  styleUrls: ['./gallery-page.component.css']
 })
-export class GaleriaPageComponent implements OnInit {
+export class GalleryPageComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
 

@@ -19,8 +19,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "../node_modules/font-awesome/css/font-awesome.css"
+        "../src/assets/css/main.css",
+        "../src/styles.css",
+        "../node_modules/font-awesome/css/font-awesome.css",
+        "../src/assets/css/bootstrap.css",
+        "../src/assets/css/bootstrap-theme.min.css",
+        "../src/assets/css/jqueryui/jquery-ui-1.10.3.custom.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",

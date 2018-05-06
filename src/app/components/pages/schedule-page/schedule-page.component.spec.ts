@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OfertaPageComponent } from './oferta-page.component';
+import { GrafikPageComponent } from './schedule-page.component';
 
-describe('OfertaPageComponent', () => {
-  let component: OfertaPageComponent;
-  let fixture: ComponentFixture<OfertaPageComponent>;
+describe('GrafikPageComponent', () => {
+  let component: GrafikPageComponent;
+  let fixture: ComponentFixture<GrafikPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OfertaPageComponent ]
+      declarations: [ GrafikPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OfertaPageComponent);
+    fixture = TestBed.createComponent(GrafikPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

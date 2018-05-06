@@ -18,12 +18,12 @@ import {BannerHeaderComponent} from './components/elements/main-elements/banner-
 import {MenuHeaderBottomComponent} from './components/elements/main-elements/menu-header-bottom/menu-header-bottom.component';
 import {NewsComponent} from './components/elements/news/news.component';
 import {FirstUppercasePipe} from './pipes/first-uppercase.pipe';
-import {OfertaPageComponent} from './components/pages/oferta-page/oferta-page.component';
-import {CennikPageComponent} from './components/pages/cennik-page/cennik-page.component';
-import {GaleriaPageComponent} from './components/pages/galeria-page/galeria-page.component';
-import {KontaktPageComponent} from './components/pages/kontakt-page/kontakt-page.component';
+import {OfferPageComponent} from './components/pages/offer-page/offer-page.component';
+import {PricePageComponent} from './components/pages/cennik-page/price-page.component';
+import {GalleryPageComponent} from './components/pages/gallery-page/gallery-page.component';
+import {ContactPageComponent} from './components/pages/contact-page/contact-page.component';
 import {FaqPageComponent} from './components/pages/faq-page/faq-page.component';
-import {GrafikPageComponent} from './components/pages/grafik-page/grafik-page.component';
+import {SchedulePageComponent} from './components/pages/schedule-page/schedule-page.component';
 import {MyRouterService} from "./services/my-router.service";
 import {BannerClassesComponent} from './components/elements/banner-classes/banner-classes.component';
 import {FaqService} from "./services/faq.service";
@@ -44,12 +44,12 @@ import {NgxGalleryModule} from "ngx-gallery";
     MenuHeaderBottomComponent,
     NewsComponent,
     FirstUppercasePipe,
-    OfertaPageComponent,
-    CennikPageComponent,
-    GaleriaPageComponent,
-    KontaktPageComponent,
+    OfferPageComponent,
+    PricePageComponent,
+    GalleryPageComponent,
+    ContactPageComponent,
     FaqPageComponent,
-    GrafikPageComponent,
+    SchedulePageComponent,
     BannerClassesComponent
   ],
   imports: [
