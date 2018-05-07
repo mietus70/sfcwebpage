@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GrafikPageComponent } from './schedule-page.component';
+import { SchedulePageComponent } from './schedule-page.component';
 
-describe('GrafikPageComponent', () => {
-  let component: GrafikPageComponent;
-  let fixture: ComponentFixture<GrafikPageComponent>;
+describe('SchedulePageComponent', () => {
+  let component: SchedulePageComponent;
+  let fixture: ComponentFixture<SchedulePageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GrafikPageComponent ]
+      declarations: [ SchedulePageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GrafikPageComponent);
+    fixture = TestBed.createComponent(SchedulePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

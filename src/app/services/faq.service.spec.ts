@@ -1,11 +1,12 @@
-import { TestBed, inject } from '@angular/core/testing';
-
-import { FaqService } from './faq.service';
+import {TestBed, inject} from '@angular/core/testing';
+import {FaqService} from './faq.service';
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('FaqService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [FaqService]
+      providers: [FaqService],
+      imports: [HttpClientTestingModule]
     });
   });
 

@@ -1,6 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { FaqPageComponent } from './faq-page.component';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {FaqPageComponent} from './faq-page.component';
+import {FaqService} from "../../../services/faq.service";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('FaqPageComponent', () => {
   let component: FaqPageComponent;
@@ -8,7 +9,9 @@ describe('FaqPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FaqPageComponent ]
+      declarations: [ FaqPageComponent ],
+      providers: [ FaqService ],
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   }));

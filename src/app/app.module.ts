@@ -19,7 +19,7 @@ import {MenuHeaderBottomComponent} from './components/elements/main-elements/men
 import {NewsComponent} from './components/elements/news/news.component';
 import {FirstUppercasePipe} from './pipes/first-uppercase.pipe';
 import {OfferPageComponent} from './components/pages/offer-page/offer-page.component';
-import {PricePageComponent} from './components/pages/cennik-page/price-page.component';
+import {PricePageComponent} from './components/pages/price-page/price-page.component';
 import {GalleryPageComponent} from './components/pages/gallery-page/gallery-page.component';
 import {ContactPageComponent} from './components/pages/contact-page/contact-page.component';
 import {FaqPageComponent} from './components/pages/faq-page/faq-page.component';
