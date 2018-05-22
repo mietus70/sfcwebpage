@@ -9,17 +9,24 @@ import {NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation} from 'ngx-galle
 export class GalleryPageComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
+  galleryTitle: string;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    this.galleryTitle = 'Galeria 1';
     this.galleryOptions = [
       {
-        width: '1100px',
+        width: '1024px',
         height: '800px',
         thumbnailsColumns: 4,
         thumbnailsRows: 1,
         imageInfinityMove: true,
+        previewRotate: true,
+        imageAutoPlay: true,
+        previewFullscreen: true,
+        previewCloseOnEsc: true,
+        previewKeyboardNavigation: true,
         imageAnimation: NgxGalleryAnimation.Slide,
         image: true
       },
@@ -39,6 +46,8 @@ export class GalleryPageComponent implements OnInit {
         preview: true
       }
     ];
+
+    this.galleryOptions[0].imageAutoPlay = false;
 
     this.galleryImages = [
       {
@@ -73,5 +82,4 @@ export class GalleryPageComponent implements OnInit {
       }
     ];
   }
-
 }
