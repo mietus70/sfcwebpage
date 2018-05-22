@@ -19,9 +19,9 @@ export class MyRouterService {
 
   /**
    * Getter długości łańcucha.
-   * @return {number}
+   * @return {number}x
    */
-  get url_length() {
+    get url_length() {
     if(this.url) {
       return this.url.split('/').length;
     }
