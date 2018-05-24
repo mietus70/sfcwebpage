@@ -1,7 +1,11 @@
-<div style="width: 100%; text-align: center;">
-  <h1>{{galleryTitle}}</h1>
+<div class="blogger">
+  <h1 class="no-margin push-down-10">{{galleryTitle}}</h1>
+  <div class="border-red "></div>
+</div>
+<div style="text-align: center; width: 100%;" class="pull-down-60">
   <ngx-gallery
     style="margin: auto;"
+    class="pull-down-60"
     [options]="galleryOptions" [images]="galleryImages"
   ></ngx-gallery>
 </div>
