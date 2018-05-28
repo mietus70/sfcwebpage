@@ -28,6 +28,7 @@ import {MyRouterService} from "./services/my-router.service";
 import {BannerClassesComponent} from './components/elements/banner-classes/banner-classes.component';
 import {FaqService} from "./services/faq.service";
 import {NgxGalleryModule} from "ngx-gallery";
+import {NgxGalleryService} from "./services/ngx-gallery.service";
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import {NgxGalleryModule} from "ngx-gallery";
   ],
   providers: [
     MyRouterService,
-    FaqService
+    FaqService,
+    NgxGalleryService
   ],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]

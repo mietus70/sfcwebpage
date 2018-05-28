@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
 // Models
-import {FaqModel} from "../components/modals/faq.model";
+import {FaqModel} from "../models/faq.model";
 
 // Config
 import {REST_API_GET_FAQ} from "../../http.config";
@@ -40,9 +40,9 @@ export class FaqService {
    * @private
    */
   private _get_faq() {
-      this._http_client.get<FaqModel[]>(REST_API_GET_FAQ)
-        .subscribe((data: FaqModel[]) => {
-          this._faq = data;
-        });
-    }
+    this._http_client.get<FaqModel[]>(REST_API_GET_FAQ)
+      .subscribe((data: FaqModel[]) => {
+        this._faq = data;
+      });
+  }
 }

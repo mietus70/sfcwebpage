@@ -4,7 +4,7 @@ import {Component, OnInit} from '@angular/core';
 import {FaqService} from "../../../services/faq.service";
 
 // Models
-import {FaqModel} from "../../modals/faq.model";
+import {FaqModel} from "../../../models/faq.model";
 
 @Component({
   selector: 'app-faq-page',
