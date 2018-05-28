@@ -3,7 +3,9 @@ import {HttpClient} from "@angular/common/http";
 import {REST_API_GET_GALLERIES} from "../../http.config";
 import {GalleriesModel} from "../models/galleries.model";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class NgxGalleryService {
   galleries: GalleriesModel[];
 

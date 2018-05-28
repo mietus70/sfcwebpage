@@ -7,7 +7,9 @@ import {FaqModel} from "../models/faq.model";
 // Config
 import {REST_API_GET_FAQ} from "../../http.config";
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class FaqService {
   /**
    * FAQ data table

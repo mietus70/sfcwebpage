@@ -24,11 +24,8 @@ import {GalleryPageComponent} from './components/pages/gallery-page/gallery-page
 import {ContactPageComponent} from './components/pages/contact-page/contact-page.component';
 import {FaqPageComponent} from './components/pages/faq-page/faq-page.component';
 import {SchedulePageComponent} from './components/pages/schedule-page/schedule-page.component';
-import {MyRouterService} from "./services/my-router.service";
 import {BannerClassesComponent} from './components/elements/banner-classes/banner-classes.component';
-import {FaqService} from "./services/faq.service";
 import {NgxGalleryModule} from "ngx-gallery";
-import {NgxGalleryService} from "./services/ngx-gallery.service";
 
 @NgModule({
   declarations: [
@@ -62,11 +59,7 @@ import {NgxGalleryService} from "./services/ngx-gallery.service";
     TabsModule.forRoot(),
     NgxGalleryModule
   ],
-  providers: [
-    MyRouterService,
-    FaqService,
-    NgxGalleryService
-  ],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
