@@ -4,8 +4,8 @@
     "galleryTitle": "Galeria 1",
     "galleryOptions": [
       {
-        "width": "100%",
-        "height": "800px",
+        "width": "960px",
+        "height": "720px",
         "thumbnailsColumns": 4,
         "thumbnailsRows": 1,
         "imageInfinityMove": true,
@@ -17,7 +17,7 @@
         "image": true
       },
       {
-        "breakpoint": 800,
+        "breakpoint": 820,
         "width": "100%",
         "height": "600px",
         "imagePercent": 80,
@@ -26,7 +26,8 @@
         "thumbnailMargin": 20
       },
       {
-        "breakpoint": 400,
+        "breakpoint": 420,
+        "height": "300px",
         "preview": true
       }
     ],
