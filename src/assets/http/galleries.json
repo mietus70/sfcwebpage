@@ -4,7 +4,7 @@
     "galleryTitle": "Galeria 1",
     "galleryOptions": [
       {
-        "width": "1024px",
+        "width": "100%",
         "height": "800px",
         "thumbnailsColumns": 4,
         "thumbnailsRows": 1,

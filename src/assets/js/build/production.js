@@ -2651,9 +2651,9 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 	var // Number of pixels a pressed pointer travels before movestart
 	    // event is fired.
 	    threshold = 6,
-	
+
 	    add = jQuery.event.add,
-	
+
 	    remove = jQuery.event.remove,
 
 	    // Just sugar, so we can have arguments in the same order as
@@ -2678,20 +2678,20 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 	    		}
 	    	);
 	    })(),
-	    
+
 	    ignoreTags = {
 	    	textarea: true,
 	    	input: true,
 	    	select: true,
 	    	button: true
 	    },
-	    
+
 	    mouseevents = {
 	    	move: 'mousemove',
 	    	cancel: 'mouseup dragstart',
 	    	end: 'mouseup'
 	    },
-	    
+
 	    touchevents = {
 	    	move: 'touchmove',
 	    	cancel: 'touchend',
@@ -2700,12 +2700,12 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 
 
 	// Constructors
-	
+
 	function Timer(fn){
 		var callback = fn,
 				active = false,
 				running = false;
-		
+
 		function trigger(time) {
 			if (active){
 				callback();
@@ -2717,17 +2717,17 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 				running = false;
 			}
 		}
-		
+
 		this.kick = function(fn) {
 			active = true;
 			if (!running) { trigger(); }
 		};
-		
+
 		this.end = function(fn) {
 			var cb = callback;
-			
+
 			if (!fn) { return; }
-			
+
 			// If the timer is not running, simply call the end callback.
 			if (!running) {
 				fn();
@@ -2737,9 +2737,9 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 			// just the end callback.
 			else {
 				callback = active ?
-					function(){ cb(); fn(); } : 
+					function(){ cb(); fn(); } :
 					fn ;
-				
+
 				active = true;
 			}
 		};
@@ -2747,23 +2747,23 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 
 
 	// Functions
-	
+
 	function returnTrue() {
 		return true;
 	}
-	
+
 	function returnFalse() {
 		return false;
 	}
-	
+
 	function preventDefault(e) {
 		e.preventDefault();
 	}
-	
+
 	function preventIgnoreTags(e) {
 		// Don't prevent interaction with form elements.
 		if (ignoreTags[ e.target.tagName.toLowerCase() ]) { return; }
-		
+
 		e.preventDefault();
 	}
 
@@ -2779,13 +2779,13 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 		if (touchList.identifiedTouch) {
 			return touchList.identifiedTouch(id);
 		}
-		
+
 		// touchList.identifiedTouch() does not exist in
 		// webkit yet… we must do the search ourselves...
-		
+
 		i = -1;
 		l = touchList.length;
-		
+
 		while (++i < l) {
 			if (touchList[i].identifier === id) {
 				return touchList[i];
@@ -2809,7 +2809,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 
 
 	// Handlers that decide when the first movestart is triggered
-	
+
 	function mousedown(e){
 		var data;
 
@@ -2848,7 +2848,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 		if (ignoreTags[ e.target.tagName.toLowerCase() ]) { return; }
 
 		touch = e.changedTouches[0];
-		
+
 		// iOS live updates the touch objects whereas Android gives us copies.
 		// That means we can't trust the touchstart object to stay the same,
 		// so we must copy the data. This object acts as a template for
@@ -2939,7 +2939,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 		// The _handled method is fired to tell the default movestart
 		// handler that one of the move events is bound.
 		template._handled = handled;
-			
+
 		// Pass the touchmove event so it can be prevented if or when
 		// movestart is handled.
 		template._preventTouchmoveDefault = function() {
@@ -2966,7 +2966,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 	function activeMouseend(e) {
 		var event = e.data.event,
 		    timer = e.data.timer;
-		
+
 		removeActiveMouse();
 
 		endEvent(event, timer, function() {
@@ -3025,7 +3025,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 		event.distY =  touch.pageY - event.startY;
 		event.deltaX = touch.pageX - event.pageX;
 		event.deltaY = touch.pageY - event.pageY;
-		
+
 		// Average the velocity of the last few events using a decay
 		// curve to even out spurious jumps in values.
 		event.velocityX = 0.3 * event.velocityX + 0.7 * event.deltaX / time;
@@ -3041,7 +3041,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 			event.type = 'moveend';
 
 			trigger(event.target, event);
-			
+
 			return fn && fn();
 		});
 	}
@@ -3052,49 +3052,49 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 	function setup(data, namespaces, eventHandle) {
 		// Stop the node from being dragged
 		//add(this, 'dragstart.move drag.move', preventDefault);
-		
+
 		// Prevent text selection and touch interface scrolling
 		//add(this, 'mousedown.move', preventIgnoreTags);
-		
+
 		// Tell movestart default handler that we've handled this
 		add(this, 'movestart.move', flagAsHandled);
 
 		// Don't bind to the DOM. For speed.
 		return true;
 	}
-	
+
 	function teardown(namespaces) {
 		remove(this, 'dragstart drag', preventDefault);
 		remove(this, 'mousedown touchstart', preventIgnoreTags);
 		remove(this, 'movestart', flagAsHandled);
-		
+
 		// Don't bind to the DOM. For speed.
 		return true;
 	}
-	
+
 	function addMethod(handleObj) {
 		// We're not interested in preventing defaults for handlers that
 		// come from internal move or moveend bindings
 		if (handleObj.namespace === "move" || handleObj.namespace === "moveend") {
 			return;
 		}
-		
+
 		// Stop the node from being dragged
 		add(this, 'dragstart.' + handleObj.guid + ' drag.' + handleObj.guid, preventDefault, undefined, handleObj.selector);
-		
+
 		// Prevent text selection and touch interface scrolling
 		add(this, 'mousedown.' + handleObj.guid, preventIgnoreTags, undefined, handleObj.selector);
 	}
-	
+
 	function removeMethod(handleObj) {
 		if (handleObj.namespace === "move" || handleObj.namespace === "moveend") {
 			return;
 		}
-		
+
 		remove(this, 'dragstart.' + handleObj.guid + ' drag.' + handleObj.guid);
 		remove(this, 'mousedown.' + handleObj.guid);
 	}
-	
+
 	jQuery.event.special.movestart = {
 		setup: setup,
 		teardown: teardown,
@@ -3103,7 +3103,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 
 		_default: function(e) {
 			var template, data;
-			
+
 			// If no move events were bound to any ancestors of this
 			// target, high tail it out of here.
 			if (!e._handled()) { return; }
@@ -3132,7 +3132,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 					trigger(e.target, template);
 				})
 			};
-			
+
 			if (e.identifier === undefined) {
 				// We're dealing with a mouse
 				// Stop clicks from propagating during a move
@@ -3156,19 +3156,19 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 			// setup that decides whether other move events are fired.
 			add(this, 'movestart.move', jQuery.noop);
 		},
-		
+
 		teardown: function() {
 			remove(this, 'movestart.move', jQuery.noop);
 		}
 	};
-	
+
 	jQuery.event.special.moveend = {
 		setup: function() {
 			// Bind a noop to movestart. Why? It's the movestart
 			// setup that decides whether other move events are fired.
 			add(this, 'movestart.moveend', jQuery.noop);
 		},
-		
+
 		teardown: function() {
 			remove(this, 'movestart.moveend', jQuery.noop);
 		}
@@ -3185,7 +3185,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 		(function(jQuery, undefined){
 			var props = ["changedTouches", "targetTouches"],
 			    l = props.length;
-			
+
 			while (l--) {
 				if (jQuery.event.props.indexOf(props[l]) === -1) {
 					jQuery.event.props.push(props[l]);
@@ -3203,7 +3203,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 
       var sliderPct = options.default_offset_pct;
       var container = $(this);
-      
+
       container.wrap("<div class='twentytwenty-wrapper'></div>");
       container.append("<div class='twentytwenty-overlay'></div>");
       var beforeImg = container.find("img:first");
@@ -3215,7 +3215,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
       container.addClass("twentytwenty-container");
       beforeImg.addClass("twentytwenty-before");
       afterImg.addClass("twentytwenty-after");
-      
+
       var overlay = container.find(".twentytwenty-overlay");
       overlay.append("<div class='twentytwenty-before-label'></div>");
       overlay.append("<div class='twentytwenty-after-label'></div>");
@@ -3248,14 +3248,14 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 
       var offsetX = 0;
       var imgWidth = 0;
-      
+
       container.on("movestart", function(e) {
         if ((e.distX > e.distY && e.distX < -e.distY) || (e.distX < e.distY && e.distX > -e.distY)) {
           e.preventDefault();
         }
         container.addClass("active");
         offsetX = container.offset().left;
-        imgWidth = beforeImg.width();          
+        imgWidth = beforeImg.width();
       });
 
       container.on("moveend", function(e) {
@@ -3294,7 +3294,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
  */
 
 ;(function ( $, window, undefined ) {
-    
+
     var document = window.document;
 
     $.fn.share = function(method) {
@@ -3312,11 +3312,11 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
                     pageTitle = this.share.settings.title||$(document).attr('title'),
                     pageUrl = this.share.settings.urlToShare||$(location).attr('href'),
                     pageDesc = "";
-                
+
                 $.each($(document).find('meta[name="description"]'),function(idx,item){
                     pageDesc = $(item).attr("content");
             });
-                
+
                 // each instance of this plugin
                 return this.each(function() {
                     var $element = $(this),
@@ -3336,17 +3336,17 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
                             "' class='pop share-"+theme+" share-"+theme+"-"+item+"'></a>")
                             .appendTo($element);
                     }
-                    
+
                     // customize css
                     $("#"+id+".share-"+theme).css('margin',margin);
-                    
+
                     if (orientation != "horizontal"){
                         $("#"+id+" a.share-"+theme).css('display','block');
                     }
                     else {
                         $("#"+id+" a.share-"+theme).css('display','inline-block');
                     }
-                    
+
                     if (typeof affix != "undefined"){
                         $element.addClass('share-affix');
                         if (affix.indexOf('right')!=-1){
@@ -3359,7 +3359,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
                         else if (affix.indexOf('left center')!=-1){
                             $element.css('top','40%');
                         }
-                        
+
                         if (affix.indexOf('bottom')!=-1){
                             $element.css('bottom','0px');
                             $element.css('top','auto');
@@ -3368,17 +3368,17 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
                             }
                         }
                     }
-                    
+
                     // bind click
                     $('.pop').click(function(){
                         window.open($(this).attr('href'),'t','toolbar=0,resizable=1,status=0,width=640,height=528');
                         return false;
                     });
-                    
-                    
+
+
                 });// end plugin instance
-            
-            }        
+
+            }
         }
 
         var helpers = {
@@ -3398,7 +3398,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
                 email:{url:'mailto:?subject=|t|'}
             }
         }
-     
+
         if (methods[method]) {
             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof method === 'object' || !method) {
@@ -3419,7 +3419,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
     }
 
     $.fn.share.settings = {}
-        
+
 })(jQuery, window);
 
 (function(root, factory) {
@@ -3687,7 +3687,7 @@ var GMaps = (function(global) {
       if (!getElementById('gmaps_context_menu')) return;
 
       var context_menu_element = getElementById('gmaps_context_menu');
-      
+
       context_menu_element.innerHTML = html;
 
       var context_menu_items = context_menu_element.getElementsByTagName('a'),
@@ -3724,11 +3724,11 @@ var GMaps = (function(global) {
 
         var overlay = new google.maps.OverlayView();
         overlay.setMap(self.map);
-        
+
         overlay.draw = function() {
           var projection = overlay.getProjection(),
               position = e.marker.getPosition();
-          
+
           e.pixel = projection.fromLatLngToContainerPixel(position);
 
           buildContextMenuHTML(control, e);
@@ -3944,7 +3944,7 @@ GMaps.prototype.addControl = function(options) {
 
   var control = this.createControl(options);
   this.controls.push(control);
-  
+
   this.map.controls[position].push(control);
 
   return control;
@@ -4011,7 +4011,7 @@ GMaps.prototype.createMarker = function(options) {
           if(!me.pixel){
             me.pixel = map.getProjection().fromLatLngToPoint(me.latLng)
           }
-          
+
           options[name].apply(this, [me]);
         });
       }
@@ -4161,7 +4161,7 @@ GMaps.prototype.drawOverlay = function(options) {
     if (!options.layer) {
       options.layer = 'overlayLayer';
     }
-    
+
     var panes = this.getPanes(),
         overlayLayer = panes[options.layer],
         stop_overlay_events = ['contextmenu', 'DOMMouseScroll', 'dblclick', 'mousedown'];
@@ -4757,7 +4757,7 @@ GMaps.prototype.drawRoute = function(options) {
           strokeOpacity: options.strokeOpacity,
           strokeWeight: options.strokeWeight
         });
-        
+
         if (options.callback) {
           options.callback(e[e.length - 1]);
         }
@@ -4812,7 +4812,7 @@ GMaps.prototype.travelRoute = function(options) {
 
 GMaps.prototype.drawSteppedRoute = function(options) {
   var self = this;
-  
+
   if (options.origin && options.destination) {
     this.getRoutes({
       origin: options.origin,
@@ -4957,7 +4957,7 @@ GMaps.prototype.toImage = function(options) {
 
   if (this.markers.length > 0) {
     static_map_options['markers'] = [];
-    
+
     for (var i = 0; i < this.markers.length; i++) {
       static_map_options['markers'].push({
         lat: this.markers[i].getPosition().lat(),
@@ -4968,7 +4968,7 @@ GMaps.prototype.toImage = function(options) {
 
   if (this.polylines.length > 0) {
     var polyline = this.polylines[0];
-    
+
     static_map_options['polyline'] = {};
     static_map_options['polyline']['path'] = google.maps.geometry.encoding.encodePath(polyline.getPath());
     static_map_options['polyline']['strokeColor'] = polyline.strokeColor
@@ -4992,7 +4992,7 @@ GMaps.staticMapURL = function(options){
   static_root += '?';
 
   var markers = options.markers;
-  
+
   delete options.markers;
 
   if (!markers && options.marker) {
@@ -5368,7 +5368,7 @@ GMaps.geocode = function(options) {
   delete options.lat;
   delete options.lng;
   delete options.callback;
-  
+
   this.geocoder.geocode(options, function(results, status) {
     callback(results, status);
   });
@@ -5484,7 +5484,7 @@ if (!Array.prototype.indexOf) {
       return -1;
   }
 }
-  
+
 return GMaps;
 }));
 
@@ -5893,7 +5893,7 @@ return GMaps;
 
 				offsetLeft = $this.offset().left - marginLeft - scrollLeft;
 				offsetTop = $this.offset().top - marginTop - scrollTop;
-				
+
 				// Calculate the offset parent
 				$this.parents().each(function() {
 					var $this = $(this);
@@ -6091,7 +6091,7 @@ return GMaps;
 					ticking = true;
 				}
 			};
-			
+
 			this.$scrollElement.bind('scroll.' + this.name, requestTick);
 			requestTick();
 		},
@@ -6151,17 +6151,17 @@ $(document).ready(function() {
 	})
 
 	/* Instagram Feed */
-    var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'fitness',
-        clientId: '19003a1ce8df47849e147814a2403c48',
-        template: '<a href="{{link}}" target="_blank"><img src="{{image}}" width="60" /></a>',
-        limit: 8,
-        sortBy: 'random',
-        resolution: 'low_resolution'
-
-    });
-    feed.run();
+    // var feed = new Instafeed({
+    //     get: 'tagged',
+    //     tagName: 'fitness',
+    //     clientId: '19003a1ce8df47849e147814a2403c48',
+    //     template: '<a href="{{link}}" target="_blank"><img src="{{image}}" width="60" /></a>',
+    //     limit: 8,
+    //     sortBy: 'random',
+    //     resolution: 'low_resolution'
+    //
+    // });
+    // feed.run();
 
 
     /* Backstrech logic */
@@ -6299,7 +6299,7 @@ $(document).ready(function() {
       $(".js-product-thumbnails img.active").removeClass("active");
       $(this).addClass("active");
     })
-    
+
   /* Closing/opening divs */
   $(".js-open-div").on('click', function(ev) {
       ev.preventDefault();
@@ -6323,7 +6323,7 @@ $(document).ready(function() {
   weekday[5]="FRIDAY";
   weekday[6]="SATURDAY";
 
-  var current_day = weekday[d.getDay()]; 
+  var current_day = weekday[d.getDay()];
 
   $(".js-filter-days-classes a").click( function(e) {
     e.preventDefault();

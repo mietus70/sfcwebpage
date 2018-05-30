@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {REST_API_GET_GALLERIES} from "../../http.config";
 import {GalleriesModel} from "../models/galleries.model";
+import {NgxGalleryAnimation} from "ngx-gallery";
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,7 @@ export class NgxGalleryService {
     this._http_client.get<GalleriesModel[]>(REST_API_GET_GALLERIES)
       .subscribe((data: GalleriesModel[]) => {
         this.galleries = data;
+        this.galleries[0].galleryOptions[0].imageAnimation = NgxGalleryAnimation.Slide
       });
   }
 }

@@ -7,7 +7,7 @@ $(document).ready(function() {
 		$(this).toggleClass("opened");
 		$(".main-navigation").slideToggle('slow');
 
-	})
+	});
 
 	/* Instagram Feed */
     var feed = new Instafeed({
@@ -26,7 +26,7 @@ $(document).ready(function() {
     /* Backstrech logic */
     $(".js-backstrech").each(function() {
          $(this).backstretch($(this).attr("data-image"));
-    })
+    });
 
     /* Alert system */
     $(".alert-f .close a").on('click', function(e) {
@@ -158,7 +158,7 @@ $(document).ready(function() {
       $(".js-product-thumbnails img.active").removeClass("active");
       $(this).addClass("active");
     })
-    
+
   /* Closing/opening divs */
   $(".js-open-div").on('click', function(ev) {
       ev.preventDefault();
@@ -182,7 +182,7 @@ $(document).ready(function() {
   weekday[5]="FRIDAY";
   weekday[6]="SATURDAY";
 
-  var current_day = weekday[d.getDay()]; 
+  var current_day = weekday[d.getDay()];
 
   $(".js-filter-days-classes a").click( function(e) {
     e.preventDefault();
