@@ -1,0 +1,7 @@
+.my-ngx-gallery {
+  text-align: center; width: 100%;
+}
+
+ngx-gallery {
+  margin: auto; background-color: lightgrey; padding: .5em;
+}

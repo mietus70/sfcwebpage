@@ -14,7 +14,9 @@
         "previewFullscreen": true,
         "previewCloseOnEsc": true,
         "previewKeyboardNavigation": true,
-        "image": true
+        "image": true,
+        "imageSize": "cover",
+        "thumbnailSize": "cover"
       },
       {
         "breakpoint": 820,
