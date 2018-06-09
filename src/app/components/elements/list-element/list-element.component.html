@@ -7,7 +7,7 @@
       <div class="border-red"></div>
       <!-- /.border-red -->
       <div class="pull-down-25" *ngIf="list.description">
-        <p>{{list.description}}</p>
+        <span [innnerHTML]="list.description"></span>
       </div>
       <!-- /.row -->
       <div class="row" *ngFor="let element of listElements;">
@@ -19,7 +19,7 @@
             </div>
             <div class="col-md-11">
               <h5 class="pull-down-10"><strong>{{element.title}}</strong></h5>
-              <span [innerHTML]='element.content'></span>
+              <span [innerHTML]="element.content"></span>
             </div>
             <!-- /.col-md-7 -->
           </div>

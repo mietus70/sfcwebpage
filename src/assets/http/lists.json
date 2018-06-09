@@ -189,5 +189,109 @@
         "content": "zawieszenie karnetu w sytuacji choroby, wyjazdu służbowego powyżej 7 dni. <ul><li>wiesz, że nie będzie Cię przez minimum 7 dni, zadzwoń do nas, a przedłużymy Ci karnet o tydzień. Usługa płatna 10 zł. </li><li>poinformuj nas o tym fakcie przed, a nie po,</li><li>możesz zwiesić karnet raz na na max 7 dni,</li><li>karnet 3 miesięczny możesz zawiesić na max 2 tygodnie- usługa płatna 20 zł.</li><ul>"
       }
     ]
+  },
+  {
+    "id": 3,
+    "title": "Cennik / Promocje",
+    "description": "",
+    "listElements": [
+      {
+        "id": 0,
+        "title": "Siłownia",
+        "content": "24 h 69 zł/ Promocja wakacyjna- lipiec i sierpień za jedyne 80 zł"
+      },
+      {
+        "id": 1,
+        "title": "Senior(65+)",
+        "content": "od 29 zł  "
+      },
+      {
+        "id": 2,
+        "title": "Dzieci",
+        "content": "40 zł lub bezpłatnie*"
+      },
+      {
+        "id": 3,
+        "title": "Walka uliczna/MMA/BOKS/Crossfit",
+        "content": "2x tydzień 80 zł/ 3x tydzień 110 zł/ 4x tydzień 130 zł"
+      },
+      {
+        "id": 4,
+        "title": "Walka (2 x tydzień) + siłownia(7 dni w tygodniu) ",
+        "content": "100 zł "
+      },
+      {
+        "id": 5,
+        "title": "Wynajem Sali na godziny dla klubów",
+        "content": "50 zł h"
+      },
+      {
+        "id": 6,
+        "title": "Wynajem na urodziny",
+        "content": "3 godziny 199 zł/ Promocja 149 zł"
+      },
+      {
+        "id": 7,
+        "title": "Porady dietetyczne + ułożenie planu treningowego",
+        "content": "czas 120 minut – 80 zł"
+      },
+      {
+        "id": 8,
+        "title": "Pomiar analizy składu ciała",
+        "content": "50 zł/ 30 zł przy planie treningowym i poradach"
+      },
+      {
+        "id": 9,
+        "title": "Trening personalny",
+        "content": "40 zł/h crossfit/siłownia, 50 zł h/walka, 30 zł h/ w parach"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Oferujemy",
+    "description": "",
+    "listElements": [
+      {
+        "id": 0,
+        "title": "Szkolenia z samoobrony",
+        "content": "Intensywne szkolenie 2 lub 4 tygodniowe na którym adepci poznają podstawy walki oraz możliwie najszybszą drogę do obrony siebie oraz swojej rodziny."
+      },
+      {
+        "id": 1,
+        "title": "Treningi personalne",
+        "content": "Trening personalny trwa do 60 minut. Każdy trening jest dobierany indywidualnie w zależności od potrzeb i preferencji."
+      },
+      {
+        "id": 2,
+        "title": "Pomiar BMI, BMR, wieku metabolicznego, porady dietetyczne",
+        "content": "Zapraszamy do skorzystania z szerokiej wiedzy w zakresie żywienia. Możesz dodatkowo poznać swój wiek metaboliczny oraz inne parametry swojego ciała."
+      },
+      {
+        "id": 3,
+        "title": "Plany treningowe + porady treningowe",
+        "content": "Każdy plan jest dobierany i ustalany indywidualnie do Twoich potrzeb."
+      },
+      {
+        "id": 4,
+        "title": "Urodziny w klubie,",
+        "content": "Możesz wynająć sale na urodziny dla swojej pociechy. Dzieciaki wściekają się na 200 metrach Sali, gdzie główną atrakcją jest ring bokserski oraz poustawiane na nim domki czy tory przeszkód. Dodatkowo maluchy mogą poszaleć na cymbergaju. Pakiet urodzinowy obejmuje wynajem Sali i atrakcji klubowych. W przypadku zamówienia dodatkowych atrakcji jak malowanie buziek itp. możesz omówić to z nami w klubie."
+      },
+      {
+        "id": 5,
+        "title": "Oferta dla firm(karnety grupowe na siłownię lub szkolenia z samoobrony)",
+        "content": "Masz firmę zatrudniającą od 5 pracowników? Przedstawimy Ci ciekawą ofertę. Wspólny trening czy szkolenie dla kobiet z samoobrony będzie z pewnością ciekawą formą premiowania ich starań dla firmy."
+      },
+      {
+        "id": 6,
+        "title": "Oferta dla klubów sportowych (wynajem Sali długoterminowy, wynajem Sali na godziny)",
+        "content": "Poszukujesz dobrze wyposażonego klubu? Dobrze trafiłeś. Posiadamy w swojej ofercie możliwość wynajęcia sali walki. "
+      },
+      {
+        "id": 7,
+        "title": "Wyposażenie",
+        "content": "Kompletne wyposażenie sali pozwala na treningi dla każdego sportu walki czy zajęć fitness oraz crossfit. Dodatkowo istnieje możliwość skorzystania ze świetnie wyposażonej siłowni."
+      }
+    ]
   }
 ]
