@@ -1,0 +1,181 @@
+[
+  {
+    "id": 0,
+    "title": "FAQ",
+    "description": "Opis listy",
+    "listElements": [
+      {
+        "id": 0,
+        "title": "Kontakt z klubem",
+        "content": "Proszę dzwonić pod numer 607 300 601 od poniedziałku do soboty (od 9:00 do 20:00).<br>W niedzielę i święta telefon jest wyłączony. Prosimy o kontakt w formie SMS."
+      },
+      {
+        "id": 1,
+        "title": "Płatność",
+        "content": "Możliwość dokonania opłaty:<br><ul><li>Gotówka</li><li>Karta</li><li>Przelew bankowy (proszę wysłać informację sms na numer 607 300 601 podając imię i nazwisko, kwotę przelewu oraz informację czy przelew jest za siłownię czy za sztuki walki)</li></ul>Numer konta do wpłat: ING Bank Śląski 50 1050 1012 1000 0090 7666 3542 (napisz sms lub wiadomość na leszeksfc@gmail.com z informacją o dokonanym przelewie) Istnieje możliwość uzyskania faktury."
+      },
+      {
+        "id": 2,
+        "title": "Wstęp bez karty",
+        "content": "Wejścia jednorazowe realizowane są od poniedziałku do piątku w godzinach 12:00-19:00"
+      },
+      {
+        "id": 3,
+        "title": "Przedłużenie wstępu na siłownię- płatności",
+        "content": "Możesz zrobić to osobiście lub tak jak w punkcie powyżej."
+      },
+      {
+        "id": 4,
+        "title": "Karta nie działa?",
+        "content": "Karta została rozmagnesowana lub skończył się termin ważności karty.<br>Kontakt w powyższej sprawie możliwy jest tylko i wyłącznie poprzez wysłanie wiadomości sms na numer 607 300 601 przez cały tydzień w godzinach 11- 20. Jeżeli karta nie działa z przyczyn technicznych proszę wpisać:<br>`Pilne! Proszę o podanie numeru karty (trzycyfrowy numer tłoczony na karcie)."
+      },
+      {
+        "id": 5,
+        "title": "Depozyt",
+        "content": "W klubie znajduje się depozyt gdzie należy deponować klucze, dokumenty, telefony itp. Klub nie ponosi odpowiedzialności za przedmioty pozostawione w szatni oraz za przedmioty, które nie zostały zdeponowane.<br>Utrata kluczyka - opłata 35 zł."
+      },
+      {
+        "id": 6,
+        "title": "Korzystanie z ringu",
+        "content": "Z ringu można korzystać w dni kiedy nie odbywają się treningi grupowe oraz personalne. Na ring należy wchodzić bez obuwia. Opłata za złamanie zakazu wynosi 10 zł."
+      },
+      {
+        "id": 7,
+        "title": "Korzystanie z klatki na Sali nr 1 (sala z ringiem)",
+        "content": "Klatka jest tylko i wyłącznie do użytku właściciela klubu. Zakaz korzystania bez zgody władz klubu."
+      },
+      {
+        "id": 8,
+        "title": "Korzystanie z siłowni",
+        "content": "Z siłowni można korzystać 24 h na dobę (osoby pełnoletnie oraz osoby zweryfikowane z profilem 'zaufane'). Na siłowni należy dbać o porządek, zgłaszać wszelkie usterki i uszkodzenia. Korzystanie z siłowni dla osób nieletnich jest możliwe po wyrażeniu zgody przez opiekuna prawnego. Opiekun osobiście wypełnia w siedzibie klubu druk i podpisuje własnoręcznie czytelnym podpisem."
+      },
+      {
+        "id": 9,
+        "title": "Gry planszowe, konsola",
+        "content": "Zakaz używania bez zgody władz klubu. Wynajem padów, konsoli i gier nie jest możliwy. Wynajem gier planszowych nie jest możliwy. Dzieci przebywające w klubie pod opieką dorosłych nie mogą manipulować przy urządzeniach. Nie mogą korzystać z gier i konsoli bez zgody władz klubu i pod ich nieobecność. Za wszelkie zniszczenia lub złamanie zakazu odpowiada opiekun."
+      },
+      {
+        "id": 10,
+        "title": "Urodziny w klubie",
+        "content": "Istnieje możliwość wynajęcia Sali na minimum 3 godziny. Kontakt do obsługi zajmującej się organizacją imprez- p. Agnieszka tel. 608 867 279"
+      },
+      {
+        "id": 11,
+        "title": "Parkowanie pojazdów, zamykanie bramy",
+        "content": "Na terenie Szkoły można parkować pojazdy o ile nie utrudnia to parkowania pracownikom szkoły. Bramę należy zamykać w godzinach wieczornych zaraz po wyjeździe z obiektu."
+      },
+      {
+        "id": 12,
+        "title": "Gaszenie światła",
+        "content": "Światło należy gasić w szatniach, wc, korytarzach lub po opuszczeniu Sali na której już nikt się nie znajduje. <br/>Jedyne światło które pali się w nocy to światło znajdujące się na skrzynce depozytowej."
+      },
+      {
+        "id": 13,
+        "title": "Zgoda na uczęszczania na treningi",
+        "content": "Każdy z uczestników treningów grupowych lub na siłowni obowiązkowo podpisuje zgodę na trenowanie oraz podpisuje brak przeciwwskazań do treningów. Nieletni muszą uzyskać zgodę opiekuna."
+      },
+      {
+        "id": 14,
+        "title": "Umowa klub - klubowicz",
+        "content": "Każdy klubowicz musi podpisać umowę z klubem. Wzór umowy znajduje się w klubie."
+      },
+      {
+        "id": 15,
+        "title": "Ubezpieczenie",
+        "content": "Klub jest ubezpieczony, jednakże wskazane jest dobrowolne ubezpieczenie na osobę w dowolnej agencji ubezpieczeniowej."
+      },
+      {
+        "id": 16,
+        "title": "Wynajem samochodów",
+        "content": "Samochód można wynająć na:<ul><li>Imprezę okolicznościową (wesele, urodziny itp.)</li><li>W celu zapewnienia ochrony i przewiezienia na np. Imprezę, do klubu itp.</li><li>Do odwiezienia/przywiezienia gości do klubu (impreza urodzinowa itp.).</li></ul>"
+      },
+      {
+        "id": 17,
+        "title": "Treningi grupowe",
+        "content": "Aktualne treningi podane są na stronie Facebook SFC Dęblin<br><ul><li>Treningi Cross</li><li>Treningi Boksu</li><li>Treningi walki wręcz</li><ul>"
+      },
+      {
+        "id": 18,
+        "title": "Treningi personalne",
+        "content": "Proszę o kontakt pod numerem 607 300 601 (od poniedziałku do soboty od 11:00 do 20:00)"
+      },
+      {
+        "id": 19,
+        "title": "Treningi dla dzieci",
+        "content": "Zapraszamy dzieci od 6 do 12 roku życia."
+      },
+      {
+        "id": 20,
+        "title": "Kontakt z klubem",
+        "content": "Proszę dzwonić pod numer 607 300 601 od poniedziałku do soboty (od 11:00 do 20:00)"
+      },
+      {
+        "id": 21,
+        "title": "Blokowanie karty",
+        "content": "Karta zostanie zablokowana, a klubowicz usunięty z klubu w przypadku gdy:<br><ol><li>Dokona kradzieży,</li><li>Będzie podejrzewany o dokonanie kradzieży,</li><li>Naruszy zasady społeczne tj. będzie pomawiał osoby, plotkował lub odzywał się w sposób wulgarny do innych klubowiczów,</li><li>Naruszy nietykalność innej osoby przebywającej w klubie,</li><li>Złamie rażąco regulamin klubu SFC.</li></ol>"
+      },
+      {
+        "id": 22,
+        "title": "Opłaty (stan na dzień 15.04.2018)",
+        "content": "<ol><li>Siłownia 30 dni/ 70 zł</li><li>Siłownia 90 dni/ 180 zł</li><li>Siłownia 30 dni + Cross 30dni/ 100 zł</li><li>Cross lub walka 30 dni/80 zł</li><li>Treningi dla dzieci 30 dni/ 40 zł</li><li>Wynajem Sali zabaw na imprezę (60 zł za 1h przy minimum 3 godzinach)</li><li>Wynajem samochodu - ustalane indywidualnie</li></ol>"
+      },
+      {
+        "id": 23,
+        "title": "Szkolenia/kursy/seminaria samoobrony",
+        "content": "W przypadku zorganizowania kursu informacja będzie podana na stronie klubu oraz na FB.<br>Wystawiamy zaświadczenie o uczestniczeniu."
+      },
+      {
+        "id": 24,
+        "title": "Aktualne promocje",
+        "content": "Informacje znajdują się na stronie na FB SFC Dęblin w zakładce usługi oraz na www.sfc.pl w zakładce aktualne promocje."
+      },
+      {
+        "id": 25,
+        "title": "Wpuszczenie osoby na swoją kartę",
+        "content": "Jest możliwe po uprzednim powiadomieniu. Proszę wysłać sms na numer 607 300 601. W wiadomości należy wpisać imię i nazwisko osoby wpuszczonej do klubu. Pierwsze wejście jest darmowe. Jeżeli jest to kolejne wejście należy dokonać opłaty (według cennika 12 zł za jednorazowe wejście). Pieniądze należy pozostawić w puszce znajdującej się na recepcji klubu. Po odebraniu pieniędzy z puszki zostanie wystawiony paragon, który będzie do odbioru w klubie w godzinach 12:00-20:00 od poniedziałku do piątku."
+      },
+      {
+        "id": 26,
+        "title": "Sklepik klubowy",
+        "content": "Wybierz towar, dokonaj opłaty do puszki. Pozostaw na kartce numer karty lub wyślij wiadomość z numerem karty i informacją o pobranym produkcie. Po odebraniu pieniędzy z puszki zostanie wystawiony paragon, który będzie do odbioru w klubie w godzinach 12:00-20:00 od poniedziałku do piątku."
+      },
+      {
+        "id": 27,
+        "title": "Ładowanie telefonów/tabletów/urządzeń",
+        "content": "Zakaz podłączania ładowarek i ładowania. Opłata za złamanie zakazu wynosi 10 zł."
+      },
+      {
+        "id": 28,
+        "title": "Manipulowanie przy sprzęcie",
+        "content": "Zakaz manipulowania, naprawiania, dokonywania zmian w sprzęcie znajdującym się w klubie SFC."
+      },
+      {
+        "id": 29,
+        "title": "Dziecko w klubie",
+        "content": "Ty trenujesz, a Twoja pociecha bawi się w klubie. Usługa bezpłatna."
+      },
+      {
+        "id": 29,
+        "title": "Brak odpowiedzi na Twoje pytanie?",
+        "content": "Napisz wiadomość na sfcdeblin@gmail.com <br> postaramy się jak najszybciej odpowiedzieć na Twoje pytanie oraz uzupełnić FAQ. <br> Przypomnienie o końcu umowy <br> Na Twoją prośbę możemy wysłać SMS przypominający o kończącej się umowie. Usługa bezpłatna."
+      },
+      {
+        "id": 29,
+        "title": "Zawieszenie karnetu",
+        "content": "zawieszenie karnetu w sytuacji choroby, wyjazdu służbowego powyżej 7 dni. <ul><li>wiesz, że nie będzie Cię przez minimum 7 dni, zadzwoń do nas, a przedłużymy Ci karnet o tydzień. Usługa płatna 10 zł. </li><li>poinformuj nas o tym fakcie przed, a nie po,</li><li>możesz zwiesić karnet raz na na max 7 dni,</li><li>karnet 3 miesięczny możesz zawiesić na max 2 tygodnie- usługa płatna 20 zł.</li><ul>"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Regulamin",
+    "description": "",
+    "listElements": [
+      {
+        "id": 0,
+        "title": "Zawieszenie karnetu",
+        "content": "zawieszenie karnetu w sytuacji choroby, wyjazdu służbowego powyżej 7 dni. <ul><li>wiesz, że nie będzie Cię przez minimum 7 dni, zadzwoń do nas, a przedłużymy Ci karnet o tydzień. Usługa płatna 10 zł. </li><li>poinformuj nas o tym fakcie przed, a nie po,</li><li>możesz zwiesić karnet raz na na max 7 dni,</li><li>karnet 3 miesięczny możesz zawiesić na max 2 tygodnie- usługa płatna 20 zł.</li><ul>"
+      }
+    ]
+  }
+]

@@ -26,6 +26,7 @@ import {FaqPageComponent} from './components/pages/faq-page/faq-page.component';
 import {SchedulePageComponent} from './components/pages/schedule-page/schedule-page.component';
 import {BannerClassesComponent} from './components/elements/banner-classes/banner-classes.component';
 import {NgxGalleryModule} from "ngx-gallery";
+import { ListElementComponent } from './components/elements/list-element/list-element.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {NgxGalleryModule} from "ngx-gallery";
     ContactPageComponent,
     FaqPageComponent,
     SchedulePageComponent,
-    BannerClassesComponent
+    BannerClassesComponent,
+    ListElementComponent
   ],
   imports: [
     BrowserModule,

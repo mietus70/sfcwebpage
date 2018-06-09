@@ -1,16 +1,16 @@
 import {TestBed, inject} from '@angular/core/testing';
-import {FaqService} from './faq.service';
+import {ListService} from './list.service';
 import {HttpClientTestingModule} from "@angular/common/http/testing";
 
-describe('FaqService', () => {
+describe('ListService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [FaqService],
+      providers: [ListService],
       imports: [HttpClientTestingModule]
     });
   });
 
-  it('should be created', inject([FaqService], (service: FaqService) => {
+  it('should be created', inject([ListService], (service: ListService) => {
     expect(service).toBeTruthy();
   }));
 });
