@@ -8,6 +8,8 @@ import {GalleryPageComponent} from "./components/pages/gallery-page/gallery-page
 import {ContactPageComponent} from "./components/pages/contact-page/contact-page.component";
 import {FaqPageComponent} from "./components/pages/faq-page/faq-page.component";
 import {SchedulePageComponent} from "./components/pages/schedule-page/schedule-page.component";
+import {StatutePageComponent} from "./components/pages/statute-page/statute-page.component";
+import {RodoPageComponent} from "./components/pages/rodo-page/rodo-page.component";
 
 export const appRoutes: Routes = [
   { path: '', component: MainPageComponent, data: {} },
@@ -16,6 +18,8 @@ export const appRoutes: Routes = [
   { path: 'galeria', component: GalleryPageComponent, data: {} },
   { path: 'kontakt', component: ContactPageComponent, data: {} },
   { path: 'faq', component: FaqPageComponent, data: {} },
+  { path: 'statute', component: StatutePageComponent, data: {} },
+  { path: 'rodo', component: RodoPageComponent, data: {} },
   { path: 'grafik', component: SchedulePageComponent, data: {} },
 
   { path: 'not-found', component: ErrorPageComponent, data: {} },

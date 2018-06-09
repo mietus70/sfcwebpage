@@ -27,6 +27,8 @@ import {SchedulePageComponent} from './components/pages/schedule-page/schedule-p
 import {BannerClassesComponent} from './components/elements/banner-classes/banner-classes.component';
 import {NgxGalleryModule} from "ngx-gallery";
 import { ListElementComponent } from './components/elements/list-element/list-element.component';
+import { StatutePageComponent } from './components/pages/statute-page/statute-page.component';
+import { RodoPageComponent } from './components/pages/rodo-page/rodo-page.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { ListElementComponent } from './components/elements/list-element/list-el
     FaqPageComponent,
     SchedulePageComponent,
     BannerClassesComponent,
-    ListElementComponent
+    ListElementComponent,
+    StatutePageComponent,
+    RodoPageComponent
   ],
   imports: [
     BrowserModule,
