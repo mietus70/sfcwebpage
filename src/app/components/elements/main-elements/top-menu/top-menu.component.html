@@ -3,7 +3,8 @@
     <div class="row header">
       <div class="col-md-2 logo align-c">
         <div class="inner-top-bottom-20">
-          <h1 class="no-margin"><a routerLink="/" style="color: white; text-decoration: none">SFC</a></h1>
+          <a routerLink="/" style="color: white; text-decoration: none"><img src="assets/img/logo.png" alt="SFC"></a>
+          <!--<h1 class="no-margin"><a routerLink="/" style="color: white; text-decoration: none">SFC</a></h1>-->
         </div><!-- /.inner-top-bottom-10 -->
       </div>
       <!-- /.col-md-2 logo -->
@@ -13,21 +14,6 @@
                  Navigation
                </span>
           <ul class="main-navigation">
-
-            <li class="bread" *ngFor="let url_item of myRouter.url.split('/'); let i=index">
-              <!--<a *ngIf="i === 0" routerLink="/">-->
-                <!--Home-->
-              <!--</a>-->
-
-              <a *ngIf="i > 0 && i < myRouter.url_length -1" routerLink="{{get_breadcrumb_elements(i+1)}}">
-                {{url_item}}
-              </a>
-
-              <a *ngIf="i === myRouter.url_length -1">
-                {{url_item}}
-              </a>
-
-            </li>
 
             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/">HOME</a></li>
             <li routerLinkActive="active"><a routerLink="/oferta">OFERTA</a></li>

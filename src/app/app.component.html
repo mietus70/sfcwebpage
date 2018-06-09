@@ -12,6 +12,22 @@
 <!--}(document, 'script', 'facebook-jssdk'));</script>-->
 
 <app-header></app-header>
+<div class="breadcrumb" *ngIf="myRouter.url!='/'">
+  <li class="bread" *ngFor="let url_item of myRouter.url.split('/'); let i=index">
+    <a *ngIf="i === 0" routerLink="/">
+      Home
+    </a>
+
+    <a *ngIf="i > 0 && i < myRouter.url_length -1" routerLink="{{get_breadcrumb_elements(i+1)}}">
+      {{url_item}}
+    </a>
+
+    <a *ngIf="i === myRouter.url_length -1">
+      {{url_item}}
+    </a>
+
+  </li>
+</div>
 <div class="container search-class" style="padding-top: 2em;">
   <router-outlet></router-outlet>
 </div>

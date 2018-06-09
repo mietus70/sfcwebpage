@@ -1,0 +1,11 @@
+.logo {
+  background: white;
+  /*border-right: 1px solid lightgrey;*/
+}
+.logo div img {
+  width: 78px;
+}
+
+.header {
+  /*border: 1px solid lightgrey;*/
+}

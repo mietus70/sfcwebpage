@@ -5,7 +5,6 @@
  */
 
 import {Component, OnInit} from '@angular/core';
-import {MyRouterService} from "../../../../services/my-router.service";
 
 @Component({
   selector: 'app-top-menu',
@@ -14,25 +13,8 @@ import {MyRouterService} from "../../../../services/my-router.service";
 })
 export class TopMenuComponent implements OnInit {
 
-  constructor(public myRouter: MyRouterService) {}
+  constructor() {}
 
   ngOnInit() {}
 
-  /**
-   * Funkcja generująca breadcrumb.
-   * @param   {number}  element_num
-   * @return  {string}
-   */
-  get_breadcrumb_elements(element_num: number) {
-    let link = '';
-    this.myRouter.url.split('/').forEach((element: string, index: number) => {
-      if (index < element_num) {
-        link += element;
-        if (index !== element_num - 1) {
-          link += '/';
-        }
-      }
-    });
-    return link;
-  }
 }
