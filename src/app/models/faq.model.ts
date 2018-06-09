@@ -6,45 +6,21 @@ export class FaqModel {
    * @type {number}
    * @private
    */
-  private _id: number;
-
-  /**
-   * Getter ID
-   * @return {number}
-   */
-  get id(): number {
-    return this._id;
-  }
+  readonly id: number;
 
   /**
    * Request title.
    * @type {string}
    * @private
    */
-  private _title: string;
-
-  /**
-   * Getter title
-   * @return {string}
-   */
-  get title(): string {
-    return this._title;
-  }
+  readonly title: string;
 
   /**
    * Request content.
    * @type {string}
    * @private
    */
-  private _content: string;
-
-  /**
-   * Request content.
-   * @return {string}
-   */
-  get content(): string {
-    return this._content;
-  }
+  readonly content: string;
 
   /**
    * Constructor assigns parameters to properties.
@@ -57,8 +33,8 @@ export class FaqModel {
     title: string,
     content: string,
   ){
-    this._id = id;
-    this._title = title;
-    this._content = content;
+    this.id = id;
+    this.title = title;
+    this.content = content;
   }
 }
