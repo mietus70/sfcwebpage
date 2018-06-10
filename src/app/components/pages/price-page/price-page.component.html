@@ -1,4 +1,27 @@
 <app-page>
-  <app-list-element [list_id]="3" class="col-md-12"></app-list-element>
-  <p class="pull-down-30">*Dla dzieci, których rodzice posiadają aktywny karnet do klubu zajęcia są bezpłatne (szczegóły w zakładce aktualne promocje)</p>
+  <div class="row">
+    <div class="col-md-8">
+      <app-list-element [list_id]="3" class="col-md-12"></app-list-element>
+      <p class="pull-down-30" class="col-md-12">*Dla dzieci, których rodzice posiadają aktywny karnet do klubu zajęcia są bezpłatne (szczegóły w zakładce aktualne promocje)</p>
+    </div>
+    <div class="col-md-4 payment pull-down-140">
+      <img src="assets/img/platnosci.jpg" alt="payment">
+      <h3>Płatności dokonasz:</h3>
+      <ul>
+        <li>Kartą</li>
+        <li>Gotówką</li>
+        <li>Przelewem na konto</li>
+      </ul>
+      <h3>Dane do przelewu</h3>
+      <div>SFC Optima Leszek Grzyb</div>
+      <div>08-530 Dęblin ul. Kowalskiego 20</div>
+      <h3>Nr konta do przelewu</h3>
+      <div>PL 50 1050 1012 1000 0090 7666 3542</div>
+      <div>ING Bank Śląski</div>
+      <h3>Tutuł przelewu</h3>
+      np. opłata za wstęp na siłownię karnet 30 dniowy w terminie od 01.09.2018 do 30.09.2018
+      <h3>Kwota przelewu</h3>
+      Według cennika podanego na stronie.
+    </div>
+  </div>
 </app-page>

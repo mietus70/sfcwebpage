@@ -198,22 +198,22 @@
       {
         "id": 0,
         "title": "Siłownia",
-        "content": "24 h 69 zł/ Promocja wakacyjna- lipiec i sierpień za jedyne 80 zł"
+        "content": "24 h 69 zł/ Promocja wakacyjna - lipiec i sierpień za jedyne 80 zł"
       },
       {
         "id": 1,
-        "title": "Senior(65+)",
+        "title": "Treningi wytrzymałościowe senior(65+)",
         "content": "od 29 zł  "
       },
       {
         "id": 2,
-        "title": "Dzieci",
+        "title": "Treningi dla dzieci",
         "content": "40 zł lub bezpłatnie*"
       },
       {
         "id": 3,
-        "title": "Walka uliczna/MMA/BOKS/Crossfit",
-        "content": "2x tydzień 80 zł/ 3x tydzień 110 zł/ 4x tydzień 130 zł"
+        "title": "Treningi / Walka uliczna/MMA/BOKS/Crossfit",
+        "content": "2x tydzień 80 zł"
       },
       {
         "id": 4,
@@ -222,12 +222,12 @@
       },
       {
         "id": 5,
-        "title": "Wynajem Sali na godziny dla klubów",
+        "title": "Wynajem sali na godziny dla klubów",
         "content": "50 zł h"
       },
       {
         "id": 6,
-        "title": "Wynajem na urodziny",
+        "title": "Wynajem sali na urodziny",
         "content": "3 godziny 199 zł/ Promocja 149 zł"
       },
       {
@@ -238,12 +238,12 @@
       {
         "id": 8,
         "title": "Pomiar analizy składu ciała",
-        "content": "50 zł/ 30 zł przy planie treningowym i poradach"
+        "content": "60 zł/40 zł przy planie treningowym i poradach"
       },
       {
         "id": 9,
         "title": "Trening personalny",
-        "content": "40 zł/h crossfit/siłownia, 50 zł h/walka, 30 zł h/ w parach"
+        "content": "40 zł/h crossfit/siłownia, 50 zł/h walka, w parach do uzgodnienia"
       }
     ]
   },
