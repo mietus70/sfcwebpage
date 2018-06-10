@@ -169,12 +169,77 @@
   {
     "id": 1,
     "title": "Regulamin",
-    "description": "",
+    "description": "<h4><strong>Aktualny regulamin klubu. Każdy klubowicz otrzyma kopię na adres mailowy. Proszę w klubie podpisać akceptację regulaminu.</strong><h4><h2>WAŻNE!</h2>Od poniedziałku do piątku od 12:00 do 20:00 wszelkie pytania proszę kierować telefonicznie do p. Agnieszki na numer 608 867 279.",
     "listElements": [
       {
         "id": 0,
-        "title": "Zawieszenie karnetu",
-        "content": "zawieszenie karnetu w sytuacji choroby, wyjazdu służbowego powyżej 7 dni. <ul><li>wiesz, że nie będzie Cię przez minimum 7 dni, zadzwoń do nas, a przedłużymy Ci karnet o tydzień. Usługa płatna 10 zł. </li><li>poinformuj nas o tym fakcie przed, a nie po,</li><li>możesz zwiesić karnet raz na na max 7 dni,</li><li>karnet 3 miesięczny możesz zawiesić na max 2 tygodnie- usługa płatna 20 zł.</li><ul>"
+        "title": "Regulamin Klubu SFC OPTIMA",
+        "content": "Regulamin dotyczy:<br>Wstępu do klubu oraz korzystania z sali walki, siłowni oraz sali gier w SFC OPTIMA przy ul. Kowalskiego 20 w Dęblinie. "
+      },
+      {
+        "id": 1,
+        "title": "Trenujący",
+        "content": "Za trenującego uważa się każdą osobę, która korzysta z siłowni oraz Sali do walki. Trenujący może korzystać z siłowni po okazaniu karnetu wstępu lub po wykupieniu wejścia jednorazowego. "
+      },
+      {
+        "id": 2,
+        "title": "Karnet wstępu",
+        "content": "Karnety 24 H dla osób pełnoletnich i pozytywnie zweryfikowanych oraz karnety uprawniające do korzystania z siłowni klubu w godzinach 8:00 – 20:00 dla osób nieletnich oraz osób, które przechodzą weryfikację.<br>*Karta dostępu do klubu 24H<br>Karta upoważniająca do wejścia do klubu (wyłącznie siłowni) SFC Optima wydawana jest osobom, które spełniają poniższe warunki: Pełnoletni powyżej 21 roku życia, niekarany (oświadczenie), korzystającym z klubu nieprzerwanie minimum 3 miesiące, posiadają pozytywną opinię trenera, właściciela klubu.<br>*Klub przewiduje odstępstwo od w/w zasad otrzymania wejścia do klubu 24h<br>Korzystając z karty 24h trenujący przyjmuje do wiadomości, że karta uprawnia do korzystania z Sali 1,2 i 3. Otrzymanie karty 24 h możliwe jest dla osób nie spełniających warunków zamieszczonych w punkcie na odrębnych warunkach. "
+      },
+      {
+        "id": 3,
+        "title": "Wejście jednorazowe ",
+        "content": "Upoważnia do wstępu do klubu w godzinie 12:00 – 18:00. Wejściówka – 15 zł "
+      },
+      {
+        "id": 4,
+        "title": "Korzystanie z klubu w niedzielę, święta, dni wolne od pracy ",
+        "content": "Z wejścia do klubu może korzystać każdy klubowicz, który ma opłaconą składkę według cennika oraz posiada aktywną kartę dostępu."
+      },
+      {
+        "id": 5,
+        "title": "Wstęp do klubu bez karty 24h ",
+        "content": "Klub otwarty jest dla osób, które nie maja kart (wejścia jednorazowe) w godzinach 12:00-18:00 od poniedziałku do piątku (nie dotyczy dni świątecznych lub wolnych od pracy)."
+      },
+      {
+        "id": 6,
+        "title": "Wstęp do klubu dla osób niepełnoletnich ",
+        "content": "Osoby poniżej 18 roku życia są zobowiązane o przyjście na pierwszy trening z opiekunem prawnym/rodzicem. "
+      },
+      {
+        "id": 7,
+        "title": "Kara za zagubienie karty, zagubienie karty",
+        "content": "Wyrobienie nowej karty wynosi 30 zł.<br>Klubowicz, który zagubi kartę proszony jest niezwłocznie poinformować pracowników klubu o tym fakcie."
+      },
+      {
+        "id": 8,
+        "title": "Blokada karty",
+        "content": "W jakich przypadkach klubowicz traci natychmiastowo bez zwrotu pieniędzy za karnet możliwość wejścia do klubu?<ul><li>pożyczenia swojej karty innej osobie – dopuszcza się oszustwa na niekorzyść klubu.</li><li>agresywnego zachowania,</li><li>braku wniesienia opłaty za karnet w i nie zgłoszenie tego faktu obsłudze oraz celowe wprowadzanie w błąd obsługę co do ważności karnetu.</li><li>wpuszczenia bez poinformowania smsem do klubu po godzinie 18:00 osoby, która nie posiada ważnego karnetu,</li><li>wpuszczenia innych osób nie będących członkami klubu w święta, dni wolne od pracy lub niedziele bez powiadomienia smsem.</li><li>niszczenia sprzętu, rzucania sprzętem, niestosowania się do regulaminu klubu,</li><li>umyślnego otworzenia drzwi ewakuacyjnych bez zgody właściciela klubu,</li><li>wniesienia do klubu alkoholu oraz spożywania na Sali 1, 2, lub 3.</li><li>trenowania pod wpływem alkoholu,</li><li>aktu kradzieży mienia klubu lub kradzieży mienia innych osób przebywających w klubie,</li><li>podejrzenia o dokonanie kradzieży.</li></ul>Art. 286. Oszustwo Dz.U.2016.0.1137 t.j. - Ustawa z dnia 6 czerwca 1997 r. - Kodeks karny§ 1. Kto, w celu osiągnięcia korzyści majątkowej, doprowadza inną osobę do niekorzystnego rozporządzenia własnym lub cudzym mieniem za pomocą wprowadzenia jej w błąd albo wyzyskania błędu lub niezdolności do należytego pojmowania przedsiębranego działania, podlega karze pozbawienia wolności od 6 miesięcy do lat 8. "
+      },
+      {
+        "id": 9,
+        "title": "Treningi grupowe",
+        "content": "<ul><li>Na treningi grupowe wstęp mają osoby, które ukończyły 15 lat (osoby nieletnie na pierwsze zajęcia zobowiązane są przyjść z rodzicem/opiekunem),<li>Zajęcia odbywają się w dni oraz godziny ustalone przez trenera i podawane na grupie SFC na FB oraz stronie internetowej.</li><li>Trening rozumie się przez 60 minut do maksymalnie 75 minut ciągłego treningu włączając w to rozgrzewkę.</li><li>Podstawą do uczestniczenia w treningu jest posiadanie opłaconego karnetu.</li><li>Osoby uczestniczące w zajęciach oświadczają, że nie mają przeciwwskazań zdrowotnych do wykonywania ćwiczeń fizycznych i wykonują je na własną odpowiedzialność. Osoby z problemami zdrowotnymi, przed przystąpieniem do ćwiczeń powinny skonsultować się z lekarzem oraz powiadomić o tym trenera.</li><li>Każdy trenujący, który dołącza do treningu z trenerem oświadcza, że podejmie się ubezpieczenia na własną odpowiedzialność.</li><li>Trenujący przyjmują do wiadomości, że klub i trener nie ponoszą odpowiedzialności za brak ubezpieczenia i ewentualne uszkodzenia wynikłe podczas treningu powstałe w wyniku niedostosowania swoich umiejętności do wykonywania ćwiczeń oraz wynikające z wykonywania ćwiczeń zabronionych przez trenera lub w sposób odbiegający od wskazanych przez trenera.</li><li>Trener ma prawo odmówić wstępu na trening osobom bez odpowiedniego stroju sportowego do ćwiczeń, a w szczególności gdy trenujący nie zastosuje się do regulaminu Klubu SFC OPTIMA pomimo uiszczonej opłaty.</li></ul> "
+      },
+      {
+        "id": 10,
+        "title": "Siłownia, Korzystanie z klubu SFC OPTIMA ",
+        "content": "<ul><li>Trener ma prawo wyprosić z Klubu SFC osoby łamiące postanowienia niniejszego regulaminu oraz wobec których istnieje uzasadnione podejrzenie, że są pod wpływem alkoholu lub środków odurzających.<li>Obowiązuje bezwzględny zakaz wnoszenia na siłownie szklanych butelek i naczyń lub własnego sprzętu (nie dotyczy rękawic do treningu oraz ochraniaczy, gum treningowych),<li>Klub i trener nie ponosi odpowiedzialności za rzeczy pozostawione w szatni oraz na terenie Klubu,</li><li>Trenujący bezwarunkowo zobowiązani są wykonywać ćwiczenia bezpiecznie i zgodnie z zaleceniami trenera. Zakaz wykonywania ćwiczeń innych niż wskazane przez trenera,</li><li>Osoby korzystające z siłowni klubu , które w czasie ćwiczeń lub pobytu na siłowni czy treningu walki źle się poczują zobowiązane są natychmiast przerwać ćwiczenia i powiadomić o tym fakcie trenera,</li><li>Zakaz wnoszenia toreb, plecaków itp. na salę nr 2 (siłownię),</li><li>Zakaz spożywania napojów mocno gazowanych typu cola itp.</li><li>Zakaz spożywania posiłków, jogurtów na salach 1,2,3</li><li>zakaz siadania na stole bilardowym, elementach konstrukcyjnych (zabudowie) kolumn po dwóch stronach Sali oraz na tyłach siłowni (podest na całej długości Sali- koloru biało czerwonego oraz czerwonego).</li><li>Zakaz rzucania butelkami z wodą. Butelki z wodą należy stawiać pionowo.</ul></li>Zasady bezpieczeństwa podczas treningu oraz postanowienia ogólne<ul><li>Przed rozpoczęciem ćwiczeń konieczne jest wykonanie rozgrzewki w celu uniknięcia kontuzji,</li><li>Podczas treningu uzupełniaj płyny, by uniknąć odwodnienia organizmu,</li><li>Korzystanie ze sprzętu powinno odbywać się w sposób bezpieczny, tj. z zapewnieniem dbałości o bezpieczeństwo ludzi, poszanowania sprzętu i sali. Za rzucanie sprzętem, nie odkładanie na stojaki lub pozostawienie na podłodze, a także pozostawianie butelek doliczana jest kwota do karnetu 10 zł za dodatkową obsługę sprzątania,</li><li>Przed ćwiczeniem należy sprawdzić stan sprzętu - wszelkie usterki, uszkodzenia sprzętu i przyrządów należy zgłaszać obsłudze klubu. - Zabrania się wykonywania ćwiczeń na przyrządach uszkodzonych lub niesprawnych (owiniętych biało czerwona taśmą lub żółto czarną),</li><li>Wszystkie urządzenia siłowni oraz sprzęt do ćwiczeń mogą być wykorzystywane tylko zgodnie z ich przeznaczeniem,</li><li>Nie jest wskazane zajmowanie stanowisk do ćwiczeń podczas odpoczynku,</li><li>Po zakończeniu treningu należy uporządkować sprzęt, zabrać lub wyrzucić do ustawionych w klubie kontenerów puste butelki po napojach,</li><li>Do prowadzenia ćwiczeń/szkoleń na sali uprawnieni są trenerzy i instruktorzy mający stosowne uprawnienia,</li><li>ćwiczące będą ponosić odpowiedzialność finansową za wszelkie wyrządzone przez siebie zniszczenia/szkody w klubie SFC Optima,</li><li>Za szkody wyrządzone przez osoby nieletnie odpowiada opiekun/rodzic,</li><li>Klub i trener nie ponosi odpowiedzialności za kontuzje i urazy, a w szczególności za urazy powstałe w wyniku niewłaściwego korzystania z urządzeń na siłowni oraz nieprzestrzegania regulaminu i zasad bezpieczeństwa,</li><li>Osoby naruszające niniejszy regulamin lub zakłócające porządek będą usuwane z klubu,</li><li>Składki za treningi są podane na stornie internetowej www na stronie SFC OPTIMA na Facebooku, a także w siedzibie klubu,</li><li>Karnet do klubu należy okazywać każdorazowo przed wejściem na salę,</li><li>Brak karnetu = opłata za wejście jednorazowe.</li><li>W przypadku gdy klub jest zamknięty proszę dzwonić na numer 608 867 279 (tylko i wyłącznie od poniedziałku do piątku od 12:00 do 20:00),</li><li>Klub otwarty jest 24 h na dobę (szczegółowe informacje o możliwości korzystania z klubu 24h podane są w zakładce Karta dostępu do klubu 24H)</li><li>Zakaz ładowania telefonów, smartfonów i innych urządzeń w klubie bez zgody obsługi klubu. Osoba łamiąca zakaz będzie obciążana finansowo w wysokości 10 zł za złamanie punktu regulaminu,</li><li>Do włączenia muzyki w klubie uprawniona jest obsługa klubu lub osoba wskazana przez obsługę. Nie wolno manipulować, dotykać, przestawiać sprzętu elektronicznego. Przestawiać kamer itp. Sprzęt grający nie może pracować powyżej 25 poziomu.</ul></li> "
+      },
+      {
+        "id": 11,
+        "title": "Obsługa klubu, recepcja, trener",
+        "content": "<ul><li>KATEGORYCZNY ZAKAZ wchodzenia kogokolwiek (kolegów, kochanek, koleżanek) za recepcję klubu.</li><li>Zakaz przeszkadzania w pracy obsłudze klubu za wyjątkiem sytuacji: a. okazania karnetu, b. udzielenia informacji o zniszczonym sprzęcie, c. udzielenia informacji o nieprawidłowościach w klubie, d. dokonywaniu opłat lub dokonywaniu kupna artykułów w sklepiku czy skorzystania z depozytu, e. pytań dotyczących treningów, prawidłowego wykonania ćwiczenia,</li><li>Wszelkie rozmowy z trenerem lub obsługą mogą tylko i wyłącznie dotyczyć strony sportowej.</ul></li>"
+      },
+      {
+        "id": 12,
+        "title": "Karnety",
+        "content": "Proszę przestrzegać zasad wykupowania karnetu i nie nękać obsługi klubu prośbami o wpuszczenie „za darmo” lub z rabatem.<br>Rabat to stolica Maroka i z uwagi na często wymieniane słowo w klubie postanowiliśmy odwiedzić ten zakątek i sprawdzić czy rzeczywiście jest tak wspaniały żeby tyle o nim wspominać w klubie."
+      },
+      {
+        "id": 13,
+        "title": "Depozyt",
+        "content": "<ul><li>W klubie na Sali nr 1 (Ring) znajduje się depozyt gdzie można deponować w skrytkach wartościowe przedmioty, dokumenty, telefony itp. - Klubowicze proszeni są o zabieranie z szatni wartościowe przedmioty, telefony itp.</li><li>*Klub za rzeczy pozostawione w szatni nie odpowiada.</li><li>Zakaz pozostawiania kluczyków z depozytu na recepcji klubu.</ul></li>"
       }
     ]
   },
@@ -185,8 +250,53 @@
     "listElements": [
       {
         "id": 0,
-        "title": "Zawieszenie karnetu",
-        "content": "zawieszenie karnetu w sytuacji choroby, wyjazdu służbowego powyżej 7 dni. <ul><li>wiesz, że nie będzie Cię przez minimum 7 dni, zadzwoń do nas, a przedłużymy Ci karnet o tydzień. Usługa płatna 10 zł. </li><li>poinformuj nas o tym fakcie przed, a nie po,</li><li>możesz zwiesić karnet raz na na max 7 dni,</li><li>karnet 3 miesięczny możesz zawiesić na max 2 tygodnie- usługa płatna 20 zł.</li><ul>"
+        "title": "INFORMACJE OGÓLNE",
+        "content": "Administratorem danych jest Leszek Grzyb, SFC OPTIMA ul. Kowalskiego 20, 08-530 Dęblin."
+      },
+      {
+        "id": 1,
+        "title": "Klub SFC Optima realizuje funkcje pozyskiwanie informacji o użytkownikach klubu w następujący sposób: ",
+        "content": "<ul><li>Poprzez dobrowolne wprowadzone w formularzach informacje,</li><li>Poprzez dobrowolne podanie informacji niezbędnych do wyrobienia karty wstępu do klubu.</li></ul>"
+      },
+      {
+        "id": 2,
+        "title": "",
+        "content": "Szanuję prawo do prywatności i dbam o bezpieczeństwo danych, dlatego minimalizujemy pobieranie dany do dobrowolnego podania imienia i nazwiska oraz maila czy numeru telefonu. "
+      },
+      {
+        "id": 3,
+        "title": "",
+        "content": "Pracownicy klubu nie są upoważnieni do pobierania innych danych niż wskazanych powyżej."
+      },
+      {
+        "id": 4,
+        "title": "Newsletter",
+        "content": "Jeśli wyrazisz zgodę na przetwarzanie danych w innych celach np. marketingowych i przesyłania informacji handlowych – będą one wykorzystywane jedynie do wysyłania e-maili informacyjnych ze strony SFC OPTIMA. Dane te przechowywane są w zabezpieczonym programie stacjonarnym. Osoby trzecie nie mają do nich dostępu. "
+      },
+      {
+        "id": 5,
+        "title": "",
+        "content": "Podanie danych osobowych do celów marketingowych i przesyłania informacji handlowych jest dobrowolne. W każdej chwili masz możliwość dostępu do swoich danych osobowych, ich poprawiania i żądania ich usunięcia. W tym celu skontaktuj się ze mną."
+      },
+      {
+        "id": 6,
+        "title": "Komentarze",
+        "content": "Jeśli dodasz na mojej stronie na Facebooku komentarz, podane dane nie będą wykorzystywane w celach marketingowych. "
+      },
+      {
+        "id": 7,
+        "title": "UDOSTĘPNIANIE DANYCH",
+        "content": "<ul><li>Dane podlegają udostępnieniu podmiotom zewnętrznym wyłącznie w granicach prawnie dozwolonych.</li><li>Administrator informuje niniejszym Użytkownika, że powierza przetwarzanie danych osobowych następującym podmiotom:</li><li>Jako administrator danych mogę mieć obowiązek udzielania informacji zebranych przez serwis upoważnionym organom na podstawie zgodnych z prawem żądań w zakresie wynikającym z żądania.</li>"
+      },
+      {
+        "id": 8,
+        "title": "PRAWO DO USUNIĘCIA DANYCH",
+        "content": "Pamiętaj, że w stosunku do wszystkich przekazanych mi danych osobowych masz prawo żądania dostępu do swoich danych osobowych, ich sprostowania, usunięcia lub ograniczenia przetwarzania. Możesz to zrobić, kontaktując się ze mną pod adresem e-mail: <a href='mailto:leszeksfc@gmail.com'>leszeksfc@gmail.com</a>"
+      },
+      {
+        "id": 9,
+        "title": "",
+        "content": "W związku z powyższym proszę ponownie w klubie podpisać zgody na przetwarzanie danych. Dziękuję."
       }
     ]
   },
