@@ -308,7 +308,7 @@
       {
         "id": 0,
         "title": "Siłownia",
-        "content": "24 h 69 zł/ Promocja wakacyjna - lipiec i sierpień za jedyne 80 zł"
+        "content": "Wstęp na siłownię przez 24 godziny/7 dni w tygodniu(również w niedzielę i świeta) 69 zł. <br> Promocja wakacyjna - lipiec i sierpień za jedyne 80 zł"
       },
       {
         "id": 1,
@@ -323,7 +323,7 @@
       {
         "id": 3,
         "title": "Treningi / Walka uliczna/MMA/BOKS/Crossfit",
-        "content": "2x tydzień 80 zł"
+        "content": "2x tydzień 80 zł<br>Dla klubowiczów wstęp na trening dodatkowy po za harmonogramem – bezpłatnie, dobrowolna opłata na cel charytatywny."
       },
       {
         "id": 4,
@@ -332,18 +332,18 @@
       },
       {
         "id": 5,
-        "title": "Wynajem sali na godziny dla klubów",
-        "content": "50 zł h"
+        "title": "Wynajem sali dla klubów",
+        "content": "50 zł/h <br> 2 i więcej godzin 35 zł za godzinę"
       },
       {
         "id": 6,
         "title": "Wynajem sali na urodziny",
-        "content": "3 godziny 199 zł/ Promocja 149 zł"
+        "content": "3 godziny Promocja 149 zł"
       },
       {
         "id": 7,
         "title": "Porady dietetyczne + ułożenie planu treningowego",
-        "content": "czas 120 minut – 80 zł"
+        "content": "czas do 120 minut – 80 zł"
       },
       {
         "id": 8,
@@ -353,7 +353,7 @@
       {
         "id": 9,
         "title": "Trening personalny",
-        "content": "40 zł/h crossfit/siłownia, 50 zł/h walka, w parach do uzgodnienia"
+        "content": "50 zł/h za walkę/crossfit/siłownię, w parach cena do uzgodnienia."
       }
     ]
   },
@@ -395,12 +395,12 @@
       {
         "id": 6,
         "title": "Oferta dla klubów sportowych (wynajem Sali długoterminowy, wynajem Sali na godziny)",
-        "content": "Poszukujesz dobrze wyposażonego klubu? Dobrze trafiłeś. Posiadamy w swojej ofercie możliwość wynajęcia sali walki. "
+        "content": "Poszukujesz dobrze wyposażonego klubu? Dobrze trafiłeś. Posiadamy w swojej ofercie możliwość wynajęcia sali walki. <br> Kompletne wyposażenie sali pozwala na treningi dla każdego sportu walki czy zajęć fitness oraz crossfit. Dodatkowo istnieje możliwość skorzystania ze świetnie wyposażonej siłowni. "
       },
       {
         "id": 7,
-        "title": "Wyposażenie",
-        "content": "Kompletne wyposażenie sali pozwala na treningi dla każdego sportu walki czy zajęć fitness oraz crossfit. Dodatkowo istnieje możliwość skorzystania ze świetnie wyposażonej siłowni."
+        "title": "Oferta dla klubów sportowych/organizacji sportowych/stowarzyszeń",
+        "content": "Masz stowarzyszenie, klub, organizację? Zrzeszasz powyżej 15 członków?<br>Mamy dla Ciebie świetną propozycje.<br>Wstęp na siłownię za jedyne 39 zł od członka Twojej organizacji. Pierwszy karnet na 3 miesiące za jedyne 99 zł.<br>Wstęp na zajęcia cross/walka/samoobrona za jedyne 59 zł od członka od członka Twojej organizacji."
       }
     ]
   }

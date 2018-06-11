@@ -1,6 +1,20 @@
+div.header-holder{
+  position: fixed;
+  /*background-color: white;*/
+  /*border-bottom: 3px solid #782121;*/
+  /*height: 145px;*/
+  color: white;
+}
+
+div.header-holder .header{
+  /*position: relative;*/
+  /*top: 50px;*/
+  border-bottom: 3px solid #782121;
+  background-color: #292929;
+}
+
 .logo {
-  background: white;
-  /*border-right: 1px solid lightgrey;*/
+  background-color: #292929;
 }
 
 .logo div img {
@@ -20,6 +34,14 @@
 }
 
 @media only screen and (max-width: 770px) {
+  div.header-holder {
+    position: static;
+  }
+
+  .header-holder .open-navigation.opened {
+    background: #444444;
+  }
+
   .logo div img {
     margin: auto;
     width: 100px;
