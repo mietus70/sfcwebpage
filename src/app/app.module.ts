@@ -26,9 +26,10 @@ import {FaqPageComponent} from './components/pages/faq-page/faq-page.component';
 import {SchedulePageComponent} from './components/pages/schedule-page/schedule-page.component';
 import {BannerClassesComponent} from './components/elements/banner-classes/banner-classes.component';
 import {NgxGalleryModule} from "ngx-gallery";
-import { ListElementComponent } from './components/elements/list-element/list-element.component';
-import { StatutePageComponent } from './components/pages/statute-page/statute-page.component';
-import { RodoPageComponent } from './components/pages/rodo-page/rodo-page.component';
+import {ListElementComponent} from './components/elements/list-element/list-element.component';
+import {StatutePageComponent} from './components/pages/statute-page/statute-page.component';
+import {RodoPageComponent} from './components/pages/rodo-page/rodo-page.component';
+import {AgmCoreModule} from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,10 @@ import { RodoPageComponent } from './components/pages/rodo-page/rodo-page.compon
     HttpClientModule,
     ModalModule.forRoot(),
     TabsModule.forRoot(),
-    NgxGalleryModule
+    NgxGalleryModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCd6q6z2uVc3OMug-yscIkGmWZA0K5CCoA'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],

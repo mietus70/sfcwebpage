@@ -88,37 +88,37 @@ $(document).ready(function() {
 
     /* Google MAPS init */
     var map;
-    $(".js-map").each(function() {
-
-        map = new GMaps({
-          div: $(this).attr("data-map"),
-          lat: $(this).attr("data-lat"),
-          lng: $(this).attr("data-lng"),
-          zoom: parseInt($(this).attr("data-start-zoom"))
-        });
-
-        var choosenStyle = $(this).attr("data-style");
-
-        if ( choosenStyle == "black-white" ) {
-            var styles =  [ { "featureType": "landscape.natural", "stylers": [ { "color": "#808080" }, { "lightness": 68 } ] },{ "featureType": "road.highway", "stylers": [ { "color": "#808080" } ] },{ "featureType": "poi.park", "stylers": [ { "color": "#808080" }, { "lightness": 58 } ] },{ "featureType": "water", "stylers": [ { "color": "#808080" }, { "lightness": 45 } ] },{ "featureType": "landscape.man_made", "stylers": [ { "color": "#808080" }, { "lightness": 25 } ] } ];
-            var styledMap = new google.maps.StyledMapType(styles,
-            {name: "Styled Map"});
-            map.setOptions({styles: styles});
-        } else {
-            return;
-        }
-
-        $(this).find(".map-marker").each(function() {
-           var marker = map.addMarker({
-              lat: $(this).attr("data-lat"),
-              lng: $(this).attr("data-lng"),
-              title: $(this).attr("data-title"),
-              icon: 'img/marker.png'
-            });
-           console.log( marker );
-        });
-
-    });
+    // $(".js-map").each(function() {
+    //
+    //     map = new GMaps({
+    //       div: $(this).attr("data-map"),
+    //       lat: $(this).attr("data-lat"),
+    //       lng: $(this).attr("data-lng"),
+    //       zoom: parseInt($(this).attr("data-start-zoom"))
+    //     });
+    //
+    //     var choosenStyle = $(this).attr("data-style");
+    //
+    //     if ( choosenStyle == "black-white" ) {
+    //         var styles =  [ { "featureType": "landscape.natural", "stylers": [ { "color": "#808080" }, { "lightness": 68 } ] },{ "featureType": "road.highway", "stylers": [ { "color": "#808080" } ] },{ "featureType": "poi.park", "stylers": [ { "color": "#808080" }, { "lightness": 58 } ] },{ "featureType": "water", "stylers": [ { "color": "#808080" }, { "lightness": 45 } ] },{ "featureType": "landscape.man_made", "stylers": [ { "color": "#808080" }, { "lightness": 25 } ] } ];
+    //         var styledMap = new google.maps.StyledMapType(styles,
+    //         {name: "Styled Map"});
+    //         map.setOptions({styles: styles});
+    //     } else {
+    //         return;
+    //     }
+    //
+    //     $(this).find(".map-marker").each(function() {
+    //        var marker = map.addMarker({
+    //           lat: $(this).attr("data-lat"),
+    //           lng: $(this).attr("data-lng"),
+    //           title: $(this).attr("data-title"),
+    //           icon: 'img/marker.png'
+    //         });
+    //        console.log( marker );
+    //     });
+    //
+    // });
 
     /* Paralax */
     $.stellar({

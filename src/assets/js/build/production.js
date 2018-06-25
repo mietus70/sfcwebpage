@@ -3442,9 +3442,9 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
  * Released under the MIT License.
  */
 
-if (!(typeof window.google === 'object' && window.google.maps)) {
-  throw 'Google Maps API is required. Please register the following JavaScript library http://maps.google.com/maps/api/js?sensor=true.'
-}
+// if (!(typeof window.google === 'object' && window.google.maps)) {
+//   throw 'Google Maps API is required. Please register the following JavaScript library http://maps.google.com/maps/api/js?sensor=true.'
+// }
 
 var extend_object = function(obj, new_obj) {
   var name;
@@ -5379,75 +5379,75 @@ GMaps.geocode = function(options) {
 // https://github.com/tparkin/Google-Maps-Point-in-Polygon
 // Poygon getBounds extension - google-maps-extensions
 // http://code.google.com/p/google-maps-extensions/source/browse/google.maps.Polygon.getBounds.js
-if (!google.maps.Polygon.prototype.getBounds) {
-  google.maps.Polygon.prototype.getBounds = function(latLng) {
-    var bounds = new google.maps.LatLngBounds();
-    var paths = this.getPaths();
-    var path;
-
-    for (var p = 0; p < paths.getLength(); p++) {
-      path = paths.getAt(p);
-      for (var i = 0; i < path.getLength(); i++) {
-        bounds.extend(path.getAt(i));
-      }
-    }
-
-    return bounds;
-  };
-}
-
-if (!google.maps.Polygon.prototype.containsLatLng) {
-  // Polygon containsLatLng - method to determine if a latLng is within a polygon
-  google.maps.Polygon.prototype.containsLatLng = function(latLng) {
-    // Exclude points outside of bounds as there is no way they are in the poly
-    var bounds = this.getBounds();
-
-    if (bounds !== null && !bounds.contains(latLng)) {
-      return false;
-    }
-
-    // Raycast point in polygon method
-    var inPoly = false;
-
-    var numPaths = this.getPaths().getLength();
-    for (var p = 0; p < numPaths; p++) {
-      var path = this.getPaths().getAt(p);
-      var numPoints = path.getLength();
-      var j = numPoints - 1;
-
-      for (var i = 0; i < numPoints; i++) {
-        var vertex1 = path.getAt(i);
-        var vertex2 = path.getAt(j);
-
-        if (vertex1.lng() < latLng.lng() && vertex2.lng() >= latLng.lng() || vertex2.lng() < latLng.lng() && vertex1.lng() >= latLng.lng()) {
-          if (vertex1.lat() + (latLng.lng() - vertex1.lng()) / (vertex2.lng() - vertex1.lng()) * (vertex2.lat() - vertex1.lat()) < latLng.lat()) {
-            inPoly = !inPoly;
-          }
-        }
-
-        j = i;
-      }
-    }
-
-    return inPoly;
-  };
-}
-
-google.maps.LatLngBounds.prototype.containsLatLng = function(latLng) {
-  return this.contains(latLng);
-};
-
-google.maps.Marker.prototype.setFences = function(fences) {
-  this.fences = fences;
-};
-
-google.maps.Marker.prototype.addFence = function(fence) {
-  this.fences.push(fence);
-};
-
-google.maps.Marker.prototype.getId = function() {
-  return this['__gm_id'];
-};
+// if (!google.maps.Polygon.prototype.getBounds) {
+//   google.maps.Polygon.prototype.getBounds = function(latLng) {
+//     var bounds = new google.maps.LatLngBounds();
+//     var paths = this.getPaths();
+//     var path;
+//
+//     for (var p = 0; p < paths.getLength(); p++) {
+//       path = paths.getAt(p);
+//       for (var i = 0; i < path.getLength(); i++) {
+//         bounds.extend(path.getAt(i));
+//       }
+//     }
+//
+//     return bounds;
+//   };
+// }
+//
+// if (!google.maps.Polygon.prototype.containsLatLng) {
+//   // Polygon containsLatLng - method to determine if a latLng is within a polygon
+//   google.maps.Polygon.prototype.containsLatLng = function(latLng) {
+//     // Exclude points outside of bounds as there is no way they are in the poly
+//     var bounds = this.getBounds();
+//
+//     if (bounds !== null && !bounds.contains(latLng)) {
+//       return false;
+//     }
+//
+//     // Raycast point in polygon method
+//     var inPoly = false;
+//
+//     var numPaths = this.getPaths().getLength();
+//     for (var p = 0; p < numPaths; p++) {
+//       var path = this.getPaths().getAt(p);
+//       var numPoints = path.getLength();
+//       var j = numPoints - 1;
+//
+//       for (var i = 0; i < numPoints; i++) {
+//         var vertex1 = path.getAt(i);
+//         var vertex2 = path.getAt(j);
+//
+//         if (vertex1.lng() < latLng.lng() && vertex2.lng() >= latLng.lng() || vertex2.lng() < latLng.lng() && vertex1.lng() >= latLng.lng()) {
+//           if (vertex1.lat() + (latLng.lng() - vertex1.lng()) / (vertex2.lng() - vertex1.lng()) * (vertex2.lat() - vertex1.lat()) < latLng.lat()) {
+//             inPoly = !inPoly;
+//           }
+//         }
+//
+//         j = i;
+//       }
+//     }
+//
+//     return inPoly;
+//   };
+// }
+//
+// google.maps.LatLngBounds.prototype.containsLatLng = function(latLng) {
+//   return this.contains(latLng);
+// };
+//
+// google.maps.Marker.prototype.setFences = function(fences) {
+//   this.fences = fences;
+// };
+//
+// google.maps.Marker.prototype.addFence = function(fence) {
+//   this.fences.push(fence);
+// };
+//
+// google.maps.Marker.prototype.getId = function() {
+//   return this['__gm_id'];
+// };
 
 //==========================
 // Array indexOf
@@ -6229,37 +6229,37 @@ $(document).ready(function() {
 
     /* Google MAPS init */
     var map;
-    $(".js-map").each(function() {
-
-        map = new GMaps({
-          div: $(this).attr("data-map"),
-          lat: $(this).attr("data-lat"),
-          lng: $(this).attr("data-lng"),
-          zoom: parseInt($(this).attr("data-start-zoom"))
-        });
-
-        var choosenStyle = $(this).attr("data-style");
-
-        if ( choosenStyle == "black-white" ) {
-            var styles =  [ { "featureType": "landscape.natural", "stylers": [ { "color": "#808080" }, { "lightness": 68 } ] },{ "featureType": "road.highway", "stylers": [ { "color": "#808080" } ] },{ "featureType": "poi.park", "stylers": [ { "color": "#808080" }, { "lightness": 58 } ] },{ "featureType": "water", "stylers": [ { "color": "#808080" }, { "lightness": 45 } ] },{ "featureType": "landscape.man_made", "stylers": [ { "color": "#808080" }, { "lightness": 25 } ] } ];
-            var styledMap = new google.maps.StyledMapType(styles,
-            {name: "Styled Map"});
-            map.setOptions({styles: styles});
-        } else {
-            return;
-        }
-
-        $(this).find(".map-marker").each(function() {
-           var marker = map.addMarker({
-              lat: $(this).attr("data-lat"),
-              lng: $(this).attr("data-lng"),
-              title: $(this).attr("data-title"),
-              icon: 'img/marker.png'
-            });
-           console.log( marker );
-        });
-
-    });
+    // $(".js-map").each(function() {
+    //
+    //     map = new GMaps({
+    //       div: $(this).attr("data-map"),
+    //       lat: $(this).attr("data-lat"),
+    //       lng: $(this).attr("data-lng"),
+    //       zoom: parseInt($(this).attr("data-start-zoom"))
+    //     });
+    //
+    //     var choosenStyle = $(this).attr("data-style");
+    //
+    //     if ( choosenStyle == "black-white" ) {
+    //         var styles =  [ { "featureType": "landscape.natural", "stylers": [ { "color": "#808080" }, { "lightness": 68 } ] },{ "featureType": "road.highway", "stylers": [ { "color": "#808080" } ] },{ "featureType": "poi.park", "stylers": [ { "color": "#808080" }, { "lightness": 58 } ] },{ "featureType": "water", "stylers": [ { "color": "#808080" }, { "lightness": 45 } ] },{ "featureType": "landscape.man_made", "stylers": [ { "color": "#808080" }, { "lightness": 25 } ] } ];
+    //         var styledMap = new google.maps.StyledMapType(styles,
+    //         {name: "Styled Map"});
+    //         map.setOptions({styles: styles});
+    //     } else {
+    //         return;
+    //     }
+    //
+    //     $(this).find(".map-marker").each(function() {
+    //        var marker = map.addMarker({
+    //           lat: $(this).attr("data-lat"),
+    //           lng: $(this).attr("data-lng"),
+    //           title: $(this).attr("data-title"),
+    //           icon: 'img/marker.png'
+    //         });
+    //        console.log( marker );
+    //     });
+    //
+    // });
 
     /* Paralax */
     $.stellar({
