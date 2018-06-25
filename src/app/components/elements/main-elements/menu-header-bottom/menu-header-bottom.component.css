@@ -1,0 +1,11 @@
+div.upper-content {
+  top: -140px;
+  margin-bottom: -110px;
+}
+
+@media only screen and (max-width: 769px) {
+  div.upper-content {
+    top: -50px;
+    margin-bottom: -50px;
+  }
+}
