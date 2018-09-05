@@ -1,0 +1,25 @@
+/*ANIMACJE*/
+@media only screen and (min-width: 770px) {
+  .anim-page-content {
+    animation-duration: 1s;
+    animation-name: anim;
+    transform: translate3d(0,0,0);
+  }
+
+  @keyframes anim {
+    0%   {
+      transform: translate3d(0,0,0);
+      opacity: 0;
+      width: 0;
+      margin-bottom: 10%;
+      margin-left: -50%;
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
