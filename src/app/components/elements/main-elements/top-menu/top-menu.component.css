@@ -54,3 +54,7 @@ div.header-holder .header{
 .header {
   /*border: 1px solid lightgrey;*/
 }
+
+div.navigation-holder {
+  padding-right: 0;
+}
