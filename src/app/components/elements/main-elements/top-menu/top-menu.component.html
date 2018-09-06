@@ -13,7 +13,7 @@
               <span class="open-navigation js-open-navigation">
                  Menu
                </span>
-          <ul class="main-navigation">
+          <ul class="main-navigation" [ngClass] = 'isScreenMobile ? "js-open-navigation":""' >
 
             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/">START</a></li>
             <li routerLinkActive="active"><a routerLink="/oferta">OFERTA</a></li>

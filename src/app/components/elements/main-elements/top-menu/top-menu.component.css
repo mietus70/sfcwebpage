@@ -34,6 +34,14 @@ div.header-holder .header{
 }
 
 @media only screen and (max-width: 770px) {
+  .header-holder .open-navigation {
+    margin-right: 1em;
+  }
+
+  .header-holder ul {
+    margin-right: 1em;
+  }
+
   div.header-holder {
     position: static;
   }

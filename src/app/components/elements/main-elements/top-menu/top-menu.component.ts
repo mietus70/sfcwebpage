@@ -12,9 +12,12 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./top-menu.component.css']
 })
 export class TopMenuComponent implements OnInit {
+  get isScreenMobile(): boolean {
+    window.innerWidth;
+    return window.innerWidth < 770;
+  }
 
   constructor() {}
 
   ngOnInit() {}
-
 }
