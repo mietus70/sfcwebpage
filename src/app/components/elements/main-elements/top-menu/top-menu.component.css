@@ -46,6 +46,10 @@ div.header-holder .header{
 }
 
 @media only screen and (max-width: 770px) {
+  .header-holder .open-navigation.opened {
+    background: #292929;
+  }
+
   .header-holder .open-navigation {
     margin-right: 1em;
   }
@@ -65,9 +69,9 @@ div.header-holder .header{
     top: -1.5em;
   }
 
-  .header-holder .open-navigation.opened {
-    background: #444444;
-  }
+  /*.header-holder .open-navigation.opened {*/
+    /*background: #444444;*/
+  /*}*/
 
   .logo div img {
     margin: auto;
