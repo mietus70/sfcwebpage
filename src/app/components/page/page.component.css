@@ -1,7 +1,7 @@
 /*ANIMACJE*/
 @media only screen and (min-width: 770px) {
   .anim-page-content {
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-name: anim;
     transform: translate3d(0,0,0);
   }

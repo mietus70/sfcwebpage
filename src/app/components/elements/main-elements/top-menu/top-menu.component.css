@@ -4,6 +4,18 @@ div.header-holder{
   /*border-bottom: 3px solid #782121;*/
   /*height: 145px;*/
   color: white;
+  animation-name: top_menu_anim;
+  animation-duration: 2s;
+}
+
+@keyframes top_menu_anim {
+  0% {
+    margin-top: -150px;
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
 }
 
 div.header-holder .header{
@@ -39,11 +51,18 @@ div.header-holder .header{
   }
 
   .header-holder ul {
-    margin-right: 1em;
+    width: calc(100% - 20px);
+    left: 10px;
+    right: 50px;
+    /*top: 60px;*/
+    background-color: #292929;
+    position: absolute;
+    border-radius: 0 0 15px 20px;
   }
 
   div.header-holder {
-    position: static;
+    position: relative;
+    top: -1.5em;
   }
 
   .header-holder .open-navigation.opened {
