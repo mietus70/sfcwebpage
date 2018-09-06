@@ -85,3 +85,7 @@ div.header-holder .header{
 div.navigation-holder {
   padding-right: 0;
 }
+
+.container header.row {
+  display: flow;
+}
