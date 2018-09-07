@@ -52,42 +52,54 @@ div.header-holder .header{
 
   .header-holder .open-navigation {
     margin-right: 1em;
+    display: inline;
   }
 
   .header-holder ul {
     width: calc(100% - 20px);
     left: 10px;
     right: 50px;
-    /*top: 60px;*/
     background-color: #292929;
     position: absolute;
     border-radius: 0 0 15px 20px;
   }
 
-  div.header-holder {
+  .header-holder {
     position: relative;
     top: -1.5em;
+    margin-bottom: -1.5em;
+  }
+
+  .header {
+    height: 50px;
+  }
+
+  .navigation-holder {
+    top: 10px;
+  }
+
+  /*Logo*/
+  .logo {
+    position: absolute;
+    left: calc(100% - 120px);
+    z-index: 1000;
   }
 
   .logo div img {
-    margin: auto;
-    width: 100px;
-    top: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 80px;
     position: static;
+    top: 0;
   }
 }
 
 
 .header {
-  /*border: 1px solid lightgrey;*/
   display: flow;
   flex-wrap: nowrap;
 }
 
 div.navigation-holder {
   padding-right: 0;
-}
-
-.container header.row {
-  display: flow;
 }
