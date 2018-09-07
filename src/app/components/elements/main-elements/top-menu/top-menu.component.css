@@ -80,6 +80,8 @@ div.header-holder .header{
 
 .header {
   /*border: 1px solid lightgrey;*/
+  display: flow;
+  flex-wrap: nowrap;
 }
 
 div.navigation-holder {
