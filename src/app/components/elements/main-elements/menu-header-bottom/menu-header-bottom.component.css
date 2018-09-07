@@ -3,7 +3,19 @@ div.upper-content {
   margin-bottom: -110px;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 990px) {
+  div.upper-content {
+    top: 20px;
+    display: block;
+    margin-bottom: 1px;
+  }
+
+  ul.boxed-navigation li {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 400px) {
   div.upper-content {
     top: -50px;
     margin-bottom: -50px;
