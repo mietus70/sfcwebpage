@@ -49,6 +49,12 @@ div.header-holder .header{
     display: block;
   }
 
+  .header-holder {
+    position: relative;
+    top: -1.5em;
+    margin-bottom: -1.5em;
+  }
+
   .header-holder .open-navigation.opened {
     background: #292929;
   }
@@ -66,13 +72,11 @@ div.header-holder .header{
     background-color: #292929;
     position: absolute;
     border-radius: 0 0 15px 20px;
-    top: 25px;
+    top: 27px;
   }
 
-  .header-holder {
-    position: relative;
-    top: -1.5em;
-    margin-bottom: -1.5em;
+  .header-holder ul li:last-child a {
+    border-bottom: none;
   }
 
   .header {
@@ -84,11 +88,10 @@ div.header-holder .header{
   }
 
   .navigation-holder i {
-    display: inline;
+    display: block;
     font-size: 2em;
-    /*animation-name: mobile-menu-icon-anim;*/
     animation-duration: 1s;
-    position: absolute;
+    position: relative;
     top: 0;
   }
 
@@ -97,24 +100,33 @@ div.header-holder .header{
       font-size: 2em;
     }
     15% {
+      left: -2px;
+      top: -2px;
       font-size: 2.5em;
     }
     30% {
-      font-size: 2.5em;
+      left: 0;
+      top: 0;
+      font-size: 2em;
     }
     45% {
-      font-size: 2em;
+      left: -2px;
+      top: -2px;
+      font-size: 2.5em;
     }
     60% {
-      font-size: 2.5em;
-    }
-    75% {
+      left: 0;
+      top: 0;
       font-size: 2em;
     }
-    90% {
+    75% {
+      left: -2px;
+      top: -2px;
       font-size: 2.5em;
     }
-    100% {
+    90% {
+      left: 0;
+      top: 0;
       font-size: 2em;
     }
   }
