@@ -36,6 +36,10 @@ div.header-holder .header{
   left: 20px;
 }
 
+.navigation-holder i {
+  display: none;
+}
+
 @media only screen and (max-width: 990px) {
   .container {
     max-width: 990px;
@@ -62,6 +66,7 @@ div.header-holder .header{
     background-color: #292929;
     position: absolute;
     border-radius: 0 0 15px 20px;
+    top: 25px;
   }
 
   .header-holder {
@@ -76,6 +81,42 @@ div.header-holder .header{
 
   .navigation-holder {
     top: 10px;
+  }
+
+  .navigation-holder i {
+    display: inline;
+    font-size: 2em;
+    /*animation-name: mobile-menu-icon-anim;*/
+    animation-duration: 1s;
+    position: absolute;
+    top: 0;
+  }
+
+  @keyframes mobile-menu-icon-anim {
+    0% {
+      font-size: 2em;
+    }
+    15% {
+      font-size: 2.5em;
+    }
+    30% {
+      font-size: 2.5em;
+    }
+    45% {
+      font-size: 2em;
+    }
+    60% {
+      font-size: 2.5em;
+    }
+    75% {
+      font-size: 2em;
+    }
+    90% {
+      font-size: 2.5em;
+    }
+    100% {
+      font-size: 2em;
+    }
   }
 
   /*icon hamburger menu*/

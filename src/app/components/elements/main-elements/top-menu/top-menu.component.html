@@ -7,9 +7,9 @@
         </div><!-- /.inner-top-bottom-10 -->
       </div>
       <!-- /.col-md-2 logo -->
-      <div class="col-md-10 col-md-xs-12 navigation-holder">
+      <div class="col-md-10 col-md-xs-12 navigation-holder" (click)="clickMenu()">
           <span class=" js-open-navigation">
-            <i class="fa fa-2x fa-bars"></i>
+            <i class="fa fa-bars" [style.animation-name]="mobileMenuAnim"></i>
           </span>
           <ul class="main-navigation" [ngClass] = 'isScreenMobile ? "js-open-navigation":""' >
             <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/">START</a></li>

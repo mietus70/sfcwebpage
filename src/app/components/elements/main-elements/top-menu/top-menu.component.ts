@@ -17,7 +17,16 @@ export class TopMenuComponent implements OnInit {
     return window.innerWidth < 770;
   }
 
+  mobileMenuAnim: string = '';
+
   constructor() {}
 
   ngOnInit() {}
+
+  clickMenu(){
+    this.mobileMenuAnim = "mobile-menu-icon-anim";
+    setTimeout(()=>{
+      this.mobileMenuAnim = "";
+    }, 1000);
+  }
 }
