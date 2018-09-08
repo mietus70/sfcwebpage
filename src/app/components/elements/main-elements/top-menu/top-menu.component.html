@@ -1,24 +1,24 @@
 <div class="header-holder">
   <div class="container">
     <div class="header row">
-      <div class="col-md-2 col-xs-12 logo">
+      <div class="col-md-1 col-xs-12 logo">
         <div>
           <a routerLink="/" style="color: white; text-decoration: none"><img src="assets/img/logo.png" alt="SFC logo"></a>
         </div><!-- /.inner-top-bottom-10 -->
       </div>
       <!-- /.col-md-2 logo -->
-      <div class="col-md-10 col-md-xs-12 navigation-holder" (click)="clickMenu()">
+      <div class="col-md-11 col-xs-12 navigation-holder" (click)="clickMenu()">
           <span class=" js-open-navigation">
             <i class="fa fa-bars" [style.animation-name]="mobileMenuAnim"></i>
           </span>
           <ul class="main-navigation" [ngClass] = 'isScreenMobile ? "js-open-navigation":""' >
-            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/">START</a></li>
+            <!--<li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/">START</a></li>-->
             <li routerLinkActive="active"><a routerLink="/oferta">OFERTA</a></li>
             <li routerLinkActive="active"><a routerLink="/cennik">CENNIK</a></li>
-            <!--<li routerLinkActive="active"><a routerLink="/galeria">GALERIA</a></li>-->
+            <li routerLinkActive="active"><a routerLink="/galeria">GALERIA</a></li>
             <li routerLinkActive="active"><a routerLink="/kontakt">KONTAKT</a></li>
             <li routerLinkActive="active"><a routerLink="/faq">Dokumenty</a></li>
-            <!--<li routerLinkActive="active"><a routerLink="/grafik">GRAFIK</a></li>-->
+            <li routerLinkActive="active"><a routerLink="/sklep">GRAFIK</a></li>
           </ul>
       </div>
       <!-- /.col-md-10 align-r -->

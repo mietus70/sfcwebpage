@@ -19,8 +19,6 @@ div.header-holder{
 }
 
 div.header-holder .header{
-  /*position: relative;*/
-  /*top: 50px;*/
   border-bottom: 3px solid #782121;
   background-color: #292929;
 }
@@ -40,7 +38,11 @@ div.header-holder .header{
   display: none;
 }
 
-@media only screen and (max-width: 990px) {
+.header-holder ul li {
+  border-left: none;
+}
+
+@media only screen and (max-width: 1000px) {
   .container {
     max-width: 990px;
   }
@@ -152,7 +154,7 @@ div.header-holder .header{
   .logo {
     position: absolute;
     left: calc(100% - 120px);
-    z-index: 1000;
+    z-index: 10000;
   }
 
   .logo div img {
