@@ -40,11 +40,17 @@ div.header-holder .header{
 
 .header-holder ul li {
   border-left: none;
+  padding: 22px 10px;
+}
+
+.header-holder ul li:last-child {
+  border-left: none;
+  padding-right: 20px;
 }
 
 @media only screen and (max-width: 1000px) {
   .container {
-    max-width: 990px;
+    max-width: 1000px;
   }
 
   .open-navigation {

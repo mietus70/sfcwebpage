@@ -2205,7 +2205,7 @@ website:   	http://www.themepunch.com
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) { .icheckbox_minimal-grey, .iradio_minimal-grey { background-image: url("../img/checkboxes/grey@2x.png"); -webkit-background-size: 200px 20px; background-size: 200px 20px; } }
 @media all and (min-width: 1024px) { a.block { display: inline; } }
-@media all and (min-width: 990px) { .logo h1 { line-height: 0.9; }
+@media all and (min-width: 1000px) { .logo h1 { line-height: 0.9; }
   .header-holder .main-navigation { display: block; width: 100%; text-align: right; }
   .header-holder .open-navigation { display: none; }
   .header-holder ul { padding-left: 0; margin-bottom: 0; list-style: none; margin-top: 0; }
