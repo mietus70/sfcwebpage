@@ -30,6 +30,9 @@ import {ListElementComponent} from './components/elements/list-element/list-elem
 import {StatutePageComponent} from './components/pages/statute-page/statute-page.component';
 import {RodoPageComponent} from './components/pages/rodo-page/rodo-page.component';
 import {AgmCoreModule} from '@agm/core';
+import {Angulartics2Module } from 'angulartics2';
+import {Angulartics2GoogleAnalytics} from 'angulartics2/ga';
+import {Angulartics2GoogleGlobalSiteTag} from 'angulartics2/gst';
 
 @NgModule({
   declarations: [
@@ -67,7 +70,9 @@ import {AgmCoreModule} from '@agm/core';
     NgxGalleryModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCd6q6z2uVc3OMug-yscIkGmWZA0K5CCoA'
-    })
+    }),
+    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
+    Angulartics2Module.forRoot([ Angulartics2GoogleGlobalSiteTag ]),
   ],
   providers: [],
   bootstrap: [AppComponent],
