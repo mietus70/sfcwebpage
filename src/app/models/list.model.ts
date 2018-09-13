@@ -8,7 +8,7 @@ export class ListModel {
    * @type {number}
    * @readonly
    */
-  readonly id: number;
+  readonly list_id: number;
 
   /**
    * List title
@@ -29,25 +29,25 @@ export class ListModel {
    * @type {ListElementModel[]}
    * @readonly
    */
-  readonly listElements: ListElementModel[];
+  readonly elements: ListElementModel[];
 
   /**
    * Constructor assigns parameters to the properties.
-   * @param {number} id
+   * @param {number} list_id
    * @param {string} title
    * @param {string} description
-   * @param {ListElementModel[]} listElements
+   * @param {ListElementModel[]} elements
    */
   constructor(
-    id: number,
+    list_id: number,
     title: string,
     description: string,
-    listElements: ListElementModel[]
+    elements: ListElementModel[]
   ) {
-    this.id = id;
+    this.list_id = list_id;
     this.title = title;
     this.description = description;
-    this.listElements = listElements;
+    this.elements = elements;
   }
 }
 
@@ -55,13 +55,6 @@ export class ListModel {
  * List element model
  */
 export class ListElementModel {
-
-  /**
-   * Request ID.
-   * @type {number}
-   * @readonly
-   */
-  readonly id: number;
 
   /**
    * Request title.
@@ -77,19 +70,21 @@ export class ListElementModel {
    */
   readonly content: string;
 
+  readonly  position: number;
+
   /**
    * Constructor assigns parameters to the properties.
-   * @param {number} id
    * @param {string} title
    * @param {string} content
+   * @param {number} position
    */
   constructor(
-    id: number,
     title: string,
     content: string,
+    position: number,
   ){
-    this.id = id;
     this.title = title;
     this.content = content;
+    this.position = position;
   }
 }

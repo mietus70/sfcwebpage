@@ -18,7 +18,13 @@ export class ListElementComponent implements OnInit {
    * @return {ListModel}
    */
   get list(): ListModel {
-    return this._listService.lists[this.list_id]
+    let list: ListModel = new ListModel(0,'','',[]);
+    this._listService.lists.forEach((listElement: ListModel)=>{
+      if(listElement.title == this.list_title){
+        list = listElement;
+      }
+    });
+    return list;
   }
 
   /**
@@ -26,18 +32,18 @@ export class ListElementComponent implements OnInit {
    * @return {ListElementModel[]}
    */
   get listElements(): ListElementModel[] {
-    return this.list.listElements;
+    return this.list.elements;
   }
 
   /**
    * Constructor
    * @param {ListService} _listService
    */
-  constructor(private _listService: ListService) {}
+  constructor(public _listService: ListService) {}
 
   ngOnInit() {}
 
   @Input()
-  list_id: number;
+  list_title: string;
 
 }

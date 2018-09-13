@@ -41,10 +41,14 @@ export class ListService {
    * Gets faq from the server.
    * @private
    */
-  private _get_lists() {
-    this._http_client.get<ListModel[]>(REST_API_GET_LISTS)
+  public _get_lists() {
+    this._http_client.get<ListModel[]>(REST_API_GET_LISTS, {withCredentials: false})
       .subscribe((data: ListModel[]) => {
-        this._lists = data;
+        if(data) {
+          this._lists = data;
+        } else {
+          console.log('Error')
+        }
       });
   }
 }
