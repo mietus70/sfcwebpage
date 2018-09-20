@@ -12,13 +12,13 @@
             <i class="fa fa-bars" [style.animation-name]="mobileMenuAnim"></i>
           </span>
           <ul class="main-navigation" [ngClass] = 'isScreenMobile ? "js-open-navigation":""' >
-            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/">START</a></li>
-            <li routerLinkActive="active"><a routerLink="/oferta">OFERTA</a></li>
-            <li routerLinkActive="active"><a routerLink="/cennik">CENNIK</a></li>
-            <!--<li routerLinkActive="active"><a routerLink="/galeria">GALERIA</a></li>-->
-            <li routerLinkActive="active"><a routerLink="/kontakt">KONTAKT</a></li>
-            <li routerLinkActive="active"><a routerLink="/faq">Dokumenty</a></li>
-            <!--<li routerLinkActive="active"><a routerLink="/sklep">GRAFIK</a></li>-->
+            <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/">START</a></li>
+            <li routerLink="/oferta" routerLinkActive="active"><a routerLink="/oferta">OFERTA</a></li>
+            <li routerLink="/cennik" routerLinkActive="active"><a routerLink="/cennik">CENNIK</a></li>
+            <!--<li routerLink="/galeria" routerLinkActive="active"><a routerLink="/galeria">GALERIA</a></li>-->
+            <li routerLink="/kontakt" routerLinkActive="active"><a routerLink="/kontakt">KONTAKT</a></li>
+            <li routerLink="/faq" routerLinkActive="active"><a routerLink="/faq">Dokumenty</a></li>
+            <!--<li routerLink="/sklep" routerLinkActive="active"><a routerLink="/sklep">GRAFIK</a></li>-->
           </ul>
       </div>
       <!-- /.col-md-10 align-r -->
