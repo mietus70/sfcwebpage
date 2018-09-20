@@ -38,14 +38,15 @@ div.header-holder .header{
   display: none;
 }
 
-.header-holder ul li {
-  border-left: none;
-  padding: 22px 10px;
-}
-
 .header-holder ul li:last-child {
   border-left: none;
   padding-right: 20px;
+}
+
+
+.header-holder ul li {
+  border-left: none;
+  padding: 22px 10px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -83,8 +84,13 @@ div.header-holder .header{
     top: 27px;
   }
 
-  .header-holder ul li:last-child a {
+  .header-holder ul li {
+    padding: 0;
+  }
+
+  .header-holder ul li:last-child {
     border-bottom: none;
+    padding-right: 0;
   }
 
   .header {
