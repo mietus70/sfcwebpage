@@ -1,10 +1,11 @@
+import { WINDOW } from '@ng-toolkit/universal';
 /**
  * Created by Paweł Grzyb 01.04.2018
  *
  * Ordinary top menu.
  */
 
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Inject} from '@angular/core';
 
 @Component({
   selector: 'app-top-menu',
@@ -19,7 +20,7 @@ export class TopMenuComponent implements OnInit {
 
   mobileMenuAnim: string = '';
 
-  constructor() {}
+  constructor(@Inject(WINDOW) private window: Window, ) {}
 
   ngOnInit() {}
 

@@ -1,5 +1,7 @@
+import {NgtUniversalModule} from '@ng-toolkit/universal';
+import {CommonModule} from '@angular/common';
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import {ModalModule, TabsModule} from "ngx-bootstrap";
 
 import {AppComponent} from './app.component';
@@ -60,8 +62,9 @@ import {Angulartics2GoogleGlobalSiteTag} from 'angulartics2/gst';
     StatutePageComponent,
     RodoPageComponent
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+    CommonModule,
+    NgtUniversalModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
@@ -72,10 +75,9 @@ import {Angulartics2GoogleGlobalSiteTag} from 'angulartics2/gst';
       apiKey: 'AIzaSyCd6q6z2uVc3OMug-yscIkGmWZA0K5CCoA'
     }),
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
-    Angulartics2Module.forRoot([ Angulartics2GoogleGlobalSiteTag ]),
+    Angulartics2Module.forRoot([Angulartics2GoogleGlobalSiteTag]),
   ],
   providers: [],
-  bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
