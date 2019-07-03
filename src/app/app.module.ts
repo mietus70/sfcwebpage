@@ -37,10 +37,10 @@ import { NgxGalleryModule }                from "ngx-gallery";
 import { ListElementComponent }            from './components/elements/list-element/list-element.component';
 import { StatutePageComponent }            from './components/pages/statute-page/statute-page.component';
 import { RodoPageComponent }               from './components/pages/rodo-page/rodo-page.component';
-import { AgmCoreModule }                   from '@agm/core';
-import { Angulartics2GoogleGlobalSiteTag } from 'angulartics2/gst';
-import { Angulartics2Module }              from 'angulartics2';
-import { Angulartics2GoogleAnalytics }     from 'angulartics2/ga';
+// import { AgmCoreModule }                   from '@agm/core';
+// import { Angulartics2GoogleGlobalSiteTag } from 'angulartics2/gst';
+// import { Angulartics2Module }              from 'angulartics2';
+// import { Angulartics2GoogleAnalytics }     from 'angulartics2/ga';
 
 @NgModule({
   declarations: [
@@ -77,10 +77,10 @@ import { Angulartics2GoogleAnalytics }     from 'angulartics2/ga';
     ModalModule.forRoot(),
     TabsModule.forRoot(),
     NgxGalleryModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCd6q6z2uVc3OMug-yscIkGmWZA0K5CCoA'
-    }),
-    Angulartics2Module.forRoot(),
+    // AgmCoreModule.forRoot({
+    //   apiKey: 'AIzaSyCd6q6z2uVc3OMug-yscIkGmWZA0K5CCoA'
+    // }),
+    // Angulartics2Module.forRoot(),
   ],
   providers: [],
   schemas: [ NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ]

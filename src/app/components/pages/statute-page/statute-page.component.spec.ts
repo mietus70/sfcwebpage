@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { StatutePageComponent } from './statute-page.component';
+import { async, ComponentFixture, TestBed }         from '@angular/core/testing';
+import { StatutePageComponent }                     from './statute-page.component';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 
 describe('StatutePageComponent', () => {
   let component: StatutePageComponent;
@@ -8,9 +8,10 @@ describe('StatutePageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StatutePageComponent ]
+      declarations: [ StatutePageComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ]
     })
-    .compileComponents();
+           .compileComponents();
   }));
 
   beforeEach(() => {

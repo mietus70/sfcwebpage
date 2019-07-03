@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OfferPageComponent } from './offer-page.component';
+import { OfferPageComponent }                       from './offer-page.component';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 
 describe('OfferPageComponent', () => {
   let component: OfferPageComponent;
@@ -8,7 +9,8 @@ describe('OfferPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OfferPageComponent ]
+      declarations: [ OfferPageComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
     })
     .compileComponents();
   }));

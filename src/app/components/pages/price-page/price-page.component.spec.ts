@@ -1,14 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PricePageComponent } from './price-page.component';
+import { PricePageComponent }                       from './price-page.component';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
 
-describe('CennikPageComponent', () => {
+describe('PricePageComponent', () => {
   let component: PricePageComponent;
   let fixture: ComponentFixture<PricePageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PricePageComponent ]
+      declarations: [ PricePageComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
     })
     .compileComponents();
   }));
