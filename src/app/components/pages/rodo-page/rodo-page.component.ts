@@ -1,3 +1,9 @@
+/**
+ * Created by Pawel Grzyb 01.04.2018
+ *
+ * RODO pages contains legal information.
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

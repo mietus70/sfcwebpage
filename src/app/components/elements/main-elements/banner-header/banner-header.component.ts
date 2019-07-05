@@ -1,7 +1,7 @@
 /**
- * Created by Paweł Grzyb 01.04.2018
+ * Created by Pawel Grzyb 01.04.2018
  *
- * Main page banner.
+ * The main top-banner in the main page.
  */
 
 import { Component, OnInit } from '@angular/core';

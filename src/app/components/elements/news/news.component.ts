@@ -1,7 +1,7 @@
 /**
- * Created by Paweł Grzyb 01.04.2018
+ * Created by Pawel Grzyb 01.04.2018
  *
- * Element shows newest posts.
+ * This element shows recent posts.
  */
 import {Component, OnInit} from '@angular/core';
 
@@ -12,7 +12,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NewsComponent implements OnInit {
   /**
-   * Element title getter
+   * A getter of the title.
    * @return {string}
    */
   get title(): string {

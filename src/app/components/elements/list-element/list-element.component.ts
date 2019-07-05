@@ -1,10 +1,14 @@
-import {Component, Input, OnInit} from '@angular/core';
+/**
+ * Created by Pawel Grzyb 01.04.2018
+ *
+ * The component shows lists.
+ */
 
+import { Component, Input, OnInit }    from '@angular/core';
 // Services
-import {ListService} from "../../../services/list.service";
-
+import { ListService }                 from "../../../services/list.service";
 // Models
-import {ListElementModel, ListModel} from "../../../models/list.model";
+import { ListElementModel, ListModel } from "../../../models/list.model";
 
 @Component({
   selector: 'app-list-element',
@@ -14,13 +18,13 @@ import {ListElementModel, ListModel} from "../../../models/list.model";
 export class ListElementComponent implements OnInit {
 
   /**
-   * Gets list.
+   * Gets a list.
    * @return {ListModel}
    */
   get list(): ListModel {
     let list: ListModel = new ListModel(0,'','',[]);
     this._listService.lists.forEach((listElement: ListModel)=>{
-      if(listElement.title == this.list_title){
+      if(listElement.title == this.listTitle){
         list = listElement;
       }
     });
@@ -28,7 +32,7 @@ export class ListElementComponent implements OnInit {
   }
 
   /**
-   * Gets list elements table data.
+   * Gets lists.
    * @return {ListElementModel[]}
    */
   get listElements(): ListElementModel[] {
@@ -43,7 +47,10 @@ export class ListElementComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * Menu title
+   */
   @Input()
-  list_title: string;
+  listTitle: string;
 
 }

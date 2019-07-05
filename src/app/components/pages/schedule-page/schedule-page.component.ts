@@ -1,3 +1,9 @@
+/**
+ * Created by Pawel Grzyb 01.04.2018
+ *
+ * Schedule page.
+ */
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

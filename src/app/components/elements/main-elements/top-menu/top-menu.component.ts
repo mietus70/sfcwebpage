@@ -1,11 +1,11 @@
+/**
+ * Created by Pawel Grzyb 01.04.2018
+ *
+ * Main top menu.
+ */
+
 import { WINDOW }                    from '@ng-toolkit/universal';
 import { Component, Inject, OnInit } from '@angular/core';
-
-/**
- * Created by Paweł Grzyb 01.04.2018
- *
- * Ordinary top menu.
- */
 
 @Component({
   selector: 'app-top-menu',
@@ -25,7 +25,7 @@ export class TopMenuComponent implements OnInit {
   ngOnInit() {}
 
   /**
-   * Animate clicked menu.
+   * Animate clicked mobile-menu (hamburger).
    */
   clickMenu(){
     this.mobileMenuAnim = "mobile-menu-icon-anim";

@@ -1,5 +1,7 @@
 /**
- * Pipe ustawiający pierwszy znak łańcucha na dużą literę.
+ * Created by Pawel Grzyb 01.04.2018
+ *
+ * This pipe turns first letter into capital letter.
  */
 import {Pipe, PipeTransform} from '@angular/core';
 
