@@ -1,8 +1,9 @@
-import {Component} from '@angular/core';
-import {MyRouterService} from "./services/my-router.service";
-import {Router} from "@angular/router";
-// import {Angulartics2GoogleAnalytics} from 'angulartics2/ga';
-// import {Angulartics2GoogleGlobalSiteTag} from 'angulartics2/gst';
+/**
+ * Created by Pawel Grzyb 01.04.2018
+ */
+
+import { Component }       from '@angular/core';
+import { MyRouterService } from "./services/my-router.service";
 
 @Component({
   selector: 'app-root',
@@ -12,32 +13,32 @@ import {Router} from "@angular/router";
 export class AppComponent {
 
   /**
-   * Konstruktor
-   * @param myRouter
-   * @param router
+   * Constructor
+   * @param myRouterService
    */
   constructor(
-    public myRouter: MyRouterService,
-    public router: Router,
-    // public angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics,
-    // public angulartics2GoogleGlobalSiteTag: Angulartics2GoogleGlobalSiteTag
-  ) {}
+    public myRouterService: MyRouterService,
+  ) {
+  }
 
   /**
-   * Funkcja generująca breadcrumb.
-   * @param   {number}  element_num
+   * Generates breadcrumb.
+   * @param   {number}  elementNum
    * @return  {string}
    */
-  get_breadcrumb_elements(element_num: number) {
-    let link = '';
-    this.myRouter.url.split('/').forEach((element: string, index: number) => {
-      if (index < element_num) {
-        link += element;
-        if (index !== element_num - 1) {
-          link += '/';
-        }
-      }
-    });
+  getBreadcrumbElements(elementNum: number): string {
+    let link: string = '';
+    if (this.myRouterService) {
+      this.myRouterService.url.split('/')
+          .forEach((element: string, index: number) => {
+            if (index < elementNum) {
+              link += element;
+              if (index !== elementNum - 1) {
+                link += '/';
+              }
+            }
+          });
+    }
     return link;
   }
 }

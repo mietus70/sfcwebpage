@@ -13,24 +13,30 @@ import { Component, Inject, OnInit } from '@angular/core';
   styleUrls: ['./top-menu.component.css']
 })
 export class TopMenuComponent implements OnInit {
+  mobileMenuAnim: string = '';
+  moblieMenuAnimLength: number = 1000;
+
+  constructor(@Inject(WINDOW) private window: Window) {
+  }
+
+  /**
+   * Check if screen is mobile
+   */
   get isScreenMobile(): boolean {
     window.innerWidth;
     return window.innerWidth < 770;
   }
 
-  mobileMenuAnim: string = '';
-
-  constructor(@Inject(WINDOW) private window: Window) {}
-
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   /**
    * Animate clicked mobile-menu (hamburger).
    */
-  clickMenu(){
+  clickMobileMenu() {
     this.mobileMenuAnim = "mobile-menu-icon-anim";
-    setTimeout(()=>{
+    setTimeout(() => {
       this.mobileMenuAnim = "";
-    }, 1000);
+    }, this.moblieMenuAnimLength);
   }
 }

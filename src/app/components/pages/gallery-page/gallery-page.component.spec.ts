@@ -1,7 +1,7 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
-import {GalleryPageComponent} from './gallery-page.component';
-import {CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from "@angular/core";
-import {HttpClientTestingModule} from "@angular/common/http/testing";
+import { async, ComponentFixture, TestBed }         from '@angular/core/testing';
+import { GalleryPageComponent }                     from './gallery-page.component';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from "@angular/core";
+import { HttpClientTestingModule }                  from "@angular/common/http/testing";
 
 describe('GalleryPageComponent', () => {
   let component: GalleryPageComponent;
@@ -9,14 +9,14 @@ describe('GalleryPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GalleryPageComponent ],
+      declarations: [GalleryPageComponent],
       schemas: [
         CUSTOM_ELEMENTS_SCHEMA,
         NO_ERRORS_SCHEMA
       ],
-      imports: [ HttpClientTestingModule ]
+      imports: [HttpClientTestingModule]
     })
-    .compileComponents();
+           .compileComponents();
   }));
 
   beforeEach(() => {

@@ -5,4 +5,9 @@ describe('FirstUppercasePipe', () => {
     const pipe = new FirstUppercasePipe();
     expect(pipe).toBeTruthy();
   });
+
+  it('should return string with first chara', () => {
+    const pipe = new FirstUppercasePipe();
+    expect(pipe.transform('hello')).toEqual('Hello');
+  });
 });

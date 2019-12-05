@@ -1,34 +1,45 @@
-import {Injectable} from '@angular/core';
-import {Router} from '@angular/router';
+/**
+ * Created by Pawel Grzyb 01.04.2018
+ *
+ * Router's operations.
+ */
+
+import { Injectable } from '@angular/core';
+import { Router }     from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MyRouterService {
-  private _url: string;
+  constructor(private _router: Router) {
+  }
 
   /**
-   * Getter akutalnego url strony pobierany z router.
+   * URL
+   * @type {string}
+   */
+  private _url: string = '';
+
+  /**
+   * Gets current url.
    * @return {string}
    */
-  get url() {
-    if(this._router.url) {
+  get url(): string {
+    if (this._router.url) {
       this._url = this._router.url;
       return this._url;
     }
-    return null
+    return ''
   }
 
   /**
-   * Getter długości łańcucha.
-   * @return {number}x
+   * Gets string length.
+   * @return {number}
    */
-    get url_length() {
-    if(this.url) {
+  get urlLength(): number {
+    if (this.url) {
       return this.url.split('/').length;
     }
-    return null;
+    return 0;
   }
-
-  constructor(private _router: Router) {}
 }

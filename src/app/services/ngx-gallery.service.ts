@@ -8,7 +8,7 @@ import {NgxGalleryAnimation} from "ngx-gallery";
   providedIn: 'root'
 })
 export class NgxGalleryService {
-  galleries: GalleriesModel[];
+  galleries: GalleriesModel[] = [];
 
   constructor(
     private _http_client: HttpClient

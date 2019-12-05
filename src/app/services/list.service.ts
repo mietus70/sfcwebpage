@@ -17,14 +17,13 @@ import { REST_API_GET_LISTS }          from "../../http.config";
 export class ListService {
   /**
    * Constructor
-   *
    * Gets lists.
-   * @param {HttpClient} _http_client
+   * @param {HttpClient} _httpClient
    */
   constructor(
-    private _http_client: HttpClient
+    private _httpClient: HttpClient
   ) {
-    this._get_lists();
+    this._getLists();
   }
 
   /**
@@ -32,7 +31,7 @@ export class ListService {
    * @type {ListElementModel[]}
    * @private
    */
-  private _lists: ListModel[];
+  private _lists: ListModel[] = [];
 
   /**
    * Gets lists.
@@ -43,10 +42,10 @@ export class ListService {
   }
 
   /**
-   * Gets FAQ from the server.
+   * Gets lists from the server.
    */
-  public _get_lists() {
-    this._http_client.get<ListModel[]>(REST_API_GET_LISTS, {withCredentials: false})
+  private _getLists() {
+    this._httpClient.get<ListModel[]>(REST_API_GET_LISTS, {withCredentials: false})
         .subscribe((data: ListModel[]) => {
           if (data) {
             this._lists = data;

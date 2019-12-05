@@ -1,7 +1,7 @@
-import {NgxGalleryImage, NgxGalleryOptions} from "ngx-gallery";
+import { NgxGalleryImage, NgxGalleryOptions } from "ngx-gallery";
 
 export class GalleriesModel {
-  readonly galleryTitle: string;
-  readonly galleryOptions: NgxGalleryOptions[];
-  readonly galleryImages: NgxGalleryImage[];
+  readonly galleryTitle: string = '';
+  readonly galleryOptions: NgxGalleryOptions[] = [];
+  readonly galleryImages: NgxGalleryImage[] = [];
 }

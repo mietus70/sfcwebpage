@@ -4,13 +4,13 @@ import { ActivatedRoute, Router } from "@angular/router";
 import { Subject }                from "rxjs/Rx";
 
 class RouterStub {
-  url: string;
+  url: string = '';
 }
 
 class ActivatedRoutStub {
   private subject = new Subject();
 
-  push(value) {
+  push(value: any) {
     this.subject.next(value);
   }
 }
@@ -28,7 +28,17 @@ describe('MyRouterService', () => {
     });
   });
 
-  it('should be created', inject([ MyRouterService ], (service: MyRouterService) => {
+  it('should be created', inject([MyRouterService], (service: MyRouterService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('should be test', inject([MyRouterService, Router], (service: MyRouterService, router: RouterStub) => {
+    router.url = 'test';
+    expect(service.url).toBe('test')
+  }));
+
+  it('should be null', inject([MyRouterService], (service: MyRouterService) => {
+    expect(service.url).toBe('')
+  }))
+
 });

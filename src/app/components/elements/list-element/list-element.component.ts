@@ -4,11 +4,11 @@
  * The component shows lists.
  */
 
-import { Component, Input, OnInit }    from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 // Services
-import { ListService }                 from "../../../services/list.service";
+import { ListService }              from "../../../services/list.service";
 // Models
-import { ListElementModel, ListModel } from "../../../models/list.model";
+import { ListModel }                from "../../../models/list.model";
 
 @Component({
   selector: 'app-list-element',
@@ -18,39 +18,34 @@ import { ListElementModel, ListModel } from "../../../models/list.model";
 export class ListElementComponent implements OnInit {
 
   /**
-   * Gets a list.
-   * @return {ListModel}
+   * List title
    */
-  get list(): ListModel {
-    let list: ListModel = new ListModel(0,'','',[]);
-    this._listService.lists.forEach((listElement: ListModel)=>{
-      if(listElement.title == this.listTitle){
-        list = listElement;
-      }
-    });
-    return list;
-  }
-
-  /**
-   * Gets lists.
-   * @return {ListElementModel[]}
-   */
-  get listElements(): ListElementModel[] {
-    return this.list.elements;
-  }
+  @Input()
+  listTitle: string = "";
 
   /**
    * Constructor
-   * @param {ListService} _listService
+   * @param {ListService} listService
    */
-  constructor(public _listService: ListService) {}
-
-  ngOnInit() {}
+  constructor(public listService: ListService) {
+  }
 
   /**
-   * Menu title
+   * Compares listTitle from the @Input to the lists from the server and returns
+   * valid list.
+   * @return {ListModel}
    */
-  @Input()
-  listTitle: string;
+  get list(): ListModel {
+    let listTemp: ListModel = new ListModel(0, '', '', []);
+    this.listService.lists.forEach((listElement: ListModel) => {
+      if (listElement.title == this.listTitle) {
+        listTemp = listElement;
+      }
+    });
+    return listTemp;
+  }
+
+  ngOnInit() {
+  }
 
 }

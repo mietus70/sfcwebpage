@@ -1,14 +1,16 @@
 /**
+ * Created by Pawel Grzyb 01.04.2018
+ *
  * List model
  */
 export class ListModel {
 
   /**
-   * Request ID.
+   * List ID
    * @type {number}
    * @readonly
    */
-  readonly list_id: number;
+  readonly listId: number;
 
   /**
    * List title
@@ -25,7 +27,7 @@ export class ListModel {
   readonly description: string;
 
   /**
-   * List description
+   * List elements
    * @type {ListElementModel[]}
    * @readonly
    */
@@ -33,18 +35,18 @@ export class ListModel {
 
   /**
    * Constructor assigns parameters to the properties.
-   * @param {number} list_id
+   * @param {number} listId
    * @param {string} title
    * @param {string} description
    * @param {ListElementModel[]} elements
    */
   constructor(
-    list_id: number,
+    listId: number,
     title: string,
     description: string,
     elements: ListElementModel[]
   ) {
-    this.list_id = list_id;
+    this.listId = listId;
     this.title = title;
     this.description = description;
     this.elements = elements;
@@ -64,16 +66,21 @@ export class ListElementModel {
   readonly title: string;
 
   /**
-   * Request content.
+   * Request content
    * @type {string}
    * @readonly
    */
   readonly content: string;
 
-  readonly  position: number;
+  /**
+   * Position
+   * @type {number}
+   * @readonly
+   */
+  readonly position: number;
 
   /**
-   * Constructor assigns parameters to the properties.
+   * Constructor assigns parameters to the properties
    * @param {string} title
    * @param {string} content
    * @param {number} position
@@ -82,7 +89,7 @@ export class ListElementModel {
     title: string,
     content: string,
     position: number,
-  ){
+  ) {
     this.title = title;
     this.content = content;
     this.position = position;
