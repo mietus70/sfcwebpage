@@ -5,6 +5,7 @@
  */
 
 import { Component, OnInit } from '@angular/core';
+import { MyRouterService }   from "../../../../services/my-router.service";
 
 @Component({
   selector: 'app-banner-header',
@@ -13,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerHeaderComponent implements OnInit {
 
-  constructor() {}
+  constructor(public myRouterService: MyRouterService) {}
 
   ngOnInit() {}
 

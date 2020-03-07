@@ -5,6 +5,7 @@
  */
 
 import { Component, OnInit } from '@angular/core';
+import { MyRouterService }   from "../../../../services/my-router.service";
 
 @Component({
   selector: 'app-header',
@@ -13,8 +14,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public myRouterService: MyRouterService
+  ) {
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
 }
