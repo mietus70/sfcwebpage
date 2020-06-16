@@ -1,4 +1,5 @@
 div.header-holder{
+  padding-top: 3px;
   position: fixed;
   color: white;
   animation-name: top_menu_anim;
@@ -25,9 +26,9 @@ div.header-holder .header{
 }
 
 .logo div img {
-  width: 230px;
+  width: 330px;
   position: absolute;
-  bottom: -15px;
+  top: -18px;
   left: 20px;
 }
 
