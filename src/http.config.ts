@@ -5,7 +5,7 @@ export const REST_API_MAIN_ADDRESS = 'assets/http/';
 let REST_API: string = "";
 
 if (environment.production) {
-  REST_API = "https://www.admin.sfc24.eu/";
+  REST_API = "https://admin.sfc24.eu/";
 }
 else {
   REST_API = "http://localhost:8000/";
