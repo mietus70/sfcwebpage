@@ -17,7 +17,7 @@ div.header-holder{
 }
 
 div.header-holder .header{
-  border-bottom: 3px solid #782121;
+  /*border-bottom: 3px solid #782121;*/
   background-color: #292929;
 }
 
@@ -49,7 +49,7 @@ div.header-holder .header{
 }
 
 .header-holder ul li:hover a {
-  color: #e70c2f;
+  /*color: #e70c2f;*/
 }
 
 @media only screen and (max-width: 1000px) {
