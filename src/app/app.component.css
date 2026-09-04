@@ -53,4 +53,9 @@
   .breadcrumb {
     display: none;
   }
+
+  /* On subpages without visible breadcrumbs, add header offset */
+  .sfc-subpage-spacer {
+    height: 60px;
+  }
 }

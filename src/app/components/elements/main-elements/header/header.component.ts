@@ -19,6 +19,14 @@ export class HeaderComponent implements OnInit {
   ) {
   }
 
+  /**
+   * Check if current page is the home page
+   */
+  get isHomePage(): boolean {
+    const url = this.myRouterService.url;
+    return url === '/' || url === '' || url === '/#' || url === '/#/';
+  }
+
   ngOnInit() {
   }
 
