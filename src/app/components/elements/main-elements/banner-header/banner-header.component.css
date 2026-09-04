@@ -1,4 +1,367 @@
-.banner {
+/* ==========================================================================
+   SFC Hero Banner - Modern hero section with slides
+   ========================================================================== */
+
+.sfc-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 900px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -----------------------------------------------------------------------
+   Background Slides
+   ----------------------------------------------------------------------- */
+
+.sfc-hero__slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
 }
 
+.sfc-hero__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.sfc-hero__slide--active {
+  opacity: 1;
+}
+
+.sfc-hero__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.05);
+  animation: sfc-hero-zoom 8s ease-in-out infinite alternate;
+}
+
+@keyframes sfc-hero-zoom {
+  from { transform: scale(1.0); }
+  to { transform: scale(1.08); }
+}
+
+/* -----------------------------------------------------------------------
+   Overlay
+   ----------------------------------------------------------------------- */
+
+.sfc-hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.85) 0%,
+    rgba(30, 41, 59, 0.7) 40%,
+    rgba(15, 23, 42, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+/* -----------------------------------------------------------------------
+   Content
+   ----------------------------------------------------------------------- */
+
+.sfc-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 var(--space-4, 1rem);
+  padding-top: 72px; /* header height offset */
+  animation: sfc-hero-content-in 1s ease-out 0.3s both;
+}
+
+@keyframes sfc-hero-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Badge */
+.sfc-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 107, 53, 0.2);
+  border: 1px solid rgba(255, 107, 53, 0.4);
+  border-radius: 9999px;
+  color: #FF8C61;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-6, 1.5rem);
+}
+
+/* Title */
+.sfc-hero__title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: var(--space-6, 1.5rem);
+  letter-spacing: -0.02em;
+}
+
+.sfc-hero__title--accent {
+  color: var(--color-primary, #FF6B35);
+  position: relative;
+}
+
+/* Subtitle */
+.sfc-hero__subtitle {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  max-width: 550px;
+  margin: 0 auto var(--space-8, 2rem);
+}
+
+/* -----------------------------------------------------------------------
+   Action Buttons
+   ----------------------------------------------------------------------- */
+
+.sfc-hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4, 1rem);
+  margin-bottom: var(--space-10, 2.5rem);
+  flex-wrap: wrap;
+}
+
+.sfc-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease;
+  min-height: 48px;
+}
+
+.sfc-hero__btn--primary {
+  background: var(--color-primary, #FF6B35);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+}
+
+.sfc-hero__btn--primary:hover {
+  background: var(--color-primary-dark, #E85A2A);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 107, 53, 0.5);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sfc-hero__btn--outline {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.sfc-hero__btn--outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------------------------
+   Stats
+   ----------------------------------------------------------------------- */
+
+.sfc-hero__stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6, 1.5rem);
+}
+
+.sfc-hero__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sfc-hero__stat-number {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.sfc-hero__stat-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
+}
+
+.sfc-hero__stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* -----------------------------------------------------------------------
+   Slide Indicators
+   ----------------------------------------------------------------------- */
+
+.sfc-hero__indicators {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+
+.sfc-hero__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.sfc-hero__dot--active {
+  background: var(--color-primary, #FF6B35);
+  border-color: var(--color-primary, #FF6B35);
+  transform: scale(1.2);
+}
+
+.sfc-hero__dot:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* -----------------------------------------------------------------------
+   Scroll indicator
+   ----------------------------------------------------------------------- */
+
+.sfc-hero__scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.5;
+}
+
+.sfc-hero__scroll span {
+  font-size: 0.65rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.sfc-hero__scroll-line {
+  width: 1px;
+  height: 30px;
+  background: linear-gradient(to bottom, #ffffff, transparent);
+  animation: sfc-hero-scroll 2s ease-in-out infinite;
+}
+
+@keyframes sfc-hero-scroll {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.5); transform-origin: top; }
+  50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media only screen and (max-width: 768px) {
+  .sfc-hero {
+    min-height: 500px;
+    height: 85vh;
+  }
+
+  .sfc-hero__title {
+    font-size: 2.25rem;
+  }
+
+  .sfc-hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .sfc-hero__actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .sfc-hero__btn {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+  }
+
+  .sfc-hero__stats {
+    gap: var(--space-4, 1rem);
+  }
+
+  .sfc-hero__stat-number {
+    font-size: 1.35rem;
+  }
+
+  .sfc-hero__indicators {
+    bottom: 60px;
+  }
+
+  .sfc-hero__scroll {
+    display: none;
+  }
+
+  .sfc-hero__badge {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sfc-hero__title {
+    font-size: 1.75rem;
+  }
+
+  .sfc-hero__stat-divider {
+    height: 30px;
+  }
+}

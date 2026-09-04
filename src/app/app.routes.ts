@@ -19,6 +19,7 @@ export const appRoutes: Routes = [
   {path: 'kontakt', component: ContactPageComponent, data: {}},
   {path: 'faq', component: FaqPageComponent, data: {}},
   {path: 'regulamin', component: StatutePageComponent, data: {}},
+  {path: 'statut', component: StatutePageComponent, data: {}},
   {path: 'rodo', component: RodoPageComponent, data: {}},
   {path: 'grafik', component: SchedulePageComponent, data: {}},
 

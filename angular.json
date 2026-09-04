@@ -21,18 +21,12 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/assets/css/main.css",
               "src/styles.css",
               "node_modules/font-awesome/css/font-awesome.css",
-              "src/assets/css/bootstrap.css",
-              "src/assets/css/bootstrap-theme.min.css",
-              "src/assets/css/jqueryui/jquery-ui-1.10.3.custom.css"
+              "src/assets/css/bootstrap.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "src/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js",
-              "src/assets/bower_components/jquery/jquery.js",
-              "src/assets/js/build/production.js"
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
@@ -81,17 +75,11 @@
             "tsConfig": "src/tsconfig.spec.json",
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "src/assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js",
-              "src/assets/bower_components/jquery/jquery.js",
-              "src/assets/js/build/production.js"
             ],
             "styles": [
-              "src/assets/css/main.css",
               "src/styles.css",
               "node_modules/font-awesome/css/font-awesome.css",
-              "src/assets/css/bootstrap.css",
-              "src/assets/css/bootstrap-theme.min.css",
-              "src/assets/css/jqueryui/jquery-ui-1.10.3.custom.css"
+              "src/assets/css/bootstrap.css"
             ],
             "assets": [
               "src/assets",

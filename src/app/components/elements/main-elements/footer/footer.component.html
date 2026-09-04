@@ -1,39 +1,77 @@
-<div class="footer-grey">
-  <div class="border-gray pull-down-140"></div>
-  <!-- /.border-gray -->
-  <!--<div class="container pull-down-30 footer">-->
-    <!--<div class="row push-down-20">-->
-      <!--<div class="col-xs-12 col-md-3"><h5 class="push-down-25"></h5>-->
-      <!--</div>-->
-      <!--<div class="col-xs-12 col-md-3"><h5 class="push-down-25"></h5>-->
-      <!--</div>-->
-      <!--<div class="col-xs-12 col-md-3"><h5 class="push-down-25"></h5>-->
-      <!--</div>-->
-      <!--<div class="col-xs-12 col-md-3"><h5 class="push-down-25"></h5>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash; /.row &ndash;&gt;-->
-  <!--</div>-->
-  <!-- /.row -->
-</div>
-<!-- /.container -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-xs-6 col-sm-6 copyright align-l">
-      <div class="inner-top-bottom-30">
-        <p>&copy;FITNESS THEME 2013</p>
+<footer class="sfc-footer">
+  <!-- Main footer content -->
+  <div class="sfc-footer__main">
+    <div class="sfc-footer__container">
+      <div class="sfc-footer__grid">
+
+        <!-- Column 1: About -->
+        <div class="sfc-footer__col sfc-footer__col--about">
+          <div class="sfc-footer__logo">
+            <img src="assets/img/logo.png" alt="SFC 24">
+          </div>
+          <p class="sfc-footer__about">
+            Sieć klubów fitness z dostępem 24/7. Siłownia, crossfit, boks, MMA
+            i zajęcia grupowe w 4 lokalizacjach na Mazowszu.
+          </p>
+          <div class="sfc-footer__social">
+            <a href="https://www.facebook.com/SFC24.eu" target="_blank" rel="noopener noreferrer" class="sfc-footer__social-link" aria-label="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://www.facebook.com/groups/sfc24" target="_blank" rel="noopener noreferrer" class="sfc-footer__social-link" aria-label="Grupa na Facebooku">
+              <i class="fa fa-users"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick links -->
+        <div class="sfc-footer__col">
+          <h4 class="sfc-footer__heading">Nawigacja</h4>
+          <ul class="sfc-footer__links">
+            <li><a routerLink="/">Strona główna</a></li>
+            <li><a routerLink="/oferta">Oferta</a></li>
+            <li><a routerLink="/cennik">Cennik</a></li>
+            <li><a routerLink="/kontakt">Kontakt</a></li>
+            <li><a routerLink="/faq">Dokumenty</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Legal -->
+        <div class="sfc-footer__col">
+          <h4 class="sfc-footer__heading">Informacje</h4>
+          <ul class="sfc-footer__links">
+            <li><a routerLink="/regulamin">Regulamin</a></li>
+            <li><a routerLink="/rodo">RODO</a></li>
+            <li><a routerLink="/statut">Statut</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="sfc-footer__col">
+          <h4 class="sfc-footer__heading">Kontakt</h4>
+          <ul class="sfc-footer__contact">
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel:607300601">607 300 601</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <a href="mailto:klub@sfc24.eu">klub@sfc24.eu</a>
+            </li>
+            <li>
+              <i class="fa fa-map-marker"></i>
+              <span>Garwolin, ul. Mazowiecka 22</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
-      <!-- /.inner-top-bottom-30 -->
     </div>
-    <!-- /.col-md-12 -->
-    <div class="col-md-6 col-xs-6 col-sm-6 copyright align-r">
-      <div class="inner-top-bottom-30">
-        <p>DESIGNED BY <strong>MUNFACTORY</strong></p>
-      </div>
-      <!-- /.inner-30 -->
-    </div>
-    <!-- /.col-md-12 -->
   </div>
-  <!-- /.row -->
-</div>
-<!-- /.container -->
+
+  <!-- Bottom bar -->
+  <div class="sfc-footer__bottom">
+    <div class="sfc-footer__container sfc-footer__bottom-inner">
+      <p>&copy; {{currentYear}} SFC 24. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </div>
+</footer>

@@ -1,10 +1,8 @@
 /**
- * Created by Pawel Grzyb 01.04.2018
- *
- * FAQ
+ * FAQ page with accordion.
  */
 
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-faq-page',
@@ -12,7 +10,11 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./faq-page.component.css']
 })
 export class FaqPageComponent implements OnInit {
+  openFaq: number = -1;
+
   ngOnInit() {}
+
+  toggleFaq(index: number) {
+    this.openFaq = this.openFaq === index ? -1 : index;
+  }
 }
-
-
