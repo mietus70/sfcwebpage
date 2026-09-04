@@ -11,8 +11,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "test coverage": "ng test --code-coverage --sourceMap=false",
-    "docs": "npm run typedoc -- --options typedoc.json --exclude '**/*.spec.ts' ./src/app/",
-    "typedoc": "typedoc",
     "build:server:prod": "ng run sfc-webpage:server && webpack --config webpack.server.config.js --progress --colors",
     "build:browser:prod": "ng build --prod",
     "build:prod": "npm run build:server:prod && npm run build:browser:prod",
@@ -60,7 +58,7 @@
     "@angular/language-service": "^7.2.12",
     "@types/jasmine": "~3.3.12",
     "@types/jasminewd2": "~2.0.6",
-    "@types/jquery": "^3.3.29",
+    "@types/jquery": "3.3.29",
     "@types/node": "~11.13.2",
     "codelyzer": "~5.0.0",
     "jasmine-core": "~3.4.0",
@@ -74,7 +72,13 @@
     "protractor": "~5.4.2",
     "ts-node": "~8.0.3",
     "tslint": "~5.15.0",
-    "typedoc": "^0.14.2",
     "typescript": "^3.2.4"
+  },
+  "overrides": {
+    "@types/lodash": "4.14.168",
+    "@types/shelljs": "0.8.1",
+    "glob": "8.1.0",
+    "@types/jquery": "3.3.29",
+    "@types/minimatch": "3.0.3"
   }
 }
