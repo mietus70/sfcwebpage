@@ -1,0 +1,541 @@
+/* ==========================================================================
+   SFC Main Page - Modern homepage styles
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------
+   Container
+   ----------------------------------------------------------------------- */
+
+.sfc-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-4, 1rem);
+}
+
+/* -----------------------------------------------------------------------
+   Section base
+   ----------------------------------------------------------------------- */
+
+.sfc-section {
+  padding: var(--space-16, 4rem) 0;
+}
+
+.sfc-section--alt {
+  background: var(--color-gray-50, #F9FAFB);
+}
+
+.sfc-section--intro {
+  padding-top: var(--space-12, 3rem);
+  padding-bottom: var(--space-10, 2.5rem);
+  text-align: center;
+}
+
+.sfc-section--payment {
+  padding-top: var(--space-6, 1.5rem);
+}
+
+.sfc-section__header {
+  text-align: center;
+  margin-bottom: var(--space-10, 2.5rem);
+}
+
+.sfc-section__header h2 {
+  font-size: 2rem;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.sfc-section__divider {
+  width: 50px;
+  height: 3px;
+  background: var(--color-primary, #FF6B35);
+  margin: var(--space-3, 0.75rem) auto var(--space-4, 1rem);
+  border-radius: 2px;
+}
+
+.sfc-section__divider--light {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.sfc-section__lead {
+  font-size: 1.1rem;
+  color: var(--color-gray-500, #6B7280);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* -----------------------------------------------------------------------
+   Intro Section
+   ----------------------------------------------------------------------- */
+
+.sfc-intro__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  background: var(--color-primary-50, #FFF4EF);
+  border: 1px solid var(--color-primary-lighter, #FFB899);
+  border-radius: 9999px;
+  color: var(--color-primary-dark, #E85A2A);
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.sfc-intro__title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-3, 0.75rem);
+}
+
+.sfc-intro__title-accent {
+  color: var(--color-primary, #FF6B35);
+}
+
+.sfc-intro__subtitle {
+  font-size: 1rem;
+  color: var(--color-gray-500, #6B7280);
+  max-width: 500px;
+  margin: 0 auto var(--space-8, 2rem);
+}
+
+/* Info cards */
+.sfc-info-cards {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4, 1rem);
+  flex-wrap: wrap;
+}
+
+.sfc-info-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  padding: var(--space-4, 1rem) var(--space-6, 1.5rem);
+  background: #ffffff;
+  border-radius: var(--radius-lg, 0.75rem);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100, #F3F4F6);
+  transition: all var(--transition-base, 250ms ease);
+}
+
+.sfc-info-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.sfc-info-card__icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md, 0.5rem);
+  background: var(--color-primary-50, #FFF4EF);
+  color: var(--color-primary, #FF6B35);
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.sfc-info-card__text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.sfc-info-card__text strong {
+  font-size: 0.9rem;
+  color: var(--color-gray-800, #1F2937);
+}
+
+.sfc-info-card__text span {
+  font-size: 0.8rem;
+  color: var(--color-gray-500, #6B7280);
+}
+
+/* -----------------------------------------------------------------------
+   Payment Section
+   ----------------------------------------------------------------------- */
+
+.sfc-payment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6, 1.5rem);
+  margin-bottom: var(--space-6, 1.5rem);
+}
+
+.sfc-payment-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg, 0.75rem);
+  padding: var(--space-6, 1.5rem);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100, #F3F4F6);
+  transition: all var(--transition-base, 250ms ease);
+}
+
+.sfc-payment-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.sfc-payment-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.sfc-payment-card__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md, 0.5rem);
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.sfc-payment-card__icon--blik {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.sfc-payment-card__icon--bank {
+  background: #E3F2FD;
+  color: #1565C0;
+}
+
+.sfc-payment-card__header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.sfc-payment-card p {
+  color: var(--color-gray-500, #6B7280);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.sfc-payment-card__number {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-gray-800, #1F2937);
+  letter-spacing: 0.02em;
+}
+
+.sfc-payment-card__number--small {
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+/* Transfer info box */
+.sfc-transfer-info {
+  background: var(--color-primary-50, #FFF4EF);
+  border: 1px solid var(--color-primary-lighter, #FFB899);
+  border-radius: var(--radius-lg, 0.75rem);
+  padding: var(--space-6, 1.5rem);
+}
+
+.sfc-transfer-info h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary-dark, #E85A2A);
+  margin-bottom: var(--space-3, 0.75rem);
+  font-size: 1rem;
+}
+
+.sfc-transfer-info__content p {
+  font-size: 0.9rem;
+  color: var(--color-gray-600, #4B5563);
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.sfc-transfer-info__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------------------------------
+   Phone link
+   ----------------------------------------------------------------------- */
+
+.sfc-phone-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary, #FF6B35);
+  text-decoration: none;
+  transition: color var(--transition-fast, 150ms ease);
+}
+
+.sfc-phone-link:hover {
+  color: var(--color-primary-dark, #E85A2A);
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------------------------
+   Two column layout
+   ----------------------------------------------------------------------- */
+
+.sfc-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6, 1.5rem);
+}
+
+/* -----------------------------------------------------------------------
+   Feature cards
+   ----------------------------------------------------------------------- */
+
+.sfc-card--feature {
+  background: #ffffff;
+  border-radius: var(--radius-lg, 0.75rem);
+  padding: var(--space-8, 2rem);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100, #F3F4F6);
+  transition: all var(--transition-base, 250ms ease);
+}
+
+.sfc-card--feature:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.sfc-card__icon-wrap {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md, 0.5rem);
+  background: linear-gradient(135deg, var(--color-primary, #FF6B35), var(--color-primary-light, #FF8C61));
+  color: #ffffff;
+  font-size: 1.35rem;
+  margin-bottom: var(--space-5, 1.25rem);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.sfc-card--feature h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-4, 1rem);
+}
+
+/* Feature list */
+.sfc-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sfc-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3, 0.75rem);
+  padding: var(--space-2, 0.5rem) 0;
+  font-size: 0.9rem;
+  color: var(--color-gray-600, #4B5563);
+  border-bottom: 1px solid var(--color-gray-100, #F3F4F6);
+}
+
+.sfc-feature-list li:last-child {
+  border-bottom: none;
+}
+
+.sfc-feature-list li i {
+  color: var(--color-success, #10B981);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.sfc-feature-list li i.fa-angle-right {
+  color: var(--color-primary, #FF6B35);
+}
+
+/* Card note */
+.sfc-card__note {
+  margin-top: var(--space-5, 1.25rem);
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  background: var(--color-info-light, #DBEAFE);
+  border-radius: var(--radius-md, 0.5rem);
+  font-size: 0.8rem;
+  color: var(--color-gray-600, #4B5563);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.sfc-card__note i {
+  color: var(--color-info, #3B82F6);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------------------------------------
+   Classes Banner (parallax)
+   ----------------------------------------------------------------------- */
+
+.sfc-classes-banner {
+  position: relative;
+  background: url("../../../../assets/img/background_classes.jpg") center / cover no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+  text-align: center;
+  padding: var(--space-20, 5rem) 0;
+  overflow: hidden;
+}
+
+.sfc-classes-banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.7));
+}
+
+.sfc-classes-banner__content {
+  position: relative;
+  z-index: 1;
+}
+
+.sfc-classes-banner h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.sfc-classes-banner p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 500px;
+  margin: 0 auto var(--space-6, 1.5rem);
+}
+
+/* -----------------------------------------------------------------------
+   Locations grid
+   ----------------------------------------------------------------------- */
+
+.sfc-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4, 1rem);
+}
+
+.sfc-location-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg, 0.75rem);
+  padding: var(--space-6, 1.5rem) var(--space-4, 1rem);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100, #F3F4F6);
+  transition: all var(--transition-base, 250ms ease);
+}
+
+.sfc-location-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--color-primary-lighter, #FFB899);
+}
+
+.sfc-location-card__pin {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-primary-50, #FFF4EF);
+  color: var(--color-primary, #FF6B35);
+  font-size: 1.25rem;
+  margin: 0 auto var(--space-3, 0.75rem);
+}
+
+.sfc-location-card h4 {
+  margin-bottom: var(--space-2, 0.5rem);
+  font-size: 1.1rem;
+}
+
+.sfc-location-card p {
+  font-size: 0.8rem;
+  color: var(--color-gray-500, #6B7280);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .sfc-locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sfc-section {
+    padding: var(--space-10, 2.5rem) 0;
+  }
+
+  .sfc-intro__title {
+    font-size: 2.25rem;
+  }
+
+  .sfc-payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sfc-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .sfc-classes-banner {
+    background-attachment: scroll;
+    padding: var(--space-12, 3rem) 0;
+  }
+
+  .sfc-classes-banner h2 {
+    font-size: 1.75rem;
+  }
+
+  .sfc-info-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sfc-info-card {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sfc-locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sfc-section__header h2 {
+    font-size: 1.5rem;
+  }
+
+  .sfc-intro__title {
+    font-size: 2rem;
+  }
+
+  .sfc-payment-card__number {
+    font-size: 1.1rem;
+  }
+
+  .sfc-payment-card__number--small {
+    font-size: 0.8rem;
+    word-break: break-all;
+  }
+}
