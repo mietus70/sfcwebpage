@@ -1,258 +1,365 @@
-<app-page>
-  <div class="navigation-content">
+<style>
+  .sfc-hero {
+    background: linear-gradient(135deg, rgba(26,26,26,0.92) 0%, rgba(26,26,26,0.78) 100%),
+                url('assets/img/slider/slide_1.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 120px 0 100px;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-radius: 0 0 24px 24px;
+    overflow: hidden;
+  }
 
-    <!--Silownia 24-->
-    <div class="col-md-12 align-c">
-            <h1>SFC<i class="fa fa-clock-o" aria-hidden="true"></i>24</h1>
-      <h2> Klub bezobsługowy </h2>
+  .sfc-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+
+  .sfc-hero .hero-icon {
+    color: #afca07;
+    font-size: 2.5rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+
+  .sfc-hero h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+
+  .sfc-hero .btn-cta {
+    background: #afca07;
+    color: #1a1a1a;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .sfc-hero .btn-cta:hover {
+    background: #96b306;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(175,202,7,0.35);
+  }
+
+  .section-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #afca07;
+    border-radius: 2px;
+  }
+
+  .sfc-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    height: 100%;
+    background: #fff;
+  }
+
+  .sfc-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  }
+
+  .sfc-card .card-body {
+    padding: 1.75rem;
+  }
+
+  .sfc-card .card-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(175,202,7,0.12);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: #afca07;
+    font-size: 1.5rem;
+  }
+
+  .sfc-card h5 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+  }
+
+  .sfc-card p, .sfc-card ul {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .sfc-card ul {
+    padding-left: 1.2rem;
+  }
+
+  .sfc-card ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  .info-highlight {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #afca07;
+  }
+
+  .info-highlight h5 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+  }
+
+  .info-highlight p, .info-highlight ul {
+    color: #555;
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+
+  .info-highlight ul {
+    padding-left: 1.2rem;
+  }
+
+  .section-cta {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    border-radius: 16px;
+    margin-top: 3rem;
+  }
+
+  .section-cta h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .section-cta p {
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .section-cta .btn-cta {
+    background: #afca07;
+    color: #1a1a1a;
+    font-weight: 700;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .section-cta .btn-cta:hover {
+    background: #96b306;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(175,202,7,0.35);
+  }
+
+  .badge-phone {
+    display: inline-block;
+    background: #afca07;
+    color: #1a1a1a;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .badge-phone:hover {
+    background: #96b306;
+    color: #1a1a1a;
+  }
+
+  @media (max-width: 768px) {
+    .sfc-hero {
+      padding: 80px 0 60px;
+    }
+
+    .sfc-hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .sfc-hero h2 {
+      font-size: 1.2rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+    }
+  }
+</style>
+
+<!-- Hero Section -->
+<div class="sfc-hero">
+  <h1><i class="fa fa-clock-o hero-icon" aria-hidden="true"></i>SFC 24</h1>
+  <h2>Klub bezobsługowy</h2>
+  <a href="tel:607300601" class="btn-cta">Zadzwoń i zapisz się</a>
+</div>
+
+<!-- Info Section -->
+<div class="row mb-5">
+  <div class="col-md-6">
+    <div class="info-highlight">
+      <h5><i class="fa fa-id-card-o" aria-hidden="true"></i> Dostęp do klubu</h5>
+      <p>Wstęp do klubu możliwy jest wyłącznie z aktywną kartą lub przydzielonym kodem dostępu.</p>
+      <p>Przedłużenie ważności karnetu możliwe od poniedziałku do piątku w godzinach 11:00-21:00.</p>
+      <a href="tel:607300601" class="badge-phone">607 300 601</a>
     </div>
-    <div class="row align-l">
-      <div class="col-md-offset-3 col-md-6 pull-down-30">
-            <b>Wstęp do klubu możliwy jest wyłącznie z aktywną kartą lub
-              przydzielonym kodem dostępu.</b><br/>
-            Przedłużenie ważności karnetu możliwe od poniedziałku do piątku.<br>
-            Prosimy o kontakt telefoniczny na numer 607 300 601 w godzinach
-            11:00-21:00.
-        <h2>Płatność za karnet</h2>
-        <ul>
-          <li>
-            BLIK na nr tel. <b>607 300 601</b>
-          </li>
-          <li>
-            Przelew (ING 50 1050 1012 1000 0090 7666 3542)<br>
-            <div style="margin: 1em; padding: 1em; background-color:
-            antiquewhite;">
-              <b>Tytuł przelewu</b><br/><br/>
-
-              <p>Imię i nazwisko / numer karty (jeśli jest wykupiona) /
-              miejscowość siłowni / ilość dni (30/90/360) / od kiedy
-              uaktywnić karnet
-              </p>
-              <p>Potwierdzenie wykonania płatności proszę wysłać na mail
-                             karnety@sfc24.eu</p>
-              <p>W treści maila napisać
-                Imię i nazwisko / numer karty (jeśli jest wykupiona) / miejscowość siłowni / ilość dni (30/90/360) / od kiedy uaktywnić karnet
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div> <!-- row -->
-
-    <div class="border-green"></div>
-
-    <div class="col-md-12 align-c pull-down-65">
-      <h1><i class="fa fa-child" aria-hidden="true"></i> Pierwsza wizyta w
-        klubie</h1>
-    </div>
-
-    <div class="row" style="text-align: center">
-      <div class="col-md-offset-3 col-md-6 pull-down-30">
-        <h3>Wybierasz się pierwszy raz do SFC? <br>Zadzwoń pod nr <h2>607 300
-          601</h2></h3>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-offset-5 col-md-3 pull-down-30">
-        <h3>Oferta treningowa:</h3>
-        <ul>
-          <li>
-            trening boksu i MMA
-          </li>
-          <li>
-            zajęcia crossfit
-          <li>
-            zajęcia grupowe od 12 roku życia dla kobiet i mężczyzn
-          </li>
-          <li>
-            zajęcia boksu dla dzieci od 6 roku życia (po zebraniu się grupy)
-          </li>
-          <li>
-            siłownia z dostępem 24 h
-          </li>
-        </ul>
-      </div>
-    </div> <!-- row -->
-    <hr>
-    <div class="row">
-      <div class="col-md-offset-3 col-md-3 push-down-66">
-        <h3>Pierwszy trening grupowy lub trening na siłowni?</h3>
-        <ul>
-          <li>musisz mieć ukończone 6 lat (na pierwszy trening przyjdź wraz
-            z opiekunem prawnym),
-          </li>
-          <li>
-            wstęp tylko w zmienionym obuwiu,
-          </li>
-          <li>
-            postępuj zgodnie z regulaminem siłowni,
-          </li>
-          <li>
-            pamiętaj, że na sali są inni trenujący.
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-md-3 push-down-33">
-        <h3>Wstęp na treningi grupowe.</h3>
-        <p>
-          Karnet SFC24 to wstęp na siłownię przez 24 h na dobę i wszystkie
-          zajęcia prowadzone w klubach bez limitu przy zakupie karnetu OPEN.
-        </p>
-        <p>
-          Przez trening rozumie się 60 minut sesji treningowej.
-        </p>
-      </div>
-    </div><!-- row -->
-
-    <!--<div class="border-green"></div>-->
-
-    <!--<div class="col-md-12 align-c pull-down-65">-->
-    <!--<h1><i class="fa fa-gift" aria-hidden="true"></i> Aktualne promocje</h1>-->
-    <!--</div>-->
-
-    <!--<div class="row">-->
-    <!--<div class="col-md-offset-3 col-md-6 pull-down-30">-->
-    <!--<h3>Oferta wakacyjna</h3>-->
-    <!--<h4>Wakacje dla członków klubu za 80 zł. Czyli 40 zł za miesiąc!</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="row">-->
-    <!--<div class="col-md-offset-3 col-md-6 pull-down-30">-->
-    <!--<h3>Dla nowych klubowiczów</h3>-->
-    <!--<h4>Od teraz do końca sierpnia za jedyne 80 zł!</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="row">-->
-    <!--<div class="col-md-offset-3 col-md-6 pull-down-30">-->
-    <!--<h3>Oferta promocyjna nr 1</h3>-->
-    <!--<h4>Już od września treningi dla dzieciaków 6 -12 lat za darmo 13-17 lat - 50% zniżki!-->
-    <!--<br>Warunek otrzymania zniżki: posiadanie przez rodzica jednego lub dwa aktywne karnety.-->
-    <!--<br><br>-->
-    <!--W planie: zajęcia ruchowe, koordynacyjne i uwielbiane przez dzieci tory przeszkód!-->
-    <!--<br><br>-->
-    <!--*promocja ważna do: marzec 2019 roku!</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="row">-->
-    <!--<div class="col-md-offset-3 col-md-6 pull-down-30">-->
-    <!--<h3>Oferta promocyjna nr 2</h3>-->
-    <!--<h4>Z tej okazji mamy dla dzieciaków fajną niespodziankę!-->
-    <!--<br><br>-->
-    <!--W czerwcu trenujący rodzic może zabrać dzieciaka do 18 roku życia za darmo!-->
-    <!--<br><br>-->
-    <!--Dwoje rodziców trenuje? Możecie zabrać na siłownię wszystkie swoje nieletnie pociechy za darmo! </h4>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="row">-->
-    <!--<div class="col-md-offset-3 col-md-6 pull-down-30">-->
-    <!--<h3>Oferta promocyjna nr 3</h3>-->
-    <!--<h4>URODZINY w klubie!-->
-    <!--<br>-->
-    <!--<br>-->
-    <!--od 01.06.2018 do końca wakacji możesz wynająć salę zabaw za jedyne 99 zł za całą imprezę!-->
-    <!--(szczegóły u obsługi klubu)</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="row">-->
-    <!--<div class="col-md-offset-3 col-md-6 pull-down-30">-->
-    <!--<h3>Oferta promocyjna nr 4</h3>-->
-    <!--<h4>29 zł za treningi? Seniorzy 65+-->
-    <!--<br><br>-->
-    <!--Treningi dla seniorów i ruszamy od września!-->
-    <!--*grupa minimum 10 osób (jeżeli nie uda się zebrać karnet zostanie przepisany na siłownię).</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="row">-->
-    <!--<div class="col-md-offset-3 col-md-6 pull-down-30">-->
-    <!--<h3>Oferta promocyjna nr 5</h3>-->
-    <!--<h4>Dla każdego lojalnego klubowicza!-->
-    <!--<br><br>-->
-    <!--obowiązuje od 01.09.2018 do 10.09.2018.-->
-    <!--<br><br>-->
-    <!--50 zł za siłownię za miesiąc przy opłaceniu 3 miesięcy.-->
-    <!--<br><br>-->
-    <!--Oczywiście promocja dla każdego kto posiada już aktywny karnet w SFC i w 2018 roku korzystał z naszej siłowni ;)</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="row">-->
-    <!--<div class="col-md-offset-3 col-md-6 pull-down-30  push-down-66">-->
-    <!--<h3>Oferta promocyjna nr 6</h3>-->
-    <!--<h4>99 zł za siłownię i cross/ miesiąc obowiązuje do końca 2018 roku!-->
-    <!--<br><br>-->
-    <!--Zapraszamy :)</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <div class="classes-banner" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-top-90">
-              <h1 class="align-c no-margin" data-stellar-ratio="0.6">
-                ZAJĘCIA</h1>
-              <div class="align-c">
-                <div class="small-border"></div>
-              </div> <!-- align-c -->
-              <!-- /.align-c -->
-            </div> <!-- inner-top-bottom-60 -->
-          </div> <!-- col-md-12 -->
-        </div> <!-- row -->
-        <div class="row">
-          <div class="col-md-offset-3 col-md-6">
-            <div class="inner-bottom-90">
-              <p class="align-c" data-stellar-ratio="0.6"></p>
-            </div>
-            <!-- /.inner-bottom-60 -->
-          </div>
-          <!-- /.col-md-offset-2 -->
-        </div>
-        <!-- /.row -->
-      </div>
-    </div> <!-- classes-banner -->
-
-    <div class="background-grey" style="padding: 1em;">
-      <div class="row">
-
-        <div class="col-md-12 align-c pull-down-65">
-          <h1>Zajęcia odbywają się:</h1>
-          <p>Według harmonogramu podanego na stronie www.sfc24.eu lub grupie na
-            Facebooku.</p>
-        <!-- <img src="assets/img/shedule.jpg" style="width: 100%"> -->
-        </div>
-
-<!--        <div class="row">-->
-<!--          <div class="col-md-offset-6 col-md-12 pull-down-30 push-down-66">-->
-<!--            <h3>Zajęcia poranne: crossfit 2x tydzień - prosimy o kontakt-->
-<!--              telefoniczny <br> 607 300 601</h3>-->
-<!--            <h3>Zajęcia popołudniowe: prosimy o kontakt-->
-<!--              telefoniczny<br>607 300 601 </h3>-->
-<!--            <ul>-->
-<!--              <li><strong>Dla dzieci:</strong> 2 x tydzień</li>-->
-<!--              <li><strong>Dla mężczyzn boks + samoobrona:</strong> 2 x tydzień,-->
-<!--                crossfit 2 x tydzień-->
-<!--              </li>-->
-<!--              <li><strong>Dla kobiet boks + samoobrona:</strong> 2 x tydzień-->
-<!--                crossfit 2 x tydzień-->
-<!--              </li>-->
-<!--              <li><strong>Dla seniorów:</strong> 2 x tydzień</li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </div> &lt;!&ndash; row &ndash;&gt;-->
-
-      </div>
-
-    </div>
-
   </div>
-  <!-- /.navigation-content -->
-</app-page>
+  <div class="col-md-6">
+    <div class="info-highlight">
+      <h5><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Płatność za karnet</h5>
+      <ul>
+        <li><strong>BLIK</strong> na nr tel. 607 300 601</li>
+        <li><strong>Przelew:</strong> ING 50 1050 1012 1000 0090 7666 3542</li>
+      </ul>
+      <p style="margin-top: 0.75rem; font-size: 0.9rem;">
+        <strong>Tytuł przelewu:</strong><br>
+        Imię i nazwisko / numer karty / miejscowość siłowni / ilość dni (30/90/360) / od kiedy uaktywnić karnet
+      </p>
+      <p style="font-size: 0.9rem;">Potwierdzenie proszę wysłać na: <strong>karnety@sfc24.eu</strong></p>
+    </div>
+  </div>
+</div>
 
+<!-- Offer Section -->
+<h3 class="section-title">Nasza oferta</h3>
+<div class="row mb-5">
+  <div class="col-md-4 col-sm-6 mb-4">
+    <div class="sfc-card">
+      <div class="card-body">
+        <div class="card-icon"><i class="fa fa-fist-raised" aria-hidden="true"></i></div>
+        <h5>Boks i MMA</h5>
+        <p>Treningi boksu i samoobrony dla kobiet i mężczyzn.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6 mb-4">
+    <div class="sfc-card">
+      <div class="card-body">
+        <div class="card-icon"><i class="fa fa-heartbeat" aria-hidden="true"></i></div>
+        <h5>Crossfit</h5>
+        <p>Zajęcia crossfitowe poprawiające wydolność i siłę.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6 mb-4">
+    <div class="sfc-card">
+      <div class="card-body">
+        <div class="card-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+        <h5>Zajęcia grupowe</h5>
+        <p>Zajęcia grupowe od 12 roku życia dla kobiet i mężczyzn.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6 mb-4">
+    <div class="sfc-card">
+      <div class="card-body">
+        <div class="card-icon"><i class="fa fa-child" aria-hidden="true"></i></div>
+        <h5>Boks dla dzieci</h5>
+        <p>Zajęcia boksu dla dzieci od 6 roku życia (po zebraniu się grupy).</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-6 mb-4">
+    <div class="sfc-card">
+      <div class="card-body">
+        <div class="card-icon"><i class="fa fa-clock" aria-hidden="true"></i></div>
+        <h5>Siłownia 24h</h5>
+        <p>Dostęp do siłowni 24 godziny na dobę, 7 dni w tygodniu.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- First Visit Section -->
+<div class="row mb-5">
+  <div class="col-md-12">
+    <h3 class="section-title">Pierwsza wizyta w klubie</h3>
+  </div>
+  <div class="col-md-6">
+    <div class="info-highlight">
+      <h5><i class="fa fa-dumbbell" aria-hidden="true"></i> Pierwszy trening</h5>
+      <ul>
+        <li>musisz mieć ukończone 6 lat (na pierwszy trening przyjdź wraz z opiekunem prawnym)</li>
+        <li>wstęp tylko w zmienionym obuwiu</li>
+        <li>postępuj zgodnie z regulaminem siłowni</li>
+        <li>pamiętaj, że na sali są inni trenujący</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="info-highlight">
+      <h5><i class="fa fa-ticket" aria-hidden="true"></i> Wstęp na treningi grupowe</h5>
+      <p>Karnet SFC24 to wstęp na siłownię przez 24 h na dobę i wszystkie zajęcia prowadzone w klubach bez limitu przy zakupie karnetu OPEN.</p>
+      <p>Przez trening rozumie się 60 minut sesji treningowej.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Schedule Section -->
+<div class="row mb-5">
+  <div class="col-md-12">
+    <div class="info-highlight" style="text-align: center;">
+      <h5><i class="fa fa-calendar" aria-hidden="true"></i> Harmonogram zajęć</h5>
+      <p>Zajęcia odbywają się według harmonogramu podanego na stronie <a href="https://www.sfc24.eu" target="_blank">www.sfc24.eu</a> lub grupie na Facebooku.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom CTA -->
+<div class="section-cta">
+  <h3>Gotowy na trening?</h3>
+  <p>Zadzwoń do nas i rozpocznij swoją przygodę z SFC 24</p>
+  <a href="tel:607300601" class="btn-cta">607 300 601</a>
+</div>
+
+</app-page>
