@@ -45,8 +45,12 @@
       </li>
     </ul>
 
-    <!-- CTA + Hamburger -->
+    <!-- CTA + Dark Mode + Hamburger -->
     <div class="sfc-header__actions">
+      <button class="sfc-dark-toggle" (click)="toggleDarkMode()"
+              [attr.aria-label]="isDarkMode ? 'Włącz tryb jasny' : 'Włącz tryb ciemny'">
+        <i class="fa" [class.fa-sun-o]="isDarkMode" [class.fa-moon-o]="!isDarkMode"></i>
+      </button>
       <a href="tel:607300601" class="sfc-btn sfc-btn--primary sfc-btn--sm sfc-header__cta-desktop">
         <i class="fa fa-phone"></i> 607 300 601
       </a>

@@ -1144,3 +1144,270 @@ figure {
     align-items: center;
   }
 }
+
+/* ==========================================================================
+   22. DARK MODE
+   ========================================================================== */
+
+html.dark {
+  /* Override primary colors (slightly brighter for dark bg) */
+  --color-primary: #FF8C5A;
+  --color-primary-dark: #FF6B35;
+  --color-primary-light: #FFB899;
+  --color-primary-50: rgba(255, 107, 53, 0.1);
+  --color-primary-100: rgba(255, 107, 53, 0.15);
+
+  /* Neutral colors inverted */
+  --color-white: #111827;
+  --color-gray-50: #1F2937;
+  --color-gray-100: #283548;
+  --color-gray-200: #374151;
+  --color-gray-300: #4B5563;
+  --color-gray-400: #6B7280;
+  --color-gray-500: #9CA3AF;
+  --color-gray-600: #D1D5DB;
+  --color-gray-700: #E5E7EB;
+  --color-gray-800: #F3F4F6;
+  --color-gray-900: #F9FAFB;
+
+  /* Background surfaces */
+  --color-surface: #111827;
+  --color-surface-raised: #1F2937;
+  --color-surface-overlay: #283548;
+
+  /* Text colors */
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #D1D5DB;
+  --color-text-muted: #9CA3AF;
+
+  /* Borders */
+  --border-thin: 1px solid rgba(255, 255, 255, 0.08);
+  --border-medium: 2px solid rgba(255, 255, 255, 0.08);
+
+  /* Shadows (lighter, more subtle) */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3);
+
+  /* Semantic colors (slightly adjusted) */
+  --color-success: #34D399;
+  --color-success-light: rgba(52, 211, 153, 0.15);
+  --color-warning: #FBBF24;
+  --color-warning-light: rgba(251, 191, 36, 0.15);
+  --color-error: #F87171;
+  --color-error-light: rgba(248, 113, 113, 0.15);
+  --color-info: #60A5FA;
+  --color-info-light: rgba(96, 165, 250, 0.15);
+
+  /* Scrollbar */
+  color-scheme: dark;
+}
+
+/* Body background */
+html.dark body {
+  background-color: #111827;
+  color: #E5E7EB;
+}
+
+/* Selection */
+html.dark ::selection {
+  background-color: #FF6B35;
+  color: #ffffff;
+}
+
+/* Scrollbar dark */
+html.dark ::-webkit-scrollbar-track {
+  background: #1F2937;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #4B5563;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6B7280;
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Header
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-header {
+  background: rgba(17, 24, 39, 0.95);
+}
+
+html.dark .sfc-header--scrolled {
+  background: rgba(17, 24, 39, 0.98);
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Cards & Surfaces
+   ----------------------------------------------------------------------- */
+
+html.dark .card-sfc,
+html.dark .sfc-service-card,
+html.dark .sfc-price-card,
+html.dark .sfc-location-card,
+html.dark .sfc-payment-card,
+html.dark .sfc-info-card,
+html.dark .sfc-faq-item,
+html.dark .sfc-document-card,
+html.dark .sfc-quick-contact__item,
+html.dark .sfc-payment-method {
+  background: #1F2937;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html.dark .sfc-price-card--featured {
+  border-color: #FF8C5A;
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Sections
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-section--alt {
+  background: #1a2332;
+}
+
+html.dark .sfc-transfer-info,
+html.dark .sfc-transfer-details {
+  background: #1a2332;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+html.dark .sfc-transfer-info {
+  background: rgba(255, 107, 53, 0.08);
+  border-color: rgba(255, 107, 53, 0.2);
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Footer
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-footer {
+  background: #0a0f1a;
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Breadcrumbs
+   ----------------------------------------------------------------------- */
+
+html.dark .breadcrumb {
+  background: #1F2937;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: FAQ
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-faq-item__content {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+html.dark .sfc-faq__cta {
+  background: #1F2937;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Cookie banner
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-cookie-banner {
+  background: #0a0f1a;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Legacy components
+   ----------------------------------------------------------------------- */
+
+html.dark .blogger h1,
+html.dark .blogger h5 {
+  color: #E5E7EB;
+}
+
+html.dark .blogger span,
+html.dark .blogger span p {
+  color: #D1D5DB;
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Note/alert boxes
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-card__note {
+  background: rgba(96, 165, 250, 0.1);
+  color: #D1D5DB;
+}
+
+html.dark .sfc-note {
+  background: rgba(52, 211, 153, 0.1);
+  border-color: rgba(52, 211, 153, 0.2);
+}
+
+html.dark .sfc-note p {
+  color: #D1D5DB;
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Placeholder pages
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-placeholder__icon {
+  background: rgba(255, 107, 53, 0.12);
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Legal pages
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-legal p,
+html.dark .sfc-legal li,
+html.dark .sfc-legal ul,
+html.dark .sfc-legal ol {
+  color: #D1D5DB;
+}
+
+html.dark .sfc-legal__intro {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Images (slightly dimmed to reduce glare)
+   ----------------------------------------------------------------------- */
+
+html.dark img {
+  opacity: 0.9;
+}
+
+html.dark img:hover {
+  opacity: 1;
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Smooth transition
+   ----------------------------------------------------------------------- */
+
+html.dark body,
+html.dark .sfc-header,
+html.dark .sfc-footer,
+html.dark .card-sfc,
+html.dark .sfc-service-card,
+html.dark .sfc-price-card,
+html.dark .sfc-faq-item,
+html.dark .sfc-location-card,
+html.dark .sfc-payment-card,
+html.dark .sfc-info-card {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Prevent FOUC on initial load */
+html:not(.dark):not(.light) body {
+  visibility: hidden;
+}

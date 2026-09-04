@@ -17,8 +17,47 @@ export class TopMenuComponent implements OnInit {
   moblieMenuAnimLength: number = 1000;
   isScrolled: boolean = false;
   isMobileMenuOpen: boolean = false;
+  isDarkMode: boolean = false;
 
   constructor(@Inject(WINDOW) private window: Window) {
+    this.initDarkMode();
+  }
+
+  /**
+   * Initialize dark mode from localStorage or system preference
+   */
+  private initDarkMode() {
+    const stored = this.window.localStorage.getItem('sfc_dark_mode');
+    if (stored !== null) {
+      this.isDarkMode = stored === 'true';
+    } else {
+      this.isDarkMode = this.window.matchMedia
+        && this.window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    this.applyDarkMode();
+  }
+
+  /**
+   * Toggle dark mode on/off
+   */
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    this.window.localStorage.setItem('sfc_dark_mode', String(this.isDarkMode));
+    this.applyDarkMode();
+  }
+
+  /**
+   * Apply dark mode class to html element
+   */
+  private applyDarkMode() {
+    const htmlEl = this.window.document.documentElement;
+    if (this.isDarkMode) {
+      htmlEl.classList.add('dark');
+      htmlEl.classList.remove('light');
+    } else {
+      htmlEl.classList.remove('dark');
+      htmlEl.classList.add('light');
+    }
   }
 
   /**
