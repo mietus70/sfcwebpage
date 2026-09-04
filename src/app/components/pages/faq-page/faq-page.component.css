@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .sfc-faq {
-  padding: var(--space-12, 3rem) 0;
+  padding: var(--space-4, 1rem) 0 var(--space-12, 3rem);
 }
 
 .sfc-container {

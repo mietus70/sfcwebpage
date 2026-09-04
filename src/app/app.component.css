@@ -6,7 +6,7 @@
 /* Breadcrumbs */
 .breadcrumb {
   background: var(--color-gray-50, #F9FAFB);
-  padding: var(--space-3, 0.75rem) 0;
+  padding: var(--space-2, 0.5rem) 0;
   border-bottom: 1px solid var(--color-gray-200, #E5E7EB);
   margin-top: 60px; /* header height for scrolled state */
 }
@@ -44,7 +44,7 @@
 
 /* Main content container */
 .search-class {
-  padding-top: var(--space-8, 2rem) !important;
+  padding-top: var(--space-4, 1rem) !important;
   padding-bottom: var(--space-8, 2rem) !important;
   min-height: 50vh;
 }
