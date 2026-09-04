@@ -1411,3 +1411,559 @@ html.dark .sfc-info-card {
 html:not(.dark):not(.light) body {
   visibility: hidden;
 }
+
+/* ==========================================================================
+   23. DARK MODE - Component Fixes (hardcoded colors override)
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------
+   Main page - cards, sections
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-info-card,
+html.dark .sfc-payment-card,
+html.dark .sfc-card--feature,
+html.dark .sfc-location-card {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .sfc-info-card__text strong,
+html.dark .sfc-card--feature h3,
+html.dark .sfc-location-card h4,
+html.dark .sfc-payment-card__header h3 {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-info-card__text span,
+html.dark .sfc-location-card p,
+html.dark .sfc-card--feature p,
+html.dark .sfc-payment-card p {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-feature-list li,
+html.dark .sfc-feature-list li i {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-feature-list li i.fa-check-circle {
+  color: var(--color-success, #34D399) !important;
+}
+
+html.dark .sfc-feature-list li i.fa-angle-right {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-feature-list li {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Payment icons in dark mode */
+html.dark .sfc-payment-card__icon--blik {
+  background: rgba(52, 211, 153, 0.15) !important;
+  color: #34D399 !important;
+}
+
+html.dark .sfc-payment-card__icon--bank {
+  background: rgba(96, 165, 250, 0.15) !important;
+  color: #60A5FA !important;
+}
+
+html.dark .sfc-payment-card__number {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+/* Transfer info box */
+html.dark .sfc-transfer-info__content p {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-transfer-info__content a {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Intro section
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-intro__title {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-intro__subtitle {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-intro__badge {
+  background: rgba(255, 107, 53, 0.12) !important;
+  border-color: rgba(255, 107, 53, 0.3) !important;
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Section headers
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-section__header h2,
+html.dark .sfc-section__header h1 {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-section__lead {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Classes banner (parallax section)
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-classes-banner h2 {
+  color: #ffffff !important;
+}
+
+html.dark .sfc-classes-banner p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Location cards
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-location-card__pin {
+  background: var(--color-surface-overlay, #283548) !important;
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-location-card__pin--featured {
+  background: var(--color-primary-dark, #FF6B35) !important;
+  color: #ffffff !important;
+}
+
+html.dark .sfc-location-card__nav {
+  color: var(--color-primary, #FF8C5A) !important;
+  border-color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-location-card__nav:hover {
+  background: var(--color-primary, #FF8C5A) !important;
+  color: #ffffff !important;
+}
+
+/* -----------------------------------------------------------------------
+   Offer page - service cards
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-service-card {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .sfc-service-card h3 {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-service-card p {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-service-card__features {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+html.dark .sfc-service-card__features li {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-service-card__features li i {
+  color: var(--color-success, #34D399) !important;
+}
+
+/* Service card icon variants in dark */
+html.dark .sfc-service-card__icon {
+  background: rgba(255, 107, 53, 0.12) !important;
+}
+
+html.dark .sfc-service-card__icon--accent {
+  background: rgba(251, 191, 36, 0.12) !important;
+  color: #FBBF24 !important;
+}
+
+html.dark .sfc-service-card__icon--blue {
+  background: rgba(96, 165, 250, 0.12) !important;
+  color: #60A5FA !important;
+}
+
+html.dark .sfc-service-card__icon--red {
+  background: rgba(248, 113, 113, 0.12) !important;
+  color: #F87171 !important;
+}
+
+html.dark .sfc-service-card__icon--green {
+  background: rgba(52, 211, 153, 0.12) !important;
+  color: #34D399 !important;
+}
+
+html.dark .sfc-service-card__icon--purple {
+  background: rgba(167, 139, 250, 0.12) !important;
+  color: #A78BFA !important;
+}
+
+/* Offer CTA */
+html.dark .sfc-offer__cta h2 {
+  color: #ffffff !important;
+}
+
+html.dark .sfc-offer__cta p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Price page
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-price-card {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .sfc-price-card--featured {
+  border-color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-price-card__header h3 {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-price-card__amount {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-price-card--featured .sfc-price-card__amount {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-price-card__currency,
+html.dark .sfc-price-card__period {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-price-card__badge {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-price-card__badge--hot {
+  background: var(--color-primary-dark, #FF6B35) !important;
+  color: #ffffff !important;
+}
+
+html.dark .sfc-price-card__save {
+  color: var(--color-success, #34D399) !important;
+}
+
+html.dark .sfc-price-card__features {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+html.dark .sfc-price-card__features li {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-price-card__features li i {
+  color: var(--color-success, #34D399) !important;
+}
+
+html.dark .sfc-price-card__cta {
+  color: var(--color-primary, #FF8C5A) !important;
+  border-color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-price-card__cta:hover {
+  background: var(--color-primary, #FF8C5A) !important;
+  color: #ffffff !important;
+}
+
+html.dark .sfc-price-card__cta--primary {
+  background: var(--color-primary, #FF8C5A) !important;
+  color: #ffffff !important;
+  border-color: var(--color-primary, #FF8C5A) !important;
+}
+
+/* OPEN card */
+html.dark .sfc-open-card__content p {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Payment methods */
+html.dark .sfc-payment-method {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .sfc-payment-method__info h4 {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-payment-method__info p {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-payment-method__icon {
+  background: rgba(52, 211, 153, 0.12) !important;
+  color: #34D399 !important;
+}
+
+html.dark .sfc-payment-method__icon--blue {
+  background: rgba(96, 165, 250, 0.12) !important;
+  color: #60A5FA !important;
+}
+
+/* Transfer details */
+html.dark .sfc-transfer-details h4 {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-transfer-details__grid p {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-transfer-details__grid label {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-transfer-details__note {
+  background: rgba(255, 107, 53, 0.08) !important;
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+/* Kids note */
+html.dark .sfc-note {
+  background: rgba(52, 211, 153, 0.1) !important;
+  border-color: rgba(52, 211, 153, 0.2) !important;
+}
+
+html.dark .sfc-note p {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Contact page
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-quick-contact__item {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .sfc-quick-contact__item strong {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-quick-contact__item span {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-quick-contact__item i {
+  background: rgba(255, 107, 53, 0.12) !important;
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-location-card {
+  background: var(--color-surface-raised, #1F2937) !important;
+}
+
+html.dark .sfc-location-card__body h3 {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-location-card__address {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-location-card__note {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-locations-section__title {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+/* -----------------------------------------------------------------------
+   FAQ page
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-faq-item {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .sfc-faq-item__header h3 {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-faq-item--open .sfc-faq-item__header h3 {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-faq-item__content {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+html.dark .sfc-faq-item__content p,
+html.dark .sfc-faq-item__content li {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-faq-item__content a {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+/* Documents section */
+html.dark .sfc-documents__title {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-document-card {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-document-card:hover {
+  border-color: rgba(255, 107, 53, 0.4) !important;
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-document-card > i:first-child {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+/* FAQ CTA */
+html.dark .sfc-faq__cta h3 {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-faq__cta p {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-btn--outline {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark .sfc-btn--outline:hover {
+  border-color: var(--color-primary, #FF8C5A) !important;
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Error page
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-error__title {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-error__description {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-error__btn--outline {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark .sfc-error__btn--outline:hover {
+  border-color: var(--color-primary, #FF8C5A) !important;
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Placeholder pages
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-placeholder h1 {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-placeholder p {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-placeholder__sub a {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-placeholder__btn--outline {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark .sfc-placeholder__btn--outline:hover {
+  border-color: var(--color-primary, #FF8C5A) !important;
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Breadcrumbs
+   ----------------------------------------------------------------------- */
+
+html.dark .breadcrumb {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+html.dark .breadcrumb li a {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .breadcrumb li a:hover {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .breadcrumb li:last-child {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .breadcrumb li:not(:last-child)::after {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Phone link
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-phone-link {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Page content (global text)
+   ----------------------------------------------------------------------- */
+
+html.dark .search-class {
+  color: var(--color-text-primary, #F9FAFB);
+}
+
+html.dark h1, html.dark h2, html.dark h3,
+html.dark h4, html.dark h5, html.dark h6 {
+  color: var(--color-text-primary, #F9FAFB);
+}
+
+html.dark p {
+  color: var(--color-text-secondary, #D1D5DB);
+}
+
+html.dark strong, html.dark b {
+  color: var(--color-text-primary, #F9FAFB);
+}
+
+html.dark li {
+  color: var(--color-text-secondary, #D1D5DB);
+}
+
+html.dark a {
+  color: var(--color-primary, #FF8C5A);
+}
