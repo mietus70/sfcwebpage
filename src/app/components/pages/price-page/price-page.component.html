@@ -1,28 +1,169 @@
 <app-page>
-  <div class="row">
-    <div class="col-md-8">
-      <img src="assets/img/pricelist.jpg" style="width: 100%" />
-<!--      <app-list-element [listTitle]="'Cennik / Promocje'" class="col-md-12"></app-list-element>-->
-      <p class="pull-down-30" class="col-md-12">*Dla dzieci, których rodzice posiadają aktywny karnet do klubu zajęcia są bezpłatne (szczegóły w zakładce aktualne promocje)</p>
-    </div>
-    <div class="col-md-4 payment pull-down-140">
-      <img src="../../../../assets/img/payments.jpg" alt="payment">
-<!--      <i class="fa fa-money" aria-hidden="true"></i>-->
-      <h3>Płatności dokonasz:</h3>
-      <ul>
-        <li>Przelewem na konto (PL 50 1050 1012 1000 0090 7666 3542) ING Bank Śląski</li>
-        <li>Blikiem na nr tel. 607 300 601</li>
-      </ul>
-      <h3>Dane do przelewu</h3>
-      <div>SFC 24</div>
-      <div>08-400 Garwolin, Mazowiecka 22</div>
-      <h3>Nr konta do przelewu</h3>
-      <div>PL 50 1050 1012 1000 0090 7666 3542</div>
-      <div>ING Bank Śląski</div>
-      <h3>Tutuł przelewu</h3>
-      np. opłata za wstęp na siłownię karnet 30 dniowy w terminie od 01.09.2018 do 30.09.2018
-      <h3>Kwota przelewu</h3>
-      Według cennika podanego na stronie.
+  <div class="sfc-pricing">
+    <div class="sfc-container">
+
+      <!-- Header -->
+      <div class="sfc-section__header">
+        <h1>Cennik</h1>
+        <div class="sfc-section__divider"></div>
+        <p class="sfc-section__lead">
+          Wybierz karnet dopasowany do swoich potrzeb
+        </p>
+      </div>
+
+      <!-- Pricing cards -->
+      <div class="sfc-pricing-grid">
+
+        <!-- 30 dni -->
+        <div class="sfc-price-card">
+          <div class="sfc-price-card__header">
+            <span class="sfc-price-card__badge">Standard</span>
+            <h3>Karnet 30 dni</h3>
+            <div class="sfc-price-card__price">
+              <span class="sfc-price-card__amount">120</span>
+              <span class="sfc-price-card__currency">zł</span>
+            </div>
+            <p class="sfc-price-card__period">/ 30 dni</p>
+          </div>
+          <ul class="sfc-price-card__features">
+            <li><i class="fa fa-check"></i> Siłownia 24/7</li>
+            <li><i class="fa fa-check"></i> Szatnie i prysznice</li>
+            <li><i class="fa fa-check"></i> Dostęp do sprzętu</li>
+          </ul>
+          <a href="tel:607300601" class="sfc-price-card__cta">
+            Zamów karnet
+          </a>
+        </div>
+
+        <!-- 90 dni -->
+        <div class="sfc-price-card sfc-price-card--featured">
+          <div class="sfc-price-card__header">
+            <span class="sfc-price-card__badge sfc-price-card__badge--hot">Najpopularniejszy</span>
+            <h3>Karnet 90 dni</h3>
+            <div class="sfc-price-card__price">
+              <span class="sfc-price-card__amount">300</span>
+              <span class="sfc-price-card__currency">zł</span>
+            </div>
+            <p class="sfc-price-card__period">/ 90 dni</p>
+            <p class="sfc-price-card__save">Oszczędzasz 60 zł</p>
+          </div>
+          <ul class="sfc-price-card__features">
+            <li><i class="fa fa-check"></i> Siłownia 24/7</li>
+            <li><i class="fa fa-check"></i> Szatnie i prysznice</li>
+            <li><i class="fa fa-check"></i> Dostęp do sprzętu</li>
+            <li><i class="fa fa-check"></i> Najlepsza cena za dzień</li>
+          </ul>
+          <a href="tel:607300601" class="sfc-price-card__cta sfc-price-card__cta--primary">
+            Zamów karnet
+          </a>
+        </div>
+
+        <!-- 360 dni -->
+        <div class="sfc-price-card">
+          <div class="sfc-price-card__header">
+            <span class="sfc-price-card__badge">Premium</span>
+            <h3>Karnet 360 dni</h3>
+            <div class="sfc-price-card__price">
+              <span class="sfc-price-card__amount">960</span>
+              <span class="sfc-price-card__currency">zł</span>
+            </div>
+            <p class="sfc-price-card__period">/ 360 dni</p>
+            <p class="sfc-price-card__save">Oszczędzasz 480 zł</p>
+          </div>
+          <ul class="sfc-price-card__features">
+            <li><i class="fa fa-check"></i> Siłownia 24/7</li>
+            <li><i class="fa fa-check"></i> Szatnie i prysznice</li>
+            <li><i class="fa fa-check"></i> Dostęp do sprzętu</li>
+            <li><i class="fa fa-check"></i> Cały rok bez przerwy</li>
+          </ul>
+          <a href="tel:607300601" class="sfc-price-card__cta">
+            Zamów karnet
+          </a>
+        </div>
+
+      </div>
+
+      <!-- OPEN karnet info -->
+      <div class="sfc-open-card">
+        <div class="sfc-open-card__content">
+          <h3><i class="fa fa-star"></i> Karnet OPEN</h3>
+          <p>
+            Karnet OPEN to wstęp na siłownię przez 24h na dobę <strong>i wszystkie zajęcia
+            prowadzone w klubach bez limitu</strong>. Idealny dla osób, które chcą łączyć trening
+            siłowy z zajęciami grupowymi.
+          </p>
+        </div>
+        <a href="tel:607300601" class="sfc-btn sfc-btn--primary">
+          <i class="fa fa-phone"></i> Zapytaj o cenę
+        </a>
+      </div>
+
+      <!-- Payment methods -->
+      <div class="sfc-payment-section">
+        <h2 class="sfc-payment-section__title">
+          <i class="fa fa-credit-card text-primary"></i> Metody płatności
+        </h2>
+
+        <div class="sfc-payment-methods">
+          <!-- BLIK -->
+          <div class="sfc-payment-method">
+            <div class="sfc-payment-method__icon">
+              <i class="fa fa-mobile"></i>
+            </div>
+            <div class="sfc-payment-method__info">
+              <h4>BLIK</h4>
+              <p>Na numer: <strong>607 300 601</strong></p>
+            </div>
+          </div>
+
+          <!-- Przelew -->
+          <div class="sfc-payment-method">
+            <div class="sfc-payment-method__icon sfc-payment-method__icon--blue">
+              <i class="fa fa-university"></i>
+            </div>
+            <div class="sfc-payment-method__info">
+              <h4>Przelew bankowy</h4>
+              <p>ING Bank Śląski: <strong>50 1050 1012 1000 0090 7666 3542</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transfer details -->
+        <div class="sfc-transfer-details">
+          <h4><i class="fa fa-info-circle"></i> Dane do przelewu</h4>
+          <div class="sfc-transfer-details__grid">
+            <div>
+              <label>Odbiorca</label>
+              <p>SFC 24</p>
+            </div>
+            <div>
+              <label>Adres</label>
+              <p>08-400 Garwolin, Mazowiecka 22</p>
+            </div>
+            <div>
+              <label>Nr konta</label>
+              <p>PL 50 1050 1012 1000 0090 7666 3542</p>
+            </div>
+            <div>
+              <label>Bank</label>
+              <p>ING Bank Śląski</p>
+            </div>
+          </div>
+          <div class="sfc-transfer-details__note">
+            <strong>Tytuł przelewu:</strong> Imię i nazwisko / numer karty / miejscowość siłowni / ilość dni (30/90/360) / od kiedy uaktywnić karnet
+          </div>
+        </div>
+      </div>
+
+      <!-- Kids free note -->
+      <div class="sfc-note">
+        <i class="fa fa-child"></i>
+        <p>
+          Dla dzieci, których rodzice posiadają aktywny karnet do klubu,
+          <strong>zajęcia są bezpłatne</strong>. Szczegóły w klubie.
+        </p>
+      </div>
+
     </div>
   </div>
 </app-page>

@@ -252,10 +252,15 @@
 - [x] Faza 2.2: Banner Header (hero section z 3 slajdami, auto-slider, CTA)
 - [x] Faza 2.3: Strona główna (intro, płatności, pierwsza wizyta, zajęcia, lokalizacje)
 - [x] Faza 2.4: Footer (4 kolumny, social media, nowoczesny design)
+- [x] Faza 3.1: Offer Page (6 kart usług z ikonami i cechami)
+- [x] Faza 3.2: Price Page (3 karty cenowe, karnet OPEN, metody płatności)
+- [x] Faza 3.3: Contact Page (quick contact, 4 lokalizacje z mapami)
+- [x] Faza 3.4: FAQ Page (7 pytań z accordion, sekcja dokumentów)
 
 ### 🔄 W trakcie
 
-- [ ] Faza 3: Podstrony (oferta, cennik, kontakt, FAQ, galeria)
+- [ ] Faza 3.5: Gallery Page (opcjonalnie)
+- [ ] Faza 4: Ulepszenia UX (animacje, performance, A11y)
 
 ### ⏳ Zaplanowane
 

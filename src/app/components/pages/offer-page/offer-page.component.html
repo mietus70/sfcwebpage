@@ -1,3 +1,138 @@
 <app-page>
-  <app-list-element [listTitle]="'Oferujemy'" class="col-md-12"></app-list-element>
+  <div class="sfc-offer">
+    <div class="sfc-container">
+
+      <!-- Header -->
+      <div class="sfc-section__header">
+        <h1>Nasza oferta</h1>
+        <div class="sfc-section__divider"></div>
+        <p class="sfc-section__lead">
+          Kompleksowa oferta treningowa dla każdego - od początkujących po zaawansowanych
+        </p>
+      </div>
+
+      <!-- Services grid -->
+      <div class="sfc-services-grid">
+
+        <!-- Siłownia 24h -->
+        <div class="sfc-service-card">
+          <div class="sfc-service-card__icon">
+            <i class="fa fa-dumbbell"></i>
+          </div>
+          <h3>Siłownia 24/7</h3>
+          <p>
+            Nowoczesny sprzęt siłowy i cardio dostępny przez całą dobę.
+            Wstęp z kartą lub kodem dostępu.
+          </p>
+          <ul class="sfc-service-card__features">
+            <li><i class="fa fa-check"></i> Sprzęt siłowy i cardio</li>
+            <li><i class="fa fa-check"></i> Dostęp 24 godziny na dobę</li>
+            <li><i class="fa fa-check"></i> Klimatyzacja</li>
+            <li><i class="fa fa-check"></i> Szatnie z prysznicami</li>
+          </ul>
+        </div>
+
+        <!-- Crossfit -->
+        <div class="sfc-service-card">
+          <div class="sfc-service-card__icon sfc-service-card__icon--accent">
+            <i class="fa fa-fire"></i>
+          </div>
+          <h3>Crossfit</h3>
+          <p>
+            Intensywne treningi funkcjonalne łączące siłę, wytrzymałość i szybkość.
+            Dla każdego poziomu zaawansowania.
+          </p>
+          <ul class="sfc-service-card__features">
+            <li><i class="fa fa-check"></i> Treningi grupowe</li>
+            <li><i class="fa fa-check"></i> Doświadczony trener</li>
+            <li><i class="fa fa-check"></i> Skalowanie do poziomu</li>
+            <li><i class="fa fa-check"></i> Różnorodne WODy</li>
+          </ul>
+        </div>
+
+        <!-- Boks -->
+        <div class="sfc-service-card">
+          <div class="sfc-service-card__icon sfc-service-card__icon--blue">
+            <i class="fa fa-hand-rock-o"></i>
+          </div>
+          <h3>Boks</h3>
+          <p>
+            Treningi bokserskie dla dorosłych i dzieci. Technika, kondycja
+            i samoobrona w jednym.
+          </p>
+          <ul class="sfc-service-card__features">
+            <li><i class="fa fa-check"></i> Dla dorosłych i dzieci 6+</li>
+            <li><i class="fa fa-check"></i> Technika i sparingi</li>
+            <li><i class="fa fa-check"></i> Kobiety i mężczyźni</li>
+            <li><i class="fa fa-check"></i> Poprawa kondycji</li>
+          </ul>
+        </div>
+
+        <!-- MMA -->
+        <div class="sfc-service-card">
+          <div class="sfc-service-card__icon sfc-service-card__icon--red">
+            <i class="fa fa-trophy"></i>
+          </div>
+          <h3>MMA</h3>
+          <p>
+            Mieszane sztuki walki - połączenie różnych dyscyplin walki.
+            Kompletny trening ciała i umysłu.
+          </p>
+          <ul class="sfc-service-card__features">
+            <li><i class="fa fa-check"></i> Stójka i parter</li>
+            <li><i class="fa fa-check"></i> Techniki submission</li>
+            <li><i class="fa fa-check"></i> Dla początkujących</li>
+            <li><i class="fa fa-check"></i> Trening siłowy</li>
+          </ul>
+        </div>
+
+        <!-- Zajęcia grupowe -->
+        <div class="sfc-service-card">
+          <div class="sfc-service-card__icon sfc-service-card__icon--green">
+            <i class="fa fa-users"></i>
+          </div>
+          <h3>Zajęcia grupowe</h3>
+          <p>
+            Różnorodne zajęcia grupowe dla kobiet i mężczyzn od 12 roku życia.
+            Motywacja i świetna atmosfera.
+          </p>
+          <ul class="sfc-service-card__features">
+            <li><i class="fa fa-check"></i> Od 12 roku życia</li>
+            <li><i class="fa fa-check"></i> Kobiety i mężczyźni</li>
+            <li><i class="fa fa-check"></i> Różne poziomy</li>
+            <li><i class="fa fa-check"></i> 60 minut sesji</li>
+          </ul>
+        </div>
+
+        <!-- Dzieci -->
+        <div class="sfc-service-card">
+          <div class="sfc-service-card__icon sfc-service-card__icon--purple">
+            <i class="fa fa-child"></i>
+          </div>
+          <h3>Zajęcia dla dzieci</h3>
+          <p>
+            Zajęcia ruchowe i koordynacyjne dla dzieci od 6 roku życia.
+            Tory przeszkód i świetna zabawa!
+          </p>
+          <ul class="sfc-service-card__features">
+            <li><i class="fa fa-check"></i> Od 6 roku życia</li>
+            <li><i class="fa fa-check"></i> Boks dla dzieci</li>
+            <li><i class="fa fa-check"></i> Tory przeszkód</li>
+            <li><i class="fa fa-check"></i> Rozwój koordynacji</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="sfc-offer__cta">
+        <h2>Gotowy na pierwszy trening?</h2>
+        <p>Zadzwoń i umów się na bezpłatną wizytę w klubie</p>
+        <a href="tel:607300601" class="sfc-btn sfc-btn--primary sfc-btn--lg">
+          <i class="fa fa-phone"></i> 607 300 601
+        </a>
+      </div>
+
+    </div>
+  </div>
 </app-page>

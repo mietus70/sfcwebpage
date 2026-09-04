@@ -1,4 +1,195 @@
-<app-menu-header-bottom></app-menu-header-bottom>
 <app-page>
-  <app-list-element [listTitle]="'FAQ'" class="col-md-12"></app-list-element>
+  <div class="sfc-faq">
+    <div class="sfc-container">
+
+      <!-- Header -->
+      <div class="sfc-section__header">
+        <h1>Dokumenty i FAQ</h1>
+        <div class="sfc-section__divider"></div>
+        <p class="sfc-section__lead">
+          Odpowiedzi na najczęściej zadawane pytania
+        </p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="sfc-faq-list">
+
+        <div class="sfc-faq-item" (click)="toggleFaq(0)" [class.sfc-faq-item--open]="openFaq === 0">
+          <div class="sfc-faq-item__header">
+            <h3>Jak zacząć trening w SFC 24?</h3>
+            <i class="fa" [class.fa-chevron-down]="openFaq !== 0" [class.fa-chevron-up]="openFaq === 0"></i>
+          </div>
+          <div class="sfc-faq-item__content" *ngIf="openFaq === 0">
+            <p>
+              Aby rozpocząć trening w SFC 24, wystarczy zakupić karnet. Możesz to zrobić
+              przelewem na konto lub BLIK-iem na numer 607 300 601. Po opłaceniu otrzymasz
+              kartę dostępu lub kod, który umożliwi Ci wstęp do klubu przez 24 godziny na dobę.
+            </p>
+            <p>
+              Przy pierwszej wizycie zadzwoń pod numer <strong>607 300 601</strong> - pomożemy
+              Ci się odnaleźć i pokażemy klub.
+            </p>
+          </div>
+        </div>
+
+        <div class="sfc-faq-item" (click)="toggleFaq(1)" [class.sfc-faq-item--open]="openFaq === 1">
+          <div class="sfc-faq-item__header">
+            <h3>Jakie są godziny otwarcia?</h3>
+            <i class="fa" [class.fa-chevron-down]="openFaq !== 1" [class.fa-chevron-up]="openFaq === 1"></i>
+          </div>
+          <div class="sfc-faq-item__content" *ngIf="openFaq === 1">
+            <p>
+              Siłownia jest dostępna <strong>24 godziny na dobę, 7 dni w tygodniu</strong>.
+              Jest to klub bezobsługowy, więc możesz trenować o dowolnej porze - potrzebujesz
+              jedynie aktywnej karty lub kodu dostępu.
+            </p>
+            <p>
+              Obsługa telefoniczna jest dostępna od poniedziałku do piątku w godzinach 11:00-21:00
+              pod numerem 607 300 601.
+            </p>
+          </div>
+        </div>
+
+        <div class="sfc-faq-item" (click)="toggleFaq(2)" [class.sfc-faq-item--open]="openFaq === 2">
+          <div class="sfc-faq-item__header">
+            <h3>Jak opłacić karnet?</h3>
+            <i class="fa" [class.fa-chevron-down]="openFaq !== 2" [class.fa-chevron-up]="openFaq === 2"></i>
+          </div>
+          <div class="sfc-faq-item__content" *ngIf="openFaq === 2">
+            <p>Karnet możesz opłacić na dwa sposoby:</p>
+            <ul>
+              <li><strong>BLIK</strong> - na numer telefonu 607 300 601</li>
+              <li><strong>Przelew</strong> - ING Bank Śląski: 50 1050 1012 1000 0090 7666 3542</li>
+            </ul>
+            <p>
+              W tytule przelewu podaj: imię i nazwisko / numer karty / miejscowość siłowni /
+              ilość dni (30/90/360) / od kiedy uaktywnić karnet.
+            </p>
+            <p>
+              Potwierdzenie przelewu wyślij na: <a href="mailto:karnety@sfc24.eu">karnety@sfc24.eu</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="sfc-faq-item" (click)="toggleFaq(3)" [class.sfc-faq-item--open]="openFaq === 3">
+          <div class="sfc-faq-item__header">
+            <h3>Czy dziecko może trenować z rodzicem?</h3>
+            <i class="fa" [class.fa-chevron-down]="openFaq !== 3" [class.fa-chevron-up]="openFaq === 3"></i>
+          </div>
+          <div class="sfc-faq-item__content" *ngIf="openFaq === 3">
+            <p>
+              Tak! Dzieci, których rodzice posiadają aktywny karnet, mogą korzystać z zajęć
+              <strong>bezpłatnie</strong>. Oferujemy:
+            </p>
+            <ul>
+              <li>Zajęcia dla dzieci od 6 roku życia (boks)</li>
+              <li>Zajęcia grupowe od 12 roku życia</li>
+              <li>Tory przeszkód i zabawy ruchowe</li>
+            </ul>
+            <p>
+              Na pierwszy trening dziecko powinno przyjść z opiekunem prawnym.
+            </p>
+          </div>
+        </div>
+
+        <div class="sfc-faq-item" (click)="toggleFaq(4)" [class.sfc-faq-item--open]="openFaq === 4">
+          <div class="sfc-faq-item__header">
+            <h3>Co to jest karnet OPEN?</h3>
+            <i class="fa" [class.fa-chevron-down]="openFaq !== 4" [class.fa-chevron-up]="openFaq === 4"></i>
+          </div>
+          <div class="sfc-faq-item__content" *ngIf="openFaq === 4">
+            <p>
+              Karnet OPEN to najwyższy pakiet, który obejmuje:
+            </p>
+            <ul>
+              <li>Wstęp na siłownię przez 24h na dobę</li>
+              <li>Wszystkie zajęcia grupowe bez limitu</li>
+              <li>Crossfit, boks, MMA i inne</li>
+              <li>Dostęp do wszystkich lokalizacji SFC</li>
+            </ul>
+            <p>
+              Skontaktuj się z nami, aby poznać aktualną cenę karnetu OPEN.
+            </p>
+          </div>
+        </div>
+
+        <div class="sfc-faq-item" (click)="toggleFaq(5)" [class.sfc-faq-item--open]="openFaq === 5">
+          <div class="sfc-faq-item__header">
+            <h3>Gdzie znajdują się kluby SFC 24?</h3>
+            <i class="fa" [class.fa-chevron-down]="openFaq !== 5" [class.fa-chevron-up]="openFaq === 5"></i>
+          </div>
+          <div class="sfc-faq-item__content" *ngIf="openFaq === 5">
+            <p>Posiadamy 4 lokalizacje:</p>
+            <ul>
+              <li><strong>Dęblin</strong> - ul. Kowalskiego 20 (budynek szkoły SP4)</li>
+              <li><strong>Ryki</strong> - ul. Warszawska 3b (budynek szkoły LSW)</li>
+              <li><strong>Garwolin</strong> - ul. Mazowiecka 22</li>
+              <li><strong>Warszawa</strong> - ul. Wolska 19/25</li>
+            </ul>
+            <p>
+              Karnet jest ważny we wszystkich lokalizacjach.
+            </p>
+          </div>
+        </div>
+
+        <div class="sfc-faq-item" (click)="toggleFaq(6)" [class.sfc-faq-item--open]="openFaq === 6">
+          <div class="sfc-faq-item__header">
+            <h3>Co zabrać na pierwszy trening?</h3>
+            <i class="fa" [class.fa-chevron-down]="openFaq !== 6" [class.fa-chevron-up]="openFaq === 6"></i>
+          </div>
+          <div class="sfc-faq-item__content" *ngIf="openFaq === 6">
+            <p>Na pierwszy trening potrzebujesz:</p>
+            <ul>
+              <li>Zmienionego obuwia sportowego (wymagane!)</li>
+              <li>Wygodnego stroju sportowego</li>
+              <li>Ręcznika</li>
+              <li>Butelki wody</li>
+              <li>Karty dostępu lub kodu (po zakupie karnetu)</li>
+            </ul>
+            <p>
+              Pamiętaj, że na sali są inni trenujący - postępuj zgodnie z regulaminem klubu.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Documents section -->
+      <div class="sfc-documents">
+        <h2 class="sfc-documents__title">Dokumenty</h2>
+        <div class="sfc-documents__grid">
+          <a routerLink="/regulamin" class="sfc-document-card">
+            <i class="fa fa-book"></i>
+            <span>Regulamin klubu</span>
+            <i class="fa fa-arrow-right sfc-document-card__arrow"></i>
+          </a>
+          <a routerLink="/rodo" class="sfc-document-card">
+            <i class="fa fa-shield"></i>
+            <span>Polityka RODO</span>
+            <i class="fa fa-arrow-right sfc-document-card__arrow"></i>
+          </a>
+          <a routerLink="/statut" class="sfc-document-card">
+            <i class="fa fa-file-text"></i>
+            <span>Statut</span>
+            <i class="fa fa-arrow-right sfc-document-card__arrow"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Still have questions -->
+      <div class="sfc-faq__cta">
+        <h3>Nie znalazłeś odpowiedzi?</h3>
+        <p>Skontaktuj się z nami - chętnie pomożemy!</p>
+        <div class="sfc-faq__cta-actions">
+          <a href="tel:607300601" class="sfc-btn sfc-btn--primary">
+            <i class="fa fa-phone"></i> 607 300 601
+          </a>
+          <a href="mailto:klub@sfc24.eu" class="sfc-btn sfc-btn--outline">
+            <i class="fa fa-envelope"></i> klub@sfc24.eu
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </app-page>

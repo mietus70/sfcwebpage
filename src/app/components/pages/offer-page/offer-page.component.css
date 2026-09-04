@@ -1,0 +1,234 @@
+/* ==========================================================================
+   SFC Offer Page
+   ========================================================================== */
+
+.sfc-offer {
+  padding: var(--space-12, 3rem) 0;
+}
+
+.sfc-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-4, 1rem);
+}
+
+/* -----------------------------------------------------------------------
+   Services Grid
+   ----------------------------------------------------------------------- */
+
+.sfc-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6, 1.5rem);
+  margin-top: var(--space-10, 2.5rem);
+}
+
+/* -----------------------------------------------------------------------
+   Service Card
+   ----------------------------------------------------------------------- */
+
+.sfc-service-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg, 0.75rem);
+  padding: var(--space-8, 2rem) var(--space-6, 1.5rem);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100, #F3F4F6);
+  transition: all var(--transition-base, 250ms ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.sfc-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--color-primary, #FF6B35);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base, 250ms ease);
+}
+
+.sfc-service-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+
+.sfc-service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.sfc-service-card__icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md, 0.5rem);
+  background: var(--color-primary-50, #FFF4EF);
+  color: var(--color-primary, #FF6B35);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-5, 1.25rem);
+  transition: all var(--transition-base, 250ms ease);
+}
+
+.sfc-service-card:hover .sfc-service-card__icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* Icon color variants */
+.sfc-service-card__icon--accent {
+  background: #FEF3C7;
+  color: #D97706;
+}
+
+.sfc-service-card__icon--blue {
+  background: #DBEAFE;
+  color: #2563EB;
+}
+
+.sfc-service-card__icon--red {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.sfc-service-card__icon--green {
+  background: #D1FAE5;
+  color: #059669;
+}
+
+.sfc-service-card__icon--purple {
+  background: #E9D5FF;
+  color: #7C3AED;
+}
+
+.sfc-service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-3, 0.75rem);
+  color: var(--color-gray-800, #1F2937);
+}
+
+.sfc-service-card p {
+  font-size: 0.9rem;
+  color: var(--color-gray-500, #6B7280);
+  line-height: 1.6;
+  margin-bottom: var(--space-5, 1.25rem);
+}
+
+/* Features list */
+.sfc-service-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--color-gray-100, #F3F4F6);
+  padding-top: var(--space-4, 1rem);
+}
+
+.sfc-service-card__features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  font-size: 0.85rem;
+  color: var(--color-gray-600, #4B5563);
+  margin-bottom: var(--space-2, 0.5rem);
+  padding: 0;
+}
+
+.sfc-service-card__features li:last-child {
+  margin-bottom: 0;
+}
+
+.sfc-service-card__features li i {
+  color: var(--color-success, #10B981);
+  font-size: 0.75rem;
+}
+
+/* -----------------------------------------------------------------------
+   CTA Section
+   ----------------------------------------------------------------------- */
+
+.sfc-offer__cta {
+  margin-top: var(--space-16, 4rem);
+  text-align: center;
+  padding: var(--space-12, 3rem) var(--space-6, 1.5rem);
+  background: linear-gradient(135deg, var(--color-secondary-dark, #0F172A), var(--color-secondary, #1E293B));
+  border-radius: var(--radius-xl, 1rem);
+  color: #ffffff;
+}
+
+.sfc-offer__cta h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.sfc-offer__cta p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-6, 1.5rem);
+}
+
+.sfc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2, 0.5rem);
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-md, 0.5rem);
+  cursor: pointer;
+  transition: all var(--transition-base, 250ms ease);
+}
+
+.sfc-btn--primary {
+  background: var(--color-primary, #FF6B35);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+}
+
+.sfc-btn--primary:hover {
+  background: var(--color-primary-dark, #E85A2A);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 107, 53, 0.5);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sfc-btn--lg {
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  min-height: 52px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .sfc-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sfc-offer {
+    padding: var(--space-8, 2rem) 0;
+  }
+
+  .sfc-services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4, 1rem);
+  }
+
+  .sfc-offer__cta {
+    padding: var(--space-8, 2rem) var(--space-4, 1rem);
+  }
+
+  .sfc-offer__cta h2 {
+    font-size: 1.5rem;
+  }
+}
