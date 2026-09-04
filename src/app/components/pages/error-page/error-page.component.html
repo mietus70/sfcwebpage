@@ -1,24 +1,20 @@
 <app-page>
-  <!-- Error 404 -->
-  <div class="error-404">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <figure class="error-404__figure">
-          <img src="assets/images/icon-ghost.svg" alt="">
-        </figure>
-        <header class="error__header">
-          <h2 class="error__title">OOOOPS! Page not Found</h2>
-          <h3 class="error__subtitle">Seems that we have a problem!</h3>
-        </header>
-        <div class="error__description">
-          The page you are looking for has been moved or doesn’t exist anymore, if you like you can return to our homepage. If the problem persists, please send us an email to <a href="mailto:info@alchemists.com">info@alchemists.com</a>
-        </div>
-        <footer class="error__cta">
-          <a routerLink="/" class="btn btn-primary">Return to Home</a>
-          <!--<a routerLink="#" class="btn btn-primary-inverse">Keep Browsing</a>-->
-        </footer>
+  <div class="sfc-error">
+    <div class="sfc-error__content">
+      <div class="sfc-error__code">404</div>
+      <h1 class="sfc-error__title">Ups! Strona nie znaleziona</h1>
+      <p class="sfc-error__description">
+        Strona, której szukasz, została przeniesiona lub nie istnieje.
+        Możesz wrócić do strony głównej lub skontaktować się z nami.
+      </p>
+      <div class="sfc-error__actions">
+        <a routerLink="/" class="sfc-error__btn sfc-error__btn--primary">
+          <i class="fa fa-home"></i> Strona główna
+        </a>
+        <a routerLink="/kontakt" class="sfc-error__btn sfc-error__btn--outline">
+          <i class="fa fa-envelope"></i> Kontakt
+        </a>
       </div>
     </div>
   </div>
-  <!-- Error 404 / End -->
 </app-page>

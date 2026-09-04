@@ -38,6 +38,7 @@ import { ListElementComponent }   from './components/elements/list-element/list-
 import { StatutePageComponent }   from './components/pages/statute-page/statute-page.component';
 import { RodoPageComponent }      from './components/pages/rodo-page/rodo-page.component';
 import { MyRouterService }        from "./services/my-router.service";
+import { ScrollAnimationDirective } from "./directives/scroll-animation.directive";
 // import { AgmCoreModule }                   from '@agm/core';
 // import { Angulartics2GoogleGlobalSiteTag } from 'angulartics2/gst';
 // import { Angulartics2Module }              from 'angulartics2';
@@ -67,7 +68,8 @@ import { MyRouterService }        from "./services/my-router.service";
     BannerClassesComponent,
     ListElementComponent,
     StatutePageComponent,
-    RodoPageComponent
+    RodoPageComponent,
+    ScrollAnimationDirective
   ],
   imports: [
     CommonModule,

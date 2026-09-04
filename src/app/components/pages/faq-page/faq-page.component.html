@@ -12,7 +12,7 @@
       </div>
 
       <!-- FAQ Accordion -->
-      <div class="sfc-faq-list">
+      <div class="sfc-faq-list" sfcScrollAnim>
 
         <div class="sfc-faq-item" (click)="toggleFaq(0)" [class.sfc-faq-item--open]="openFaq === 0">
           <div class="sfc-faq-item__header">
@@ -155,7 +155,7 @@
       </div>
 
       <!-- Documents section -->
-      <div class="sfc-documents">
+      <div class="sfc-documents" sfcScrollAnim>
         <h2 class="sfc-documents__title">Dokumenty</h2>
         <div class="sfc-documents__grid">
           <a routerLink="/regulamin" class="sfc-document-card">

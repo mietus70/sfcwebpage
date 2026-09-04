@@ -1,3 +1,5 @@
+<a href="#main-content" class="sfc-skip-link">Przejdź do treści</a>
+
 <app-header></app-header>
 
 <div class="breadcrumb" *ngIf="myRouterService.url!='/' && myRouterService.url!=='/#/'">
@@ -20,7 +22,7 @@
   </div>
 </div>
 
-<div class="container search-class">
+<div class="container search-class sfc-page-enter" id="main-content">
   <router-outlet></router-outlet>
 </div>
 

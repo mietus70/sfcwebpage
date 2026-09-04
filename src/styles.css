@@ -587,3 +587,284 @@ figure {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
+
+/* ==========================================================================
+   12. SCROLL ANIMATIONS
+   ========================================================================== */
+
+/* Fade up (default) */
+.sfc-animate-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.sfc-animate-fade-up.sfc-animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade in */
+.sfc-animate-fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.sfc-animate-fade-in.sfc-animated {
+  opacity: 1;
+}
+
+/* Scale in */
+.sfc-animate-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.sfc-animate-scale.sfc-animated {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slide from left */
+.sfc-animate-slide-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.sfc-animate-slide-left.sfc-animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide from right */
+.sfc-animate-slide-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.sfc-animate-slide-right.sfc-animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ==========================================================================
+   13. SKIP LINK (Accessibility)
+   ========================================================================== */
+
+.sfc-skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 9999;
+  font-weight: 600;
+  border-radius: 0 0 4px 0;
+  transition: top 0.2s ease;
+}
+
+.sfc-skip-link:focus {
+  top: 0;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   14. PAGE TRANSITION
+   ========================================================================== */
+
+.sfc-page-enter {
+  animation: sfc-page-fade-in 0.4s ease-out;
+}
+
+@keyframes sfc-page-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   15. SCROLLBAR (custom)
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}
+
+/* ==========================================================================
+   16. PRINT STYLES
+   ========================================================================== */
+
+@media print {
+  .sfc-header,
+  .sfc-footer,
+  .sfc-hero,
+  .sfc-hero__scroll,
+  .sfc-header__hamburger {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+/* ==========================================================================
+   17. PLACEHOLDER PAGES (gallery, schedule, coming soon)
+   ========================================================================== */
+
+.sfc-placeholder {
+  text-align: center;
+  padding: 4rem 1rem;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sfc-placeholder__icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #FFF4EF;
+  color: #FF6B35;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.sfc-placeholder h1 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.sfc-placeholder p {
+  font-size: 1.05rem;
+  color: #6B7280;
+  max-width: 400px;
+  margin: 0 auto 0.5rem;
+}
+
+.sfc-placeholder__sub {
+  font-size: 0.9rem !important;
+  color: #9CA3AF !important;
+  margin-bottom: 2rem !important;
+}
+
+.sfc-placeholder__sub a {
+  color: #FF6B35;
+}
+
+.sfc-placeholder__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sfc-placeholder__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  background: #FF6B35;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  min-height: 44px;
+  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.3);
+}
+
+.sfc-placeholder__btn:hover {
+  background: #E85A2A;
+  color: #ffffff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.sfc-placeholder__btn--outline {
+  background: transparent;
+  color: #374151;
+  border: 2px solid #D1D5DB;
+  box-shadow: none;
+}
+
+.sfc-placeholder__btn--outline:hover {
+  border-color: #FF6B35;
+  color: #FF6B35;
+  background: transparent;
+}
+
+/* ==========================================================================
+   18. LEGAL PAGES (statute, rodo, regulations)
+   ========================================================================== */
+
+.sfc-legal {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.sfc-legal h1,
+.sfc-legal h2,
+.sfc-legal h3 {
+  color: #1F2937;
+  margin-top: 2rem;
+}
+
+.sfc-legal p {
+  color: #4B5563;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.sfc-legal ul,
+.sfc-legal ol {
+  color: #4B5563;
+  line-height: 1.7;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sfc-legal li {
+  margin-bottom: 0.5rem;
+}
+
+.sfc-legal a {
+  color: #FF6B35;
+}
