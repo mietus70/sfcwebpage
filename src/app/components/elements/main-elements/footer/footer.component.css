@@ -1,0 +1,231 @@
+/* ==========================================================================
+   SFC Footer - Modern multi-column footer
+   ========================================================================== */
+
+.sfc-footer {
+  background: var(--color-secondary-dark, #0F172A);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* -----------------------------------------------------------------------
+   Container
+   ----------------------------------------------------------------------- */
+
+.sfc-footer__container {
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--space-4, 1rem);
+}
+
+/* -----------------------------------------------------------------------
+   Main footer
+   ----------------------------------------------------------------------- */
+
+.sfc-footer__main {
+  padding: var(--space-16, 4rem) 0 var(--space-10, 2.5rem);
+}
+
+.sfc-footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: var(--space-10, 2.5rem);
+}
+
+/* -----------------------------------------------------------------------
+   About column
+   ----------------------------------------------------------------------- */
+
+.sfc-footer__logo {
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.sfc-footer__logo img {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.sfc-footer__about {
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  margin-bottom: var(--space-6, 1.5rem);
+  font-size: 0.85rem;
+}
+
+/* -----------------------------------------------------------------------
+   Social links
+   ----------------------------------------------------------------------- */
+
+.sfc-footer__social {
+  display: flex;
+  gap: var(--space-2, 0.5rem);
+}
+
+.sfc-footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  transition: all var(--transition-base, 250ms ease);
+  text-decoration: none;
+}
+
+.sfc-footer__social-link:hover {
+  background: var(--color-primary, #FF6B35);
+  color: #ffffff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------------------------
+   Headings
+   ----------------------------------------------------------------------- */
+
+.sfc-footer__heading {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: var(--space-5, 1.25rem);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  padding-bottom: var(--space-3, 0.75rem);
+}
+
+.sfc-footer__heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary, #FF6B35);
+  border-radius: 1px;
+}
+
+/* -----------------------------------------------------------------------
+   Navigation links
+   ----------------------------------------------------------------------- */
+
+.sfc-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sfc-footer__links li {
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.sfc-footer__links a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all var(--transition-fast, 150ms ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sfc-footer__links a:hover {
+  color: var(--color-primary, #FF6B35);
+  transform: translateX(4px);
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------------------------
+   Contact info
+   ----------------------------------------------------------------------- */
+
+.sfc-footer__contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sfc-footer__contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3, 0.75rem);
+  margin-bottom: var(--space-4, 1rem);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sfc-footer__contact i {
+  color: var(--color-primary, #FF6B35);
+  margin-top: 3px;
+  width: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sfc-footer__contact a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color var(--transition-fast, 150ms ease);
+}
+
+.sfc-footer__contact a:hover {
+  color: var(--color-primary, #FF6B35);
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------------------------
+   Bottom bar
+   ----------------------------------------------------------------------- */
+
+.sfc-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: var(--space-5, 1.25rem) 0;
+}
+
+.sfc-footer__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sfc-footer__bottom p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media only screen and (max-width: 992px) {
+  .sfc-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8, 2rem);
+  }
+
+  .sfc-footer__col--about {
+    grid-column: 1 / -1;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .sfc-footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6, 1.5rem);
+  }
+
+  .sfc-footer__main {
+    padding: var(--space-10, 2.5rem) 0 var(--space-6, 1.5rem);
+  }
+
+  .sfc-footer__col--about {
+    grid-column: auto;
+  }
+}

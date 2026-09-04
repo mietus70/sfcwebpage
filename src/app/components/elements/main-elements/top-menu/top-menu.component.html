@@ -1,30 +1,66 @@
-<div class="header-holder">
-  <div class="container">
-    <div class="header row">
-      <div class="col-md-2 col-xs-12 logo">
-        <div>
-          <a routerLink="/" style="color: white; text-decoration: none"><img src="assets/img/logo.png" alt="SFC logo"></a>
-        </div><!-- /.inner-top-bottom-10 -->
-      </div>
-      <!-- /.col-md-2 logo -->
-      <div class="col-md-10 col-xs-12 navigation-holder" (click)="clickMobileMenu()">
-          <span class=" js-open-navigation">
-            <i class="fa fa-bars" [style.animation-name]="mobileMenuAnim"></i>
-          </span>
-          <ul class="main-navigation" [ngClass] = 'isScreenMobile ? "js-open-navigation":""' >
-            <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a routerLink="/">START</a></li>
-            <li routerLink="/oferta" routerLinkActive="active"><a routerLink="/oferta">OFERTA</a></li>
-            <li routerLink="/cennik" routerLinkActive="active"><a routerLink="/cennik">CENNIK</a></li>
-            <!--<li routerLink="/galeria" routerLinkActive="active"><a routerLink="/galeria">GALERIA</a></li>-->
-            <li routerLink="/kontakt" routerLinkActive="active"><a routerLink="/kontakt">KONTAKT</a></li>
-            <li routerLink="/faq" routerLinkActive="active"><a routerLink="/faq">Dokumenty</a></li>
-            <!--<li routerLink="/sklep" routerLinkActive="active"><a routerLink="/sklep">GRAFIK</a></li>-->
-          </ul>
-      </div>
-      <!-- /.col-md-10 align-r -->
+<nav class="sfc-header" [class.sfc-header--scrolled]="isScrolled">
+  <div class="sfc-header__inner">
+
+    <!-- Logo -->
+    <a routerLink="/" class="sfc-header__logo" (click)="closeMobileMenu()">
+      <img src="assets/img/logo.png" alt="SFC 24 - Siłownia 24/7">
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="sfc-header__nav" [class.sfc-header__nav--open]="isMobileMenuOpen">
+      <li routerLink="/" routerLinkActive="sfc-nav--active" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/" (click)="closeMobileMenu()">
+          <span class="sfc-nav__label">Start</span>
+          <span class="sfc-nav__indicator"></span>
+        </a>
+      </li>
+      <li routerLink="/oferta" routerLinkActive="sfc-nav--active">
+        <a routerLink="/oferta" (click)="closeMobileMenu()">
+          <span class="sfc-nav__label">Oferta</span>
+          <span class="sfc-nav__indicator"></span>
+        </a>
+      </li>
+      <li routerLink="/cennik" routerLinkActive="sfc-nav--active">
+        <a routerLink="/cennik" (click)="closeMobileMenu()">
+          <span class="sfc-nav__label">Cennik</span>
+          <span class="sfc-nav__indicator"></span>
+        </a>
+      </li>
+      <li routerLink="/kontakt" routerLinkActive="sfc-nav--active">
+        <a routerLink="/kontakt" (click)="closeMobileMenu()">
+          <span class="sfc-nav__label">Kontakt</span>
+          <span class="sfc-nav__indicator"></span>
+        </a>
+      </li>
+      <li routerLink="/faq" routerLinkActive="sfc-nav--active">
+        <a routerLink="/faq" (click)="closeMobileMenu()">
+          <span class="sfc-nav__label">Dokumenty</span>
+          <span class="sfc-nav__indicator"></span>
+        </a>
+      </li>
+      <li class="sfc-header__cta-mobile">
+        <a href="tel:607300601" class="sfc-btn sfc-btn--primary sfc-btn--sm" (click)="closeMobileMenu()">
+          <i class="fa fa-phone"></i> Zadzwoń
+        </a>
+      </li>
+    </ul>
+
+    <!-- CTA + Hamburger -->
+    <div class="sfc-header__actions">
+      <a href="tel:607300601" class="sfc-btn sfc-btn--primary sfc-btn--sm sfc-header__cta-desktop">
+        <i class="fa fa-phone"></i> 607 300 601
+      </a>
+
+      <button class="sfc-header__hamburger" [class.sfc-header__hamburger--open]="isMobileMenuOpen"
+              (click)="clickMobileMenu()" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <!-- /.row -->
+
   </div>
-  <!-- /.container -->
-</div>
-<!-- /.header-holder absolute -->
+</nav>
+
+<!-- Mobile menu overlay -->
+<div class="sfc-header__overlay" [class.sfc-header__overlay--visible]="isMobileMenuOpen" (click)="closeMobileMenu()"></div>

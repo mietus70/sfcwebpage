@@ -1,39 +1,29 @@
-<!--[if lt IE 7]>
-<p class="chromeframe">You are using an <strong>outdated</strong> browser.
-  Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a
-    href="http://www.google.com/chromeframe/?redirect=true">activate Google
-    Chrome Frame</a> to improve your experience.</p>
-<![endif]-->
-
-<!--<div id="fb-root"></div>-->
-<!--<script>(function(d, s, id) {-->
-<!--var js, fjs = d.getElementsByTagName(s)[0];-->
-<!--if (d.getElementById(id)) return;-->
-<!--js = d.createElement(s); js.id = id;-->
-<!--js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1468366216712571";-->
-<!--fjs.parentNode.insertBefore(js, fjs);-->
-<!--}(document, 'script', 'facebook-jssdk'));</script>-->
+<a href="#main-content" class="sfc-skip-link">Przejdź do treści</a>
 
 <app-header></app-header>
-<div class="breadcrumb" *ngIf="myRouterService.url!='/'">
-  <li class="bread"
-      *ngFor="let url_item of myRouterService.url.split('/'); let i=index">
-    <a *ngIf="i === 0" routerLink="/">
-      Home
-    </a>
 
-    <a *ngIf="i > 0 && i < myRouterService.urlLength -1"
-       routerLink="{{getBreadcrumbElements(i+1)}}">
-      {{url_item}}
-    </a>
+<div class="breadcrumb" *ngIf="myRouterService.url!='/' && myRouterService.url!=='/#/'">
+  <div class="container">
+    <li class="bread"
+        *ngFor="let url_item of myRouterService.url.split('/'); let i=index">
+      <a *ngIf="i === 0" routerLink="/">
+        Strona główna
+      </a>
 
-    <a *ngIf="i === myRouterService.urlLength -1">
-      {{url_item}}
-    </a>
+      <a *ngIf="i > 0 && i < myRouterService.urlLength -1"
+         routerLink="{{getBreadcrumbElements(i+1)}}">
+        {{url_item}}
+      </a>
 
-  </li>
+      <a *ngIf="i === myRouterService.urlLength -1">
+        {{url_item}}
+      </a>
+    </li>
+  </div>
 </div>
-<div class="container search-class" style="padding-top: 2em;">
+
+<div class="container search-class sfc-page-enter" id="main-content">
   <router-outlet></router-outlet>
 </div>
+
 <app-footer></app-footer>

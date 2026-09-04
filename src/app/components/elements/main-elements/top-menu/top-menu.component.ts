@@ -5,7 +5,7 @@
  */
 
 import { WINDOW }                    from '@ng-toolkit/universal';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-top-menu',
@@ -15,6 +15,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 export class TopMenuComponent implements OnInit {
   mobileMenuAnim: string = '';
   moblieMenuAnimLength: number = 1000;
+  isScrolled: boolean = false;
+  isMobileMenuOpen: boolean = false;
 
   constructor(@Inject(WINDOW) private window: Window) {
   }
@@ -23,20 +25,32 @@ export class TopMenuComponent implements OnInit {
    * Check if screen is mobile
    */
   get isScreenMobile(): boolean {
-    window.innerWidth;
-    return window.innerWidth < 770;
+    return this.window.innerWidth < 770;
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = this.window.scrollY > 50;
   }
 
   ngOnInit() {
   }
 
   /**
-   * Animate clicked mobile-menu (hamburger).
+   * Toggle mobile menu
    */
   clickMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
     this.mobileMenuAnim = "mobile-menu-icon-anim";
     setTimeout(() => {
       this.mobileMenuAnim = "";
     }, this.moblieMenuAnimLength);
+  }
+
+  /**
+   * Close mobile menu on link click
+   */
+  closeMobileMenu() {
+    this.isMobileMenuOpen = false;
   }
 }
