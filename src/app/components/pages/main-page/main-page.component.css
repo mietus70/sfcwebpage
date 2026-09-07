@@ -494,6 +494,24 @@
    RESPONSIVE
    ========================================================================== */
 
+.sfc-payment-card,
+.sfc-transfer-info,
+.sfc-card--feature,
+.sfc-location-card,
+.sfc-info-card {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.sfc-payment-card__number,
+.sfc-transfer-info__content p {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
+}
+
 @media (max-width: 992px) {
   .sfc-locations-grid {
     grid-template-columns: repeat(2, 1fr);

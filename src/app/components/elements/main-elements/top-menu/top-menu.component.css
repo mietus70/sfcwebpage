@@ -294,7 +294,7 @@
   .sfc-header__nav {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: 0;
     width: 280px;
     height: 100vh;
     background: var(--color-secondary-dark, #0F172A);
@@ -303,13 +303,15 @@
     padding: 90px var(--space-4, 1rem) var(--space-4, 1rem);
     gap: 0;
     z-index: var(--z-fixed, 300);
-    transition: right var(--transition-slow, 350ms ease);
+    transition: transform var(--transition-slow, 350ms ease);
+    transform: translateX(100%);
     overflow-y: auto;
+    overflow-x: hidden;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
   }
 
   .sfc-header__nav--open {
-    right: 0;
+    transform: translateX(0);
   }
 
   .sfc-header__nav li {
