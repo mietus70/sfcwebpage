@@ -16,7 +16,10 @@
 
 .sfc-main {
   width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
+  position: relative;
+  box-sizing: border-box;
 }
 
 /* -----------------------------------------------------------------------
@@ -25,6 +28,11 @@
 
 .sfc-section {
   padding: var(--space-16, 4rem) 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .sfc-section--alt {
@@ -391,11 +399,16 @@
 .sfc-classes-banner {
   position: relative;
   background: url("../../../../assets/img/background_classes.jpg") center / cover no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
   color: #ffffff;
   text-align: center;
   padding: var(--space-20, 5rem) 0;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .sfc-classes-banner__overlay {
