@@ -5,7 +5,7 @@
 <app-header></app-header>
 
 <div class="breadcrumb" *ngIf="myRouterService.url!='/' && myRouterService.url!=='/#/'">
-  <div class="container">
+  <div class="sfc-container" style="max-width:var(--container-max-width,1200px); margin:0 auto; padding:0 1rem; width:100%; box-sizing:border-box;">
     <li class="bread"
         *ngFor="let url_item of myRouterService.url.split('/'); let i=index">
       <a *ngIf="i === 0" routerLink="/">
@@ -28,7 +28,7 @@
 <div class="sfc-subpage-spacer"
      *ngIf="myRouterService.url!='/' && myRouterService.url!=='/#/'"></div>
 
-<div class="container search-class sfc-page-enter" id="main-content">
+<div class="sfc-page-wrapper sfc-page-enter" id="main-content">
   <router-outlet></router-outlet>
 </div>
 
