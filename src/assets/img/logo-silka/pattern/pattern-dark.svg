@@ -1,0 +1,18 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="darkPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <g opacity="0.06">
+        <!-- dumbbell -->
+        <rect x="30" y="40" width="4" height="16" rx="2" fill="white"/>
+        <rect x="36" y="36" width="6" height="24" rx="2" fill="white"/>
+        <rect x="44" y="32" width="8" height="32" rx="3" fill="#FF6B35"/>
+        <rect x="54" y="28" width="12" height="40" rx="4" fill="white"/>
+        <rect x="54" y="45" width="30" height="6" rx="2" fill="white"/>
+        <rect x="86" y="28" width="12" height="40" rx="4" fill="white"/>
+        <rect x="100" y="32" width="8" height="32" rx="3" fill="#FF6B35"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="#1E293B"/>
+  <rect width="100%" height="100%" fill="url(#darkPattern)"/>
+</svg>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>siłka – pattern demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pattern.css">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Inter,sans-serif;background:#F9FAFB;color:#1E293B}
+  header{background:#1E293B;color:white;padding:3rem 2rem;text-align:center;position:relative;overflow:hidden}
+  header::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.06'%3E%3Crect x='30' y='40' width='4' height='16' rx='2' fill='white'/%3E%3Crect x='36' y='36' width='6' height='24' rx='2' fill='white'/%3E%3Crect x='44' y='32' width='8' height='32' rx='3' fill='%23FF6B35'/%3E%3Crect x='54' y='28' width='12' height='40' rx='4' fill='white'/%3E%3C/g%3E%3C/svg%3E")}
+  header *{position:relative;z-index:1}
+  header h1{font-family:Poppins,sans-serif;font-weight:900;font-size:3rem;letter-spacing:-1px} header h1 span{color:#FF6B35}
+  .container{max-width:1200px;margin:0 auto;padding:2rem 1rem}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+  @media(max-width:800px){.grid{grid-template-columns:1fr}}
+  .card{border-radius:16px;padding:2.5rem;min-height:280px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;border:1px solid #E5E7EB;background:white;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+  .card h3{font-family:Poppins,sans-serif;font-weight:800;font-size:1.25rem;margin-bottom:.5rem;position:relative;z-index:1}
+  .card p{font-size:.9rem;color:#6B7280;position:relative;z-index:1;max-width:320px}
+  .card .badge{position:absolute;top:1rem;right:1rem;background:#FF6B35;color:white;font-size:.65rem;font-weight:700;padding:.25rem .6rem;border-radius:999px;text-transform:uppercase;letter-spacing:.05em;z-index:2}
+  .demo-code{margin-top:2rem;background:#1E293B;color:#E5E7EB;padding:1.5rem;border-radius:12px;font-family:monospace;font-size:.8rem;overflow:auto}
+  .demo-code span.c{color:#6B7280} .demo-code span.p{color:#FF6B35} .demo-code span.v{color:#22D3EE}
+</style>
+</head>
+<body>
+<header>
+  <h1>SIŁ<span>KA</span> – pattern system</h1>
+  <p style="opacity:.7;max-width:600px;margin:1rem auto 0">Powtarzalne wzory z hantlą i logotypem jako tła sekcji, kart, hero. Subtelne, nie przytłaczają treści, dodają charakteru siłowni.</p>
+</header>
+
+<div class="container">
+  <div class="grid">
+    <div class="card silka-pattern-light">
+      <span class="badge">LIGHT</span>
+      <h3>Subtelna hantla – jasne tło</h3>
+      <p>Idealna do sekcji "Oferta", "Cennik", "Kontakt". Jasne #F9FAFB + hantle 5% opacity w #1E293B i #FF6B35.</p>
+      <p style="margin-top:1rem;font-size:.75rem;opacity:.6">Klasa: .silka-pattern-light</p>
+    </div>
+
+    <div class="card silka-pattern-dark" style="color:white;border-color:rgba(255,255,255,.1)">
+      <span class="badge" style="background:white;color:#1E293B">DARK</span>
+      <h3 style="color:white">Hantla – ciemne tło</h3>
+      <p style="color:rgba(255,255,255,.6)">Do footera, hero overlay, CTA. Granat #1E293B + białe hantle 6% opacity + pomarańcz akcent.</p>
+      <p style="margin-top:1rem;font-size:.75rem;color:rgba(255,255,255,.4)">Klasa: .silka-pattern-dark</p>
+    </div>
+
+    <div class="card silka-pattern-text">
+      <span class="badge" style="background:#1E293B">TEXT</span>
+      <h3>Tekst SIŁKA – watermark</h3>
+      <p>Bardzo subtelny watermark SIŁKA powtarzany pod kątem -12°. Do dużych pustych sekcji, 404, placeholderów.</p>
+      <p style="margin-top:1rem;font-size:.75rem;opacity:.6">Klasa: .silka-pattern-text</p>
+    </div>
+
+    <div class="card silka-pattern-orange">
+      <span class="badge" style="background:#1E293B">ORANGE</span>
+      <h3>Pomarańczowy akcent</h3>
+      <p>Jasny pomarańcz #FFF4EF + hantle 6% opacity. Do wyróżnionych kart, cennika OPEN, promo bannerów.</p>
+      <p style="margin-top:1rem;font-size:.75rem;opacity:.6">Klasa: .silka-pattern-orange</p>
+    </div>
+  </div>
+
+  <div class="demo-code">
+<span class="c">/* Użycie w Angular / HTML */</span><br>
+<span class="p">&lt;section</span> <span class="v">class</span>=<span class="p">"sfc-section silka-pattern-light"</span><span class="p">&gt;</span><br>
+&nbsp;&nbsp;<span class="p">&lt;div</span> <span class="v">class</span>=<span class="p">"sfc-container"</span><span class="p">&gt;</span>...<span class="p">&lt;/div&gt;</span><br>
+<span class="p">&lt;/section&gt;</span><br><br>
+<span class="c">/* W styles.css - import */</span><br>
+<span class="p">@import</span> <span class="v">"assets/img/logo-silka/pattern/pattern.css"</span>;<br><br>
+<span class="c">/* Hero overlay */</span><br>
+<span class="p">&lt;div</span> <span class="v">class</span>=<span class="p">"sfc-hero"</span><span class="p">&gt;</span><br>
+&nbsp;&nbsp;<span class="p">&lt;div</span> <span class="v">class</span>=<span class="p">"hero-pattern-overlay"</span><span class="p">&gt;&lt;/div&gt;</span><br>
+<span class="p">&lt;/div&gt;</span>
+  </div>
+
+  <div style="margin-top:3rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+    <div style="background:#1E293B;border-radius:16px;padding:2rem;color:white;position:relative;overflow:hidden">
+      <div style="position:absolute;inset:0;background-image:url('pattern-dark.svg');opacity:.4"></div>
+      <div style="position:relative;z-index:1">
+        <h3 style="font-family:Poppins,sans-serif;font-weight:800">Przykład: Footer z pattern</h3>
+        <p style="opacity:.6;margin-top:.5rem;font-size:.9rem">Footer + pattern-dark daje premium, siłowniany charakter bez dodatkowych grafik.</p>
+      </div>
+    </div>
+    <div style="background:white;border:1px solid #E5E7EB;border-radius:16px;padding:2rem;position:relative;overflow:hidden">
+      <div style="position:absolute;inset:0;background-image:url('pattern-dumbbell.svg');opacity:.6"></div>
+      <div style="position:relative;z-index:1">
+        <h3 style="font-family:Poppins,sans-serif;font-weight:800">Przykład: Karta z pattern</h3>
+        <p style="color:#6B7280;margin-top:.5rem;font-size:.9rem">Karty cennika z pattern-light na hover – subtelny detal.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:3rem 1rem;color:#9CA3AF;font-size:.85rem">
+  Patterny są tileable (bezszwowe), SVG inline jako data-uri – zero dodatkowych requestów, działa w dark mode, 2-3KB każdy.
+</div>
+</body>
+</html>
