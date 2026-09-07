@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>siłka – hero z animowanym logo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--primary:#FF6B35;--secondary:#1E293B;--secondary-dark:#0F172A}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Inter,sans-serif;background:var(--secondary);color:white;overflow-x:hidden}
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .hero__bg{position:absolute;inset:0;background:linear-gradient(135deg, rgba(15,23,42,0.9) 0%, rgba(30,41,59,0.7) 100%), url('../../img/slider/slide_1.jpg') center/cover}
+  .hero__overlay{position:absolute;inset:0;background:radial-gradient(ellipse at center, transparent 40%, rgba(15,23,42,0.8) 100%)}
+  .hero__content{position:relative;z-index:2;text-align:center;max-width:800px;padding:2rem}
+  .hero__logo{margin-bottom:2rem;animation:hero-logo-in 1s ease-out}
+  @keyframes hero-logo-in{from{opacity:0;transform:translateY(30px) scale(0.9)}to{opacity:1;transform:translateY(0) scale(1)}}
+  .hero__badge{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;background:rgba(255,107,53,.15);border:1px solid rgba(255,107,53,.3);border-radius:999px;color:#FF8C61;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.5rem}
+  .hero__title{font-family:Poppins,sans-serif;font-weight:900;font-size:4rem;line-height:0.9;letter-spacing:-2px;margin-bottom:1rem}
+  .hero__title span{color:var(--primary);position:relative}
+  .hero__title span::after{content:'';position:absolute;bottom:8px;left:0;right:0;height:8px;background:var(--primary);opacity:.2;z-index:-1}
+  .hero__subtitle{font-size:1.2rem;color:rgba(255,255,255,.7);line-height:1.6;max-width:500px;margin:0 auto 2rem}
+  .hero__actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+  .btn{padding:.9rem 1.8rem;border-radius:8px;font-family:Poppins,sans-serif;font-weight:700;text-decoration:none;transition:all .25s;display:inline-flex;align-items:center;gap:.5rem}
+  .btn--primary{background:var(--primary);color:white;box-shadow:0 4px 20px rgba(255,107,53,.4)}
+  .btn--primary:hover{background:#E85A2A;transform:translateY(-2px);box-shadow:0 6px 25px rgba(255,107,53,.5)}
+  .btn--outline{background:rgba(255,255,255,.1);color:white;border:1px solid rgba(255,255,255,.2)}
+  .btn--outline:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+  .hero__stats{margin-top:3rem;display:flex;gap:2rem;justify-content:center;opacity:.8}
+  .stat{text-align:center}
+  .stat__num{font-family:Poppins,sans-serif;font-weight:800;font-size:2rem;line-height:1}
+  .stat__label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;opacity:.6;margin-top:.25rem}
+  .divider{width:1px;height:40px;background:rgba(255,255,255,.15)}
+  /* Animated logo specific */
+  .logo-anim{animation:logo-float 3s ease-in-out infinite}
+  @keyframes logo-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <div class="hero__logo logo-anim">
+      <img src="../../logo.svg" alt="siłka" width="240" height="60" style="filter:drop-shadow(0 0 20px rgba(255,107,53,0.3))">
+    </div>
+    <div class="hero__badge">● Otwarte 24/7 – klub bezobsługowy</div>
+    <h1 class="hero__title">Twoja<br><span>siłka</span>.<br>Twój czas.</h1>
+    <p class="hero__subtitle">Klub bezobsługowy z dostępem przez całą dobę. Siłownia, crossfit, boks, MMA i zajęcia grupowe w 4 lokalizacjach.</p>
+    <div class="hero__actions">
+      <a href="#" class="btn btn--primary">Zobacz cennik</a>
+      <a href="#" class="btn btn--outline">Znajdź nas</a>
+    </div>
+    <div class="hero__stats">
+      <div class="stat"><div class="stat__num">4</div><div class="stat__label">Lokalizacje</div></div>
+      <div class="divider"></div>
+      <div class="stat"><div class="stat__num">24h</div><div class="stat__label">Dostęp</div></div>
+      <div class="divider"></div>
+      <div class="stat"><div class="stat__num">6+</div><div class="stat__label">Typów zajęć</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Kod do wklejenia w banner-header.component.html -->
+<div style="background:#0F172A;padding:2rem;text-align:center;font-family:monospace;font-size:.8rem;color:rgba(255,255,255,.5)">
+  Zastąp &lt;img&gt; w banner-header na: &lt;img src="assets/img/logo-animated.svg" class="logo-anim" /&gt; + dodaj CSS z .logo-anim
+</div>
+</body>
+</html>

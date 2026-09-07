@@ -35,10 +35,11 @@ import { SchedulePageComponent }  from './components/pages/schedule-page/schedul
 import { BannerClassesComponent } from './components/elements/banner-classes/banner-classes.component';
 import { NgxGalleryModule }       from "ngx-gallery";
 import { ListElementComponent }   from './components/elements/list-element/list-element.component';
-import { StatutePageComponent }   from './components/pages/statute-page/statute-page.component';
-import { RodoPageComponent }      from './components/pages/rodo-page/rodo-page.component';
-import { MyRouterService }        from "./services/my-router.service";
+import { StatutePageComponent } from './components/pages/statute-page/statute-page.component';
+import { RodoPageComponent } from './components/pages/rodo-page/rodo-page.component';
+import { MyRouterService } from "./services/my-router.service";
 import { ScrollAnimationDirective } from "./directives/scroll-animation.directive";
+import { LogoLoaderComponent } from './components/elements/main-elements/logo-loader/logo-loader.component';
 // import { AgmCoreModule }                   from '@agm/core';
 // import { Angulartics2GoogleGlobalSiteTag } from 'angulartics2/gst';
 // import { Angulartics2Module }              from 'angulartics2';
@@ -69,7 +70,8 @@ import { ScrollAnimationDirective } from "./directives/scroll-animation.directiv
     ListElementComponent,
     StatutePageComponent,
     RodoPageComponent,
-    ScrollAnimationDirective
+    ScrollAnimationDirective,
+    LogoLoaderComponent
   ],
   imports: [
     CommonModule,
