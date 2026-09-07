@@ -1,0 +1,10 @@
+<svg width="400" height="80" viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="siłka logo dark">
+  <!-- Proposal 1 - Wordmark for dark background (header) -->
+  <style>
+    .bold { font-family: 'Poppins', Inter, -apple-system, sans-serif; font-weight: 800; }
+  </style>
+  <!-- SIŁ in white, KA in orange -->
+  <text x="0" y="58" class="bold" font-size="62" letter-spacing="-2.5" font-weight="800">
+    <tspan fill="#FFFFFF">SIŁ</tspan><tspan fill="#FF6B35">KA</tspan>
+  </text>
+</svg>

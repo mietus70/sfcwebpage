@@ -1,0 +1,17 @@
+<svg width="360" height="80" viewBox="0 0 360 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="siłka badge logo">
+  <style>
+    .bold { font-family: 'Poppins', Inter, sans-serif; font-weight: 800; }
+    .medium { font-family: 'Poppins', Inter, sans-serif; font-weight: 600; }
+  </style>
+  <!-- Main shape - skewed rounded -->
+  <g>
+    <!-- left dark part -->
+    <path d="M 20 5 L 235 5 Q 250 5 250 20 L 250 60 Q 250 75 235 75 L 15 75 Q 0 75 2 60 L 7 20 Q 9 5 20 5 Z" fill="#1E293B"/>
+    <!-- right orange badge -->
+    <path d="M 238 2 L 335 2 Q 355 2 352 20 L 342 60 Q 340 78 320 78 L 232 78 L 238 2 Z" fill="#FF6B35"/>
+  </g>
+  <!-- Text SFC evolution: SIŁKA -->
+  <text x="22" y="54" class="bold" font-size="52" letter-spacing="-2" font-weight="800" fill="#FFFFFF">SIŁKA</text>
+  <!-- 24 on orange -->
+  <text x="268" y="54" class="bold" font-size="46" letter-spacing="-1" font-weight="800" fill="#1E293B">24</text>
+</svg>

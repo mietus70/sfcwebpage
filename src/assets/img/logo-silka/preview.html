@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siłka - Propozycje Logo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #FF6B35;
+    --primary-dark: #E85A2A;
+    --secondary: #1E293B;
+    --secondary-dark: #0F172A;
+    --accent: #06B6D4;
+    --white: #FFFFFF;
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+  }
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: 'Inter', sans-serif; background: var(--gray-50); color: var(--secondary); line-height: 1.6; }
+  header { background: var(--secondary); color: white; padding: 3rem 2rem; text-align: center; }
+  header h1 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3rem; letter-spacing: -1px; margin-bottom: .5rem; }
+  header h1 span { color: var(--primary); }
+  header p { opacity: .8; max-width: 600px; margin: 0 auto; }
+  .colors { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
+  .color { display: flex; align-items: center; gap: .5rem; background: rgba(255,255,255,.08); padding: .5rem 1rem; border-radius: 999px; font-size: .85rem; }
+  .color-dot { width: 20px; height: 20px; border-radius: 50%; border: 2px solid rgba(255,255,255,.2); }
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem; }
+  @media(min-width: 900px){ .grid{ grid-template-columns: 1fr 1fr; } }
+  .card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.06); border: 1px solid #E5E7EB; }
+  .card-header { padding: 1.25rem 1.5rem; border-bottom: 1px solid #F3F4F6; }
+  .card-header h3 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.1rem; }
+  .card-header p { font-size: .85rem; color: #6B7280; margin-top: .25rem; }
+  .logo-preview { padding: 3rem 2rem; display: flex; align-items: center; justify-content: center; min-height: 180px; }
+  .logo-preview.dark { background: var(--secondary); }
+  .logo-preview.light { background: white; }
+  .logo-preview.orange { background: var(--primary); }
+  .logo-preview img, .logo-preview svg { max-width: 100%; max-height: 90px; height: auto; }
+  .dual { display: grid; grid-template-columns: 1fr 1fr; }
+  .dual .logo-preview { min-height: 160px; }
+  .badge { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: .25rem .6rem; border-radius: 999px; margin-left: .5rem; vertical-align: middle; }
+  .badge-rec { background: var(--primary); color: white; }
+  .badge-new { background: var(--secondary); color: white; }
+  .badge-evo { background: var(--accent); color: white; }
+  .specs { padding: 1rem 1.5rem; background: #F9FAFB; font-size: .8rem; color: #4B5563; display: flex; gap: 1rem; flex-wrap: wrap; }
+  .specs span { display: flex; align-items: center; gap: .35rem; }
+  .section-title { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.75rem; margin: 3rem 0 1rem; letter-spacing: -0.5px; }
+  .recommend { background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%); color: white; border-radius: 16px; padding: 2rem; margin-top: 2rem; display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  @media(min-width: 800px){ .recommend{ grid-template-columns: 1.2fr .8fr; } }
+  .recommend h2 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.5rem; margin-bottom: 1rem; }
+  .recommend ul { list-style: none; padding: 0; }
+  .recommend li { padding: .5rem 0; display: flex; gap: .75rem; }
+  .recommend li i { color: var(--primary); }
+  footer { text-align: center; padding: 3rem 1rem; color: #9CA3AF; font-size: .85rem; }
+  .mock-header { background: rgba(30,41,59,.95); backdrop-filter: blur(12px); padding: 0 1.5rem; height: 72px; display: flex; align-items: center; justify-content: space-between; border-radius: 12px; margin-top: 1rem; }
+  .mock-header img { height: 36px; }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+  <h1>SIŁ<span>KA</span></h1>
+  <p>Nowe logo pasujące do design systemu SFC24 — energetyczny pomarańcz #FF6B35, profesjonalny granat #1E293B i akcent cyjan #06B6D4. Poniżej 4 kierunki + rekomendacja.</p>
+  <div class="colors">
+    <div class="color"><div class="color-dot" style="background:#FF6B35"></div> Primary #FF6B35</div>
+    <div class="color"><div class="color-dot" style="background:#1E293B"></div> Secondary #1E293B</div>
+    <div class="color"><div class="color-dot" style="background:#06B6D4"></div> Accent #06B6D4</div>
+    <div class="color"><div class="color-dot" style="background:#FFFFFF"></div> White #FFFFFF</div>
+  </div>
+</header>
+
+<div class="container">
+
+  <h2 class="section-title">Propozycje wygenerowane AI (rastrowe)</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-header">
+        <h3>01. Wordmark Split <span class="badge badge-rec">REKOMENDOWANY - MINIMAL</span></h3>
+        <p>Podział SIŁ (granat) + KA (pomarańcz). Czysty, nowoczesny, bardzo czytelny w małym rozmiarze.</p>
+      </div>
+      <div class="logo-preview light"><img src="ai-proposal-1.png" alt="SIŁKA split"></div>
+      <div class="dual">
+        <div class="logo-preview dark"><img src="final-transparent-dark.png" alt="dark" style="filter: brightness(0) invert(1);"></div>
+        <div class="logo-preview light"><img src="final-transparent-light.png" alt="light"></div>
+      </div>
+      <div class="specs"><span>● Font: Poppins ExtraBold</span><span>● Użycie: header, social, merch</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>02. Icon + Wordmark <span class="badge badge-new">NAJLEPSZY DO HEADERA</span></h3>
+        <p>Hantle jako ikona + SIŁKA. Najmocniej komunikuje siłownię. Idealny na ciemne tło headera.</p>
+      </div>
+      <div class="logo-preview dark"><img src="ai-proposal-2-dark.png" alt="SIŁKA dumbbell"></div>
+      <div class="dual">
+        <div class="logo-preview light"><img src="proposal-2-icon-light.svg" alt="icon light"></div>
+        <div class="logo-preview dark"><img src="proposal-2-icon-dark.svg" alt="icon dark"></div>
+      </div>
+      <div class="specs"><span>● Kolory: #FFFFFF + #FF6B35 na #1E293B</span><span>● Czytelny z daleka</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>03. Badge SIŁKA 24 <span class="badge badge-evo">EWOLUCJA SFC</span></h3>
+        <p>Bezpośrednia ewolucja starego logo SFC 24 - ten sam kształt, nowe kolory. Zachowuje ciągłość marki.</p>
+      </div>
+      <div class="logo-preview light"><img src="ai-proposal-3-badge.png" alt="badge"></div>
+      <div class="logo-preview light"><img src="logo-silka-badge.svg" alt="badge svg"></div>
+      <div class="specs"><span>● Shape: skewed badge</span><span>● Dla fanów starego SFC</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>04. Lowercase Friendly</h3>
+        <p>Małe litery "siłka" - bardziej przystępne, młodzieżowe, ale wciąż mocne dzięki kolorom.</p>
+      </div>
+      <div class="logo-preview light"><img src="ai-proposal-4-lowercase.png" alt="lowercase"></div>
+      <div class="dual">
+        <div class="logo-preview light"><img src="proposal-4-lowercase.svg" alt="lowercase light"></div>
+        <div class="logo-preview dark"><img src="proposal-4-lowercase-dark.svg" alt="lowercase dark"></div>
+      </div>
+      <div class="specs"><span>● Vibe: przyjazny, nowoczesny</span></div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Wersje wektorowe SVG (gotowe do wdrożenia)</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-header"><h3>Wordmark - dark / light</h3><p>Najprostszy, najlżejszy, skalowalny</p></div>
+      <div class="dual">
+        <div class="logo-preview dark"><img src="logo-silka-wordmark-dark.svg" alt="word dark"></div>
+        <div class="logo-preview light"><img src="logo-silka-wordmark-light.svg" alt="word light"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><h3>Main - z hantlą</h3><p>Rekomendowany jako główny</p></div>
+      <div class="dual">
+        <div class="logo-preview dark"><img src="logo-silka-main-dark.svg" alt="main dark"></div>
+        <div class="logo-preview light"><img src="logo-silka-main-light.svg" alt="main light"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header"><h3>Favicon / Ikona S</h3><p>Do social media, favicon, app icon</p></div>
+      <div class="logo-preview light"><img src="final-logo-icon.png" alt="icon S" style="max-height:120px"></div>
+      <div class="logo-preview dark"><img src="final-logo-icon.png" alt="icon S dark" style="max-height:120px"></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><h3>Podgląd w headerze strony</h3><p>Jak wygląda w prawdziwym menu</p></div>
+      <div class="logo-preview dark" style="flex-direction:column; gap:1rem;">
+        <div class="mock-header" style="width:100%">
+          <img src="logo-silka-main-dark.svg" alt="mock logo">
+          <span style="color:rgba(255,255,255,.6); font-size:.8rem; font-family:Poppins">Start Oferta Cennik Kontakt</span>
+        </div>
+        <div class="mock-header" style="width:100%; background: white;">
+          <img src="logo-silka-main-light.svg" alt="mock logo light">
+          <span style="color:#6B7280; font-size:.8rem; font-family:Poppins">Start Oferta Cennik Kontakt</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Wdrożone pliki produkcyjne (nowe)</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-header"><h3>Produkcyjne SVG – header</h3><p>assets/img/logo.svg – używane w top-menu</p></div>
+      <div class="logo-preview dark"><img src="../../logo.svg" alt="logo.svg" style="height:48px"></div>
+      <div class="logo-preview light"><img src="../../logo-light.svg" alt="logo-light.svg" style="height:48px"></div>
+      <div class="specs"><span>● SVG wektor, skalowalny, 2KB</span><span>● Zastępuje PNG</span></div>
+    </div>
+    <div class="card">
+      <div class="card-header"><h3>Favicon + OG + Social</h3><p>Nowe favicon, OG cover, social square</p></div>
+      <div class="dual">
+        <div class="logo-preview light"><img src="favicon-512.png" alt="favicon" style="max-height:120px; border-radius:16px"></div>
+        <div class="logo-preview dark"><img src="og-cover-1200x630.png" alt="og cover" style="max-height:100px; border-radius:8px"></div>
+      </div>
+      <div class="logo-preview light"><img src="social-square-1080.png" alt="social square" style="max-height:180px; border-radius:12px"></div>
+    </div>
+  </div>
+
+  <div class="recommend">
+    <div>
+      <h2>Rekomendacja wdrożenia</h2>
+      <p style="opacity:.8; margin-bottom:1rem;">Dla marki <strong>siłka</strong> proponuję system 2 logo:</p>
+      <ul>
+        <li><i class="fa fa-check-circle"></i><div><strong>Główne (header):</strong> <code>assets/img/logo.svg</code> — biała SIŁKA + pomarańczowa hantla na granatowym tle #1E293B. Mocno siłowniane, czytelne, pasuje do CTA #FF6B35. Już wdrożone!</div></li>
+        <li><i class="fa fa-check-circle"></i><div><strong>Alternatywne (jasne tło):</strong> <code>assets/img/logo-light.svg</code> — SIŁ w #1E293B, KA w #FF6B35 + hantla.</div></li>
+        <li><i class="fa fa-check-circle"></i><div><strong>Minimal (małe rozmiary, favicon):</strong> <code>assets/img/logo-icon.svg</code> + <code>favicon.ico</code> – ikona S + hantla.</div></li>
+        <li><i class="fa fa-check-circle"></i><div><strong>Badge 24:</strong> jeśli chcesz zachować "24" w nazwie, użyj <code>logo-silka-badge.svg</code> — ewolucja starego SFC.</div></li>
+      </ul>
+    </div>
+    <div>
+      <h2 style="font-size:1.1rem">Dlaczego te kolory?</h2>
+      <p style="opacity:.8; font-size:.9rem; margin-bottom:1rem;">Strona używa design tokenów:</p>
+      <div style="display:grid; gap:.75rem">
+        <div style="display:flex; gap:.75rem; align-items:center"><div style="width:40px; height:40px; background:#FF6B35; border-radius:8px"></div><div><strong>#FF6B35 Primary</strong><br><span style="opacity:.7; font-size:.8rem">energia, akcja, CTA</span></div></div>
+        <div style="display:flex; gap:.75rem; align-items:center"><div style="width:40px; height:40px; background:#1E293B; border-radius:8px; border:1px solid rgba(255,255,255,.1)"></div><div><strong>#1E293B Secondary</strong><br><span style="opacity:.7; font-size:.8rem">profesjonalizm, zaufanie, header</span></div></div>
+        <div style="display:flex; gap:.75rem; align-items:center"><div style="width:40px; height:40px; background:#06B6D4; border-radius:8px"></div><div><strong>#06B6D4 Accent</strong><br><span style="opacity:.7; font-size:.8rem">świeżość, detal (kropka, underline)</span></div></div>
+      </div>
+      <p style="margin-top:1.5rem; font-size:.85rem; opacity:.7">Font: Poppins 800/900 (heading) + Inter (body) — zgodnie ze stroną.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Wygenerowano dla SFC24 → siłka • 2026 • Pliki SVG w <code>/src/assets/img/logo-silka/</code>
+</footer>
+</body>
+</html>
