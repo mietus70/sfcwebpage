@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>siłka - social loop video generator</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+<style>
+  :root { --primary:#FF6B35; --secondary:#1E293B; }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#111827;color:white;font-family:Inter,sans-serif;display:flex;flex-direction:column;align-items:center;padding:2rem;min-height:100vh}
+  h1{font-family:Poppins,sans-serif;font-weight:900;font-size:2rem} h1 span{color:var(--primary)}
+  .controls{margin:1.5rem 0;display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+  button{padding:.75rem 1.25rem;border-radius:8px;border:none;background:var(--primary);color:white;font-weight:700;font-family:Poppins,sans-serif;cursor:pointer;transition:all .2s}
+  button:hover{background:#E85A2A;transform:translateY(-1px)}
+  button.secondary{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2)}
+  canvas{border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.5);background:var(--secondary);max-width:100%;height:auto}
+  .sizes{display:flex;gap:1rem;margin-top:1rem;font-size:.8rem;opacity:.6}
+  .info{max-width:600px;text-align:center;margin-top:1.5rem;opacity:.7;font-size:.85rem;line-height:1.6}
+  .formats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;width:100%;max-width:800px}
+  .format{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1rem;text-align:center}
+  .format strong{display:block;font-family:Poppins,sans-serif;margin-bottom:.25rem}
+  .format span{font-size:.75rem;opacity:.6}
+</style>
+</head>
+<body>
+<h1>sił<span>ka</span> – video loop generator</h1>
+<p style="opacity:.6;margin-top:.5rem">1080x1080 / 1080x1920 / 400x400 – gotowe do Instagram, TikTok, Reels</p>
+
+<div class="controls">
+  <button onclick="setSize(1080,1080)">⬜ 1080x1080 Feed</button>
+  <button onclick="setSize(1080,1920)">📱 1080x1920 Story/Reels</button>
+  <button onclick="setSize(400,400)">🔲 400x400 Small</button>
+  <button onclick="startRecord()" id="recBtn">⏺️ Nagraj WebM (5s)</button>
+  <button class="secondary" onclick="downloadFrame()">🖼️ Pobierz PNG</button>
+</div>
+
+<canvas id="c" width="1080" height="1080"></canvas>
+
+<div class="sizes">
+  <span id="sizeLabel">1080x1080</span>
+  <span id="fpsLabel">60 FPS</span>
+  <span id="timeLabel">loop 2s</span>
+</div>
+
+<div class="formats">
+  <div class="format"><strong>Instagram Feed</strong><span>1080x1080, 5s loop, WebM/MP4</span></div>
+  <div class="format"><strong>Story / Reels / TikTok</strong><span>1080x1920, vertical, 5s loop</span></div>
+  <div class="format"><strong>Favicon / Loader</strong><span>400x400, GIF, Lottie</span></div>
+</div>
+
+<div class="info">
+  <p><strong>Jak użyć:</strong> Wybierz rozmiar, kliknij "Nagraj WebM" – przeglądarka nagra 5 sekund animacji jako video/webm. Potem możesz przekonwertować na MP4 w <a href="https://cloudconvert.com/webm-to-mp4" target="_blank" style="color:#FF6B35">cloudconvert</a> lub użyć bezpośrednio na Instagramie.</p>
+  <p style="margin-top:.75rem">Lottie JSON gotowe w <code>../lottie/silka-logo.json</code> – import do After Effects / LottieFiles / Telegram stickers. SVG animowane w <code>../logo-animated.svg</code> działa bez JS.</p>
+</div>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+let W = 1080, H = 1080;
+let startTime = performance.now();
+let animId;
+let recorder, chunks = [];
+
+function setSize(w,h){
+  W=w; H=h;
+  canvas.width=w; canvas.height=h;
+  document.getElementById('sizeLabel').textContent = w+'x'+h;
+}
+
+function draw(t){
+  const elapsed = (t - startTime)/1000;
+  const loop = elapsed % 2; // 2s loop
+  const yOffset = Math.sin(loop * Math.PI) * 20; // -20 to 20
+  const scale = 1 + Math.sin(loop * Math.PI) * 0.03;
+  const glow = 0.5 + Math.sin(loop * Math.PI)*0.5;
+
+  // bg
+  ctx.fillStyle = '#1E293B';
+  ctx.fillRect(0,0,W,H);
+
+  ctx.save();
+  ctx.translate(W/2, H/2 + yOffset);
+  ctx.scale(scale, scale);
+
+  // dumbbell
+  const dbW = Math.min(W,H)*0.35;
+  const plateW = dbW * 0.08;
+  ctx.fillStyle = '#FF6B35';
+  // left plates
+  ctx.globalAlpha = 0.7; ctx.beginPath(); ctx.roundRect(-dbW/2, -12, plateW*0.6, 24, 4); ctx.fill();
+  ctx.globalAlpha = 0.85; ctx.beginPath(); ctx.roundRect(-dbW/2 + plateW, -18, plateW, 36, 5); ctx.fill();
+  ctx.globalAlpha = 1; ctx.beginPath(); ctx.roundRect(-dbW/2 + plateW*2.2, -22, plateW*1.4, 44, 6); ctx.fill();
+  ctx.beginPath(); ctx.roundRect(-dbW/2 + plateW*4, -28, plateW*1.8, 56, 8); ctx.fill();
+  // bar
+  ctx.beginPath(); ctx.roundRect(-dbW/2 + plateW*4, -6, dbW*0.7, 12, 3); ctx.fill();
+  // right plates
+  ctx.beginPath(); ctx.roundRect(dbW/2 - plateW*5.8, -28, plateW*1.8, 56, 8); ctx.fill();
+  ctx.beginPath(); ctx.roundRect(dbW/2 - plateW*3.6, -22, plateW*1.4, 44, 6); ctx.fill();
+  ctx.globalAlpha = 0.85; ctx.beginPath(); ctx.roundRect(dbW/2 - plateW*2, -18, plateW, 36, 5); ctx.fill();
+  ctx.globalAlpha = 0.7; ctx.beginPath(); ctx.roundRect(dbW/2 - plateW*0.6, -12, plateW*0.6, 24, 4); ctx.fill();
+  ctx.globalAlpha = 1;
+
+  // glow
+  ctx.shadowColor = '#FF6B35';
+  ctx.shadowBlur = 20 * glow;
+  ctx.fillStyle = '#FF6B35';
+  ctx.beginPath(); ctx.arc(0,0,4,0,Math.PI*2); ctx.fill();
+  ctx.shadowBlur = 0;
+
+  // text SIŁKA
+  ctx.fillStyle = 'white';
+  ctx.font = `900 ${Math.min(W,H)*0.12}px Poppins, sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.letterSpacing = '-2px';
+  ctx.fillText('SIŁKA', 0, 90);
+
+  ctx.restore();
+
+  // subtle vignette
+  const grad = ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,Math.max(W,H));
+  grad.addColorStop(0,'rgba(0,0,0,0)');
+  grad.addColorStop(1,'rgba(0,0,0,0.2)');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0,0,W,H);
+}
+
+function loop(t){
+  draw(t);
+  animId = requestAnimationFrame(loop);
+}
+loop(performance.now());
+
+function downloadFrame(){
+  const link = document.createElement('a');
+  link.download = `silka-${W}x${H}-${Date.now()}.png`;
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}
+
+function startRecord(){
+  const btn = document.getElementById('recBtn');
+  btn.textContent = '⏺️ Nagrywanie...';
+  btn.disabled = true;
+  chunks = [];
+  const stream = canvas.captureStream(60);
+  recorder = new MediaRecorder(stream, {mimeType:'video/webm;codecs=vp9'});
+  recorder.ondataavailable = e=>{ if(e.data.size>0) chunks.push(e.data); };
+  recorder.onstop = ()=>{
+    const blob = new Blob(chunks, {type:'video/webm'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `silka-loop-${W}x${H}-${Date.now()}.webm`;
+    a.click();
+    btn.textContent = '⏺️ Nagraj WebM (5s)';
+    btn.disabled = false;
+  };
+  recorder.start();
+  setTimeout(()=>recorder.stop(), 5000);
+}
+</script>
+</body>
+</html>
