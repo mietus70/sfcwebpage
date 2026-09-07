@@ -1,0 +1,22 @@
+{
+  "name": "siłka - Siłownia 24/7",
+  "short_name": "siłka",
+  "description": "siłka (dawniej SFC 24) - sieć klubów fitness 24/7",
+  "icons": [
+    {
+      "src": "/assets/img/logo-silka/favicon-pack/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/logo-silka/favicon-pack/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#FF6B35",
+  "background_color": "#1E293B",
+  "display": "standalone"
+}
