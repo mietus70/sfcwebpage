@@ -1981,11 +1981,9 @@ html.dark a {
    ========================================================================== */
 
 html, body {
-  overflow-x: clip !important;
   overflow-x: hidden !important;
   width: 100% !important;
   max-width: 100% !important;
-  max-width: 100vw !important;
   position: relative;
 }
 
@@ -1997,10 +1995,7 @@ body {
 .sfc-main,
 .sfc-section,
 .sfc-hero {
-  overflow-x: clip !important;
-  overflow-x: hidden !important;
   max-width: 100% !important;
-  max-width: 100vw !important;
   box-sizing: border-box !important;
 }
 
@@ -2008,7 +2003,7 @@ body {
 .sfc-hero__slides,
 .sfc-hero__slide {
   overflow: hidden !important;
-  max-width: 100vw !important;
+  max-width: 100% !important;
 }
 
 .sfc-hero__slide img {

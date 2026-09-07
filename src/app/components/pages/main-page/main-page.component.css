@@ -17,7 +17,6 @@
 .sfc-main {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
   position: relative;
   box-sizing: border-box;
 }
@@ -30,7 +29,6 @@
   padding: var(--space-16, 4rem) 0;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
   position: relative;
 }
@@ -405,7 +403,6 @@
   color: #ffffff;
   text-align: center;
   padding: var(--space-20, 5rem) 0;
-  overflow: hidden;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;

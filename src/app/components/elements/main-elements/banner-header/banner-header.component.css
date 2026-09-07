@@ -5,14 +5,14 @@
 :host {
   display: block;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   overflow: hidden;
 }
 
 .sfc-hero {
   position: relative;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   height: 100vh;
   min-height: 600px;
   max-height: 900px;
@@ -32,7 +32,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   height: 100%;
   overflow: hidden;
 }
@@ -42,7 +42,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   height: 100%;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
@@ -55,7 +55,7 @@
 
 .sfc-hero__slide img {
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;

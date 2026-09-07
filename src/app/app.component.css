@@ -42,14 +42,13 @@
   font-weight: 500;
 }
 
-/* Main content container - fixed: no bootstrap double container + no horizontal scroll */
+/* Main content container - fixed: no bootstrap double container */
 .sfc-page-wrapper {
   width: 100%;
   max-width: 100%;
   min-height: 50vh;
   padding-top: var(--space-4, 1rem);
   padding-bottom: var(--space-8, 2rem);
-  overflow-x: hidden;
   position: relative;
   box-sizing: border-box;
 }
