@@ -53,33 +53,6 @@
         </div>
       </div>
 
-      <!-- All 3 cards grid (comparison) -->
-      <div class="sfc-pricing-grid" sfcScrollAnim>
-        <div
-          class="sfc-price-card"
-          *ngFor="let opt of allOptions"
-          [class.sfc-price-card--featured]="opt.featured"
-          [class.sfc-price-card--active]="selectedPeriod === opt.id"
-          (click)="selectPeriod(opt.id)">
-          <div class="sfc-price-card__header">
-            <span class="sfc-price-card__badge" [class.sfc-price-card__badge--hot]="opt.featured">{{opt.badge}}</span>
-            <h3>Karnet {{opt.days}} dni</h3>
-            <div class="sfc-price-card__price">
-              <span class="sfc-price-card__amount">{{opt.price}}</span>
-              <span class="sfc-price-card__currency">zł</span>
-            </div>
-            <p class="sfc-price-card__period">{{opt.perDay}}</p>
-            <p class="sfc-price-card__save" *ngIf="opt.save">{{opt.save}}</p>
-          </div>
-          <ul class="sfc-price-card__features">
-            <li *ngFor="let f of opt.features.slice(0,3)"><i class="fa fa-check"></i> {{f}}</li>
-          </ul>
-          <a href="tel:" class="sfc-price-card__cta" [class.sfc-price-card__cta--primary]="opt.featured">
-            Wybierz
-          </a>
-        </div>
-      </div>
-
       <!-- OPEN -->
       <div class="sfc-open-card" sfcScrollAnim>
         <div class="sfc-open-card__icon">

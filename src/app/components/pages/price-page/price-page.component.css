@@ -119,24 +119,15 @@
 .sfc-price-card--hero {
   max-width: 480px;
   width: 100%;
-  background: linear-gradient(180deg, #ffffff 0%, #FFF8F5 100%);
-  border: 2px solid var(--color-primary-lighter, #FFB899);
+  background: #ffffff;
+  border: 2px solid var(--color-primary, #FF6B35);
   box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
 }
 
 .sfc-price-card--hero.sfc-price-card--featured {
-  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #FFF4EF 100%);
   border-color: var(--color-primary, #FF6B35);
-  color: #ffffff;
-}
-
-.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__header h3,
-.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__amount {
-  color: #ffffff;
-}
-
-.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__amount {
-  color: var(--color-primary-light, #FF8C61);
+  box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2), 0 0 0 1px rgba(255, 107, 53, 0.1);
 }
 
 .sfc-price-card__top {
@@ -151,10 +142,6 @@
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-}
-
-.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__trust {
-  color: rgba(255,255,255,0.6);
 }
 
 /* Pricing Grid */
