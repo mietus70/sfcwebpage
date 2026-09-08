@@ -3,6 +3,7 @@
  */
 
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 interface Location {
   id: string;
@@ -86,9 +87,23 @@ export class ContactPageComponent implements OnInit {
   };
   formSent = false;
 
-  constructor() {}
+  constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit() {}
+
+  getMapUrl(): SafeResourceUrl {
+    if (this.selectedLocation) {
+      const loc = this.locations.find(l => l.id === this.selectedLocation);
+      if (loc) {
+        const q = `${loc.lat},${loc.lng}(${encodeURIComponent(loc.name + ' ' + loc.address)})`;
+        const url = `https://maps.google.com/maps?q=${q}&z=${this.zoom}&ie=UTF8&iwloc=&output=embed`;
+        return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+      }
+    }
+    // overview - all locations
+    const url = `https://maps.google.com/maps?q=D%C4%99blin+Kowalskiego+20,Ryki+Warszawska+3b,Garwolin+Mazowiecka+22,Warszawa+Wolska+19%2F25&t=&z=8&ie=UTF8&iwloc=&output=embed`;
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 
   selectLocation(id: string) {
     this.selectedLocation = id;
