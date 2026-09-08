@@ -4,164 +4,158 @@
 
       <!-- Header -->
       <div class="sfc-section__header">
+        <div class="sfc-pricing__badge">
+          <i class="fa fa-bolt"></i> Elastyczne karnety
+        </div>
         <h1>Cennik</h1>
         <div class="sfc-section__divider"></div>
         <p class="sfc-section__lead">
-          Wybierz karnet dopasowany do swoich potrzeb
+          Wybierz okres, płać BLIKiem lub przelewem, trenuj 24/7 we wszystkich klubach siłka
         </p>
       </div>
 
-      <!-- Pricing cards -->
-      <div class="sfc-pricing-grid" sfcScrollAnim>
-
-        <!-- 30 dni -->
-        <div class="sfc-price-card">
-          <div class="sfc-price-card__header">
-            <span class="sfc-price-card__badge">Standard</span>
-            <h3>Karnet 30 dni</h3>
-            <div class="sfc-price-card__price">
-              <span class="sfc-price-card__amount">120</span>
-              <span class="sfc-price-card__currency">zł</span>
-            </div>
-            <p class="sfc-price-card__period">/ 30 dni</p>
-          </div>
-          <ul class="sfc-price-card__features">
-            <li><i class="fa fa-check"></i> Siłownia 24/7</li>
-            <li><i class="fa fa-check"></i> Szatnie i prysznice</li>
-            <li><i class="fa fa-check"></i> Dostęp do sprzętu</li>
-          </ul>
-          <a href="tel:" class="sfc-price-card__cta">
-            Zamów karnet
-          </a>
-        </div>
-
-        <!-- 90 dni -->
-        <div class="sfc-price-card sfc-price-card--featured">
-          <div class="sfc-price-card__header">
-            <span class="sfc-price-card__badge sfc-price-card__badge--hot">Najpopularniejszy</span>
-            <h3>Karnet 90 dni</h3>
-            <div class="sfc-price-card__price">
-              <span class="sfc-price-card__amount">300</span>
-              <span class="sfc-price-card__currency">zł</span>
-            </div>
-            <p class="sfc-price-card__period">/ 90 dni</p>
-            <p class="sfc-price-card__save">Oszczędzasz 60 zł</p>
-          </div>
-          <ul class="sfc-price-card__features">
-            <li><i class="fa fa-check"></i> Siłownia 24/7</li>
-            <li><i class="fa fa-check"></i> Szatnie i prysznice</li>
-            <li><i class="fa fa-check"></i> Dostęp do sprzętu</li>
-            <li><i class="fa fa-check"></i> Najlepsza cena za dzień</li>
-          </ul>
-          <a href="tel:" class="sfc-price-card__cta sfc-price-card__cta--primary">
-            Zamów karnet
-          </a>
-        </div>
-
-        <!-- 360 dni -->
-        <div class="sfc-price-card">
-          <div class="sfc-price-card__header">
-            <span class="sfc-price-card__badge">Premium</span>
-            <h3>Karnet 360 dni</h3>
-            <div class="sfc-price-card__price">
-              <span class="sfc-price-card__amount">960</span>
-              <span class="sfc-price-card__currency">zł</span>
-            </div>
-            <p class="sfc-price-card__period">/ 360 dni</p>
-            <p class="sfc-price-card__save">Oszczędzasz 480 zł</p>
-          </div>
-          <ul class="sfc-price-card__features">
-            <li><i class="fa fa-check"></i> Siłownia 24/7</li>
-            <li><i class="fa fa-check"></i> Szatnie i prysznice</li>
-            <li><i class="fa fa-check"></i> Dostęp do sprzętu</li>
-            <li><i class="fa fa-check"></i> Cały rok bez przerwy</li>
-          </ul>
-          <a href="tel:" class="sfc-price-card__cta">
-            Zamów karnet
-          </a>
-        </div>
-
+      <!-- Period toggle -->
+      <div class="sfc-pricing__toggle" sfcScrollAnim>
+        <button
+          *ngFor="let opt of allOptions"
+          class="sfc-pricing__toggle-btn"
+          [class.sfc-pricing__toggle-btn--active]="selectedPeriod === opt.id"
+          (click)="selectPeriod(opt.id)">
+          {{opt.label}}
+          <span *ngIf="opt.save" class="sfc-pricing__toggle-save">{{opt.save}}</span>
+        </button>
       </div>
 
-      <!-- OPEN karnet info -->
-      <div class="sfc-open-card" sfcScrollAnim>
-        <div class="sfc-open-card__content">
-          <h3><i class="fa fa-star"></i> Karnet OPEN</h3>
-          <p>
-            Karnet OPEN to wstęp na siłownię przez 24h na dobę <strong>i wszystkie zajęcia
-            prowadzone w klubach bez limitu</strong>. Idealny dla osób, które chcą łączyć trening
-            siłowy z zajęciami grupowymi.
+      <!-- Featured single card (dynamic) -->
+      <div class="sfc-pricing__featured-wrap" sfcScrollAnim>
+        <div class="sfc-price-card sfc-price-card--hero" [class.sfc-price-card--featured]="selectedOption.featured">
+          <div class="sfc-price-card__top">
+            <span class="sfc-price-card__badge" [class.sfc-price-card__badge--hot]="selectedOption.featured">
+              {{selectedOption.badge}}
+            </span>
+            <h3>Karnet {{selectedOption.days}} dni</h3>
+            <div class="sfc-price-card__price">
+              <span class="sfc-price-card__amount">{{selectedOption.price}}</span>
+              <span class="sfc-price-card__currency">zł</span>
+            </div>
+            <p class="sfc-price-card__period">{{selectedOption.perDay}} • {{selectedOption.days}} dni</p>
+            <p class="sfc-price-card__save" *ngIf="selectedOption.save">{{selectedOption.save}}</p>
+          </div>
+          <ul class="sfc-price-card__features">
+            <li *ngFor="let f of selectedOption.features"><i class="fa fa-check"></i> {{f}}</li>
+          </ul>
+          <a href="tel:" class="sfc-price-card__cta" [class.sfc-price-card__cta--primary]="selectedOption.featured">
+            Zamów – XXX XXX XXX
+          </a>
+          <p class="sfc-price-card__trust">
+            <i class="fa fa-shield"></i> Bez umowy • Aktywacja od dowolnego dnia • Wszystkie lokalizacje
           </p>
         </div>
-        <a href="tel:" class="sfc-btn sfc-btn--primary">
-          <i class="fa fa-phone"></i> Zapytaj o cenę
-        </a>
       </div>
 
-      <!-- Payment methods -->
+      <!-- All 3 cards grid (comparison) -->
+      <div class="sfc-pricing-grid" sfcScrollAnim>
+        <div
+          class="sfc-price-card"
+          *ngFor="let opt of allOptions"
+          [class.sfc-price-card--featured]="opt.featured"
+          [class.sfc-price-card--active]="selectedPeriod === opt.id"
+          (click)="selectPeriod(opt.id)">
+          <div class="sfc-price-card__header">
+            <span class="sfc-price-card__badge" [class.sfc-price-card__badge--hot]="opt.featured">{{opt.badge}}</span>
+            <h3>Karnet {{opt.days}} dni</h3>
+            <div class="sfc-price-card__price">
+              <span class="sfc-price-card__amount">{{opt.price}}</span>
+              <span class="sfc-price-card__currency">zł</span>
+            </div>
+            <p class="sfc-price-card__period">{{opt.perDay}}</p>
+            <p class="sfc-price-card__save" *ngIf="opt.save">{{opt.save}}</p>
+          </div>
+          <ul class="sfc-price-card__features">
+            <li *ngFor="let f of opt.features.slice(0,3)"><i class="fa fa-check"></i> {{f}}</li>
+          </ul>
+          <a href="tel:" class="sfc-price-card__cta" [class.sfc-price-card__cta--primary]="opt.featured">
+            Wybierz
+          </a>
+        </div>
+      </div>
+
+      <!-- OPEN -->
+      <div class="sfc-open-card" sfcScrollAnim>
+        <div class="sfc-open-card__icon">
+          <i class="fa fa-star"></i>
+        </div>
+        <div class="sfc-open-card__content">
+          <h3>Karnet OPEN – siłownia + wszystkie zajęcia</h3>
+          <p>
+            Wstęp 24/7 <strong>i wszystkie zajęcia bez limitu</strong> – boks, MMA, crossfit, grupowe.
+            Idealny jeśli chcesz łączyć siłę z zajęciami.
+          </p>
+          <ul class="sfc-open-card__list">
+            <li><i class="fa fa-check"></i> Siłownia 24h</li>
+            <li><i class="fa fa-check"></i> Boks, MMA, Crossfit</li>
+            <li><i class="fa fa-check"></i> Zajęcia grupowe</li>
+          </ul>
+        </div>
+        <div class="sfc-open-card__cta">
+          <p class="sfc-open-card__price">Zapytaj o cenę OPEN</p>
+          <a href="tel:" class="sfc-btn sfc-btn--primary">
+            <i class="fa fa-phone"></i> XXX XXX XXX
+          </a>
+        </div>
+      </div>
+
+      <!-- Payment -->
       <div class="sfc-payment-section" sfcScrollAnim>
         <h2 class="sfc-payment-section__title">
-          <i class="fa fa-credit-card text-primary"></i> Metody płatności
+          <i class="fa fa-credit-card text-primary"></i> Jak zapłacić?
         </h2>
 
         <div class="sfc-payment-methods">
-          <!-- BLIK -->
-          <div class="sfc-payment-method">
+          <div class="sfc-payment-method sfc-payment-method--blik">
             <div class="sfc-payment-method__icon">
               <i class="fa fa-mobile"></i>
             </div>
             <div class="sfc-payment-method__info">
-              <h4>BLIK</h4>
+              <h4>BLIK – najszybciej</h4>
               <p>Na numer: <strong>XXX XXX XXX</strong></p>
+              <span>Potwierdzenie wyślij na karnety@silka.pl</span>
             </div>
+            <div class="sfc-payment-method__badge">24h</div>
           </div>
 
-          <!-- Przelew -->
-          <div class="sfc-payment-method">
+          <div class="sfc-payment-method sfc-payment-method--bank">
             <div class="sfc-payment-method__icon sfc-payment-method__icon--blue">
               <i class="fa fa-university"></i>
             </div>
             <div class="sfc-payment-method__info">
               <h4>Przelew bankowy</h4>
-              <p>ING Bank Śląski: <strong>50 1050 1012 1000 0090 7666 3542</strong></p>
+              <p>ING Bank Śląski</p>
+              <p class="sfc-payment-method__iban">PL XX XXXX XXXX XXXX XXXX XXXX XXXX</p>
+              <span>Kopiowanie numeru dostępne po kontakcie</span>
             </div>
           </div>
         </div>
 
-        <!-- Transfer details -->
         <div class="sfc-transfer-details">
-          <h4><i class="fa fa-info-circle"></i> Dane do przelewu</h4>
+          <h4><i class="fa fa-info-circle"></i> Co wpisać w tytule przelewu?</h4>
           <div class="sfc-transfer-details__grid">
-            <div>
-              <label>Odbiorca</label>
-              <p>siłka</p>
-            </div>
-            <div>
-              <label>Adres</label>
-              <p>08-400 Garwolin, Mazowiecka 22</p>
-            </div>
-            <div>
-              <label>Nr konta</label>
-              <p>PL 50 1050 1012 1000 0090 7666 3542</p>
-            </div>
-            <div>
-              <label>Bank</label>
-              <p>ING Bank Śląski</p>
-            </div>
+            <div><label>Odbiorca</label><p>siłka</p></div>
+            <div><label>Adres</label><p>08-400 Garwolin, Mazowiecka 22</p></div>
+            <div><label>Kwota</label><p>{{selectedOption.price}} zł – {{selectedOption.label}}</p></div>
+            <div><label>Bank</label><p>ING Bank Śląski</p></div>
           </div>
           <div class="sfc-transfer-details__note">
-            <strong>Tytuł przelewu:</strong> Imię i nazwisko / numer karty / miejscowość siłowni / ilość dni (30/90/360) / od kiedy uaktywnić karnet
+            <strong>Tytuł:</strong> Imię i nazwisko / numer karty (jeśli masz) / miejscowość (Dęblin/Ryki/Garwolin/Warszawa) / {{selectedOption.label}} / od kiedy aktywować
+            <br>
+            <strong>Potwierdzenie:</strong> wyślij na <a href="mailto:karnety@silka.pl">karnety@silka.pl</a>
           </div>
         </div>
       </div>
 
-      <!-- Kids free note -->
       <div class="sfc-note">
         <i class="fa fa-child"></i>
-        <p>
-          Dla dzieci, których rodzice posiadają aktywny karnet do klubu,
-          <strong>zajęcia są bezpłatne</strong>. Szczegóły w klubie.
-        </p>
+        <p>Dla dzieci rodziców z aktywnym karnetem <strong>zajęcia są bezpłatne</strong>. Szczegóły w klubie.</p>
       </div>
 
     </div>

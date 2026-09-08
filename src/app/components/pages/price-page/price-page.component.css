@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SFC Pricing Page - Fixed layout, no large right margin
+   siłka - Modern Pricing Page
    ========================================================================== */
 
 .sfc-pricing {
@@ -15,45 +15,179 @@
   box-sizing: border-box;
 }
 
-/* -----------------------------------------------------------------------
-   Pricing Grid - fixed, no overflow
-   ----------------------------------------------------------------------- */
+.sfc-section__header {
+  text-align: center;
+  margin-bottom: var(--space-8, 2rem);
+}
 
+.sfc-section__header h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.sfc-section__divider {
+  width: 50px;
+  height: 3px;
+  background: var(--color-primary, #FF6B35);
+  margin: var(--space-3, 0.75rem) auto var(--space-4, 1rem);
+  border-radius: 2px;
+}
+
+.sfc-section__lead {
+  font-size: 1.1rem;
+  color: var(--color-gray-500, #6B7280);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sfc-pricing__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  background: var(--color-primary-50, #FFF4EF);
+  border: 1px solid var(--color-primary-lighter, #FFB899);
+  border-radius: 9999px;
+  color: var(--color-primary-dark, #E85A2A);
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-4, 1rem);
+}
+
+/* Toggle */
+.sfc-pricing__toggle {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2, 0.5rem);
+  background: var(--color-gray-100, #F3F4F6);
+  padding: 0.4rem;
+  border-radius: 9999px;
+  width: fit-content;
+  margin: 0 auto var(--space-8, 2rem);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.sfc-pricing__toggle-btn {
+  position: relative;
+  padding: 0.65rem 1.5rem;
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-gray-600, #4B5563);
+  background: transparent;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all var(--transition-base, 250ms ease);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.sfc-pricing__toggle-btn:hover {
+  color: var(--color-gray-800, #1F2937);
+}
+
+.sfc-pricing__toggle-btn--active {
+  background: #ffffff;
+  color: var(--color-gray-900, #111827);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-200, #E5E7EB);
+}
+
+.sfc-pricing__toggle-save {
+  font-size: 0.65rem;
+  color: var(--color-success, #10B981);
+  font-weight: 600;
+}
+
+.sfc-pricing__toggle-btn--active .sfc-pricing__toggle-save {
+  color: var(--color-primary, #FF6B35);
+}
+
+/* Featured hero card */
+.sfc-pricing__featured-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-10, 2.5rem);
+}
+
+.sfc-price-card--hero {
+  max-width: 480px;
+  width: 100%;
+  background: linear-gradient(180deg, #ffffff 0%, #FFF8F5 100%);
+  border: 2px solid var(--color-primary-lighter, #FFB899);
+  box-shadow: 0 20px 40px rgba(255, 107, 53, 0.15);
+}
+
+.sfc-price-card--hero.sfc-price-card--featured {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  border-color: var(--color-primary, #FF6B35);
+  color: #ffffff;
+}
+
+.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__header h3,
+.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__amount {
+  color: #ffffff;
+}
+
+.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__amount {
+  color: var(--color-primary-light, #FF8C61);
+}
+
+.sfc-price-card__top {
+  text-align: center;
+}
+
+.sfc-price-card__trust {
+  margin-top: var(--space-4, 1rem);
+  font-size: 0.75rem;
+  color: var(--color-gray-500, #6B7280);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__trust {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Pricing Grid */
 .sfc-pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6, 1.5rem);
-  margin-top: var(--space-10, 2.5rem);
+  margin-top: var(--space-8, 2rem);
   align-items: stretch;
   width: 100%;
 }
 
-/* -----------------------------------------------------------------------
-   Price Card
-   ----------------------------------------------------------------------- */
-
 .sfc-price-card {
   background: #ffffff;
   border-radius: var(--radius-xl, 1rem);
-  padding: var(--space-8, 2rem);
+  padding: var(--space-6, 1.5rem);
   box-shadow: var(--shadow-sm);
   border: 2px solid var(--color-gray-100, #F3F4F6);
   transition: all var(--transition-base, 250ms ease);
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 
 .sfc-price-card:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
+  border-color: var(--color-gray-200, #E5E7EB);
 }
 
-/* Featured card - fixed: no scale to prevent right overflow */
 .sfc-price-card--featured {
   border-color: var(--color-primary, #FF6B35);
   box-shadow: var(--shadow-lg);
-  z-index: 1;
-  position: relative;
 }
 
 .sfc-price-card--featured::before {
@@ -63,15 +197,15 @@
   background: linear-gradient(135deg, #FF6B35, #FF8C61);
   border-radius: var(--radius-xl, 1rem);
   z-index: -1;
-  opacity: 0.15;
+  opacity: 0.12;
 }
 
-.sfc-price-card--featured:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+.sfc-price-card--active {
+  border-color: var(--color-primary, #FF6B35);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15), var(--shadow-lg);
+  transform: translateY(-2px);
 }
 
-/* Badge */
 .sfc-price-card__badge {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -82,7 +216,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: var(--space-4, 1rem);
+  margin-bottom: var(--space-3, 0.75rem);
 }
 
 .sfc-price-card__badge--hot {
@@ -90,10 +224,9 @@
   color: #ffffff;
 }
 
-/* Header */
 .sfc-price-card__header h3 {
   font-size: 1.15rem;
-  margin-bottom: var(--space-4, 1rem);
+  margin-bottom: var(--space-3, 0.75rem);
   color: var(--color-gray-700, #374151);
 }
 
@@ -107,10 +240,14 @@
 
 .sfc-price-card__amount {
   font-family: var(--font-heading, 'Poppins', sans-serif);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--color-gray-900, #111827);
   line-height: 1;
+}
+
+.sfc-price-card--hero .sfc-price-card__amount {
+  font-size: 3rem;
 }
 
 .sfc-price-card--featured .sfc-price-card__amount {
@@ -118,29 +255,28 @@
 }
 
 .sfc-price-card__currency {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--color-gray-500, #6B7280);
 }
 
 .sfc-price-card__period {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--color-gray-400, #9CA3AF);
   margin-bottom: var(--space-2, 0.5rem);
 }
 
 .sfc-price-card__save {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--color-success, #10B981);
   font-weight: 600;
   margin-bottom: 0;
 }
 
-/* Features */
 .sfc-price-card__features {
   list-style: none;
-  padding: var(--space-5, 1.25rem) 0;
-  margin: var(--space-5, 1.25rem) 0;
+  padding: var(--space-4, 1rem) 0;
+  margin: var(--space-4, 1rem) 0;
   border-top: 1px solid var(--color-gray-100, #F3F4F6);
   border-bottom: 1px solid var(--color-gray-100, #F3F4F6);
   text-align: left;
@@ -150,7 +286,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-2, 0.5rem);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--color-gray-600, #4B5563);
   padding: var(--space-2, 0.5rem) 0;
   margin: 0;
@@ -158,17 +294,24 @@
 
 .sfc-price-card__features li i {
   color: var(--color-success, #10B981);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   width: 16px;
   text-align: center;
 }
 
-/* CTA */
+.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__features {
+  border-color: rgba(255,255,255,0.1);
+}
+
+.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__features li {
+  color: rgba(255,255,255,0.8);
+}
+
 .sfc-price-card__cta {
   display: block;
   padding: var(--space-3, 0.75rem) var(--space-6, 1.5rem);
   font-family: var(--font-heading, 'Poppins', sans-serif);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-primary, #FF6B35);
   border: 2px solid var(--color-primary, #FF6B35);
@@ -180,7 +323,7 @@
 .sfc-price-card__cta:hover {
   background: var(--color-primary, #FF6B35);
   color: #ffffff;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   text-decoration: none;
 }
 
@@ -196,10 +339,7 @@
   color: #ffffff;
 }
 
-/* -----------------------------------------------------------------------
-   OPEN Card
-   ----------------------------------------------------------------------- */
-
+/* OPEN Card */
 .sfc-open-card {
   margin-top: var(--space-10, 2.5rem);
   background: linear-gradient(135deg, var(--color-secondary-dark, #0F172A), var(--color-secondary, #1E293B));
@@ -207,8 +347,38 @@
   padding: var(--space-8, 2rem);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: var(--space-6, 1.5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.sfc-open-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sfc-open-card__icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FF6B35, #FF8C61);
+  border-radius: var(--radius-lg, 0.75rem);
+  color: #ffffff;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.sfc-open-card__content {
+  flex: 1;
 }
 
 .sfc-open-card__content h3 {
@@ -217,20 +387,52 @@
   margin-bottom: var(--space-2, 0.5rem);
 }
 
-.sfc-open-card__content h3 i {
-  color: #FCD34D;
-  margin-right: 0.5rem;
-}
-
 .sfc-open-card__content p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.95rem;
-  margin: 0;
+  margin: 0 0 var(--space-3, 0.75rem);
   max-width: 600px;
 }
 
 .sfc-open-card__content p strong {
   color: #ffffff;
+}
+
+.sfc-open-card__list {
+  display: flex;
+  gap: var(--space-4, 1rem);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.sfc-open-card__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.sfc-open-card__list li i {
+  color: #10B981;
+  font-size: 0.7rem;
+}
+
+.sfc-open-card__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-3, 0.75rem);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.sfc-open-card__price {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.85rem;
+  margin: 0;
 }
 
 .sfc-btn {
@@ -260,10 +462,7 @@
   text-decoration: none;
 }
 
-/* -----------------------------------------------------------------------
-   Payment Section
-   ----------------------------------------------------------------------- */
-
+/* Payment Section */
 .sfc-payment-section {
   margin-top: var(--space-16, 4rem);
 }
@@ -290,6 +489,13 @@
   border-radius: var(--radius-lg, 0.75rem);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--color-gray-100, #F3F4F6);
+  position: relative;
+  transition: all var(--transition-base, 250ms ease);
+}
+
+.sfc-payment-method:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
 }
 
 .sfc-payment-method__icon {
@@ -316,9 +522,35 @@
 }
 
 .sfc-payment-method__info p {
-  font-size: 0.85rem;
-  color: var(--color-gray-500, #6B7280);
+  font-size: 0.9rem;
+  color: var(--color-gray-800, #1F2937);
   margin: 0;
+  font-weight: 500;
+}
+
+.sfc-payment-method__info span {
+  font-size: 0.75rem;
+  color: var(--color-gray-400, #9CA3AF);
+}
+
+.sfc-payment-method__iban {
+  font-family: monospace;
+  font-size: 0.8rem !important;
+  letter-spacing: 0.05em;
+  color: var(--color-gray-500, #6B7280) !important;
+}
+
+.sfc-payment-method__badge {
+  position: absolute;
+  top: var(--space-3, 0.75rem);
+  right: var(--space-3, 0.75rem);
+  padding: 0.15rem 0.5rem;
+  background: var(--color-success-light, #D1FAE5);
+  color: var(--color-success, #10B981);
+  font-size: 0.65rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  text-transform: uppercase;
 }
 
 /* Transfer details */
@@ -363,17 +595,20 @@
 }
 
 .sfc-transfer-details__note {
-  padding: var(--space-3, 0.75rem);
+  padding: var(--space-4, 1rem);
   background: var(--color-primary-50, #FFF4EF);
   border-radius: var(--radius-md, 0.5rem);
-  font-size: 0.8rem;
-  color: var(--color-gray-600, #4B5563);
+  font-size: 0.85rem;
+  color: var(--color-gray-700, #374151);
+  line-height: 1.6;
 }
 
-/* -----------------------------------------------------------------------
-   Note
-   ----------------------------------------------------------------------- */
+.sfc-transfer-details__note a {
+  color: var(--color-primary, #FF6B35);
+  font-weight: 600;
+}
 
+/* Note */
 .sfc-note {
   margin-top: var(--space-8, 2rem);
   display: flex;
@@ -397,22 +632,11 @@
   color: var(--color-gray-700, #374151);
 }
 
-/* ==========================================================================
-   RESPONSIVE
-   ========================================================================== */
-
+/* Responsive */
 @media (max-width: 992px) {
   .sfc-pricing-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-4, 1rem);
-  }
-
-  .sfc-price-card--featured {
-    transform: scale(1);
-  }
-
-  .sfc-price-card--featured:hover {
-    transform: translateY(-4px);
   }
 
   .sfc-transfer-details__grid {
@@ -425,6 +649,19 @@
     padding: var(--space-8, 2rem) 0;
   }
 
+  .sfc-pricing__toggle {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    border-radius: var(--radius-lg, 0.75rem);
+  }
+
+  .sfc-pricing__toggle-btn {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .sfc-pricing-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
@@ -435,6 +672,15 @@
   .sfc-open-card {
     flex-direction: column;
     text-align: center;
+  }
+
+  .sfc-open-card__cta {
+    align-items: center;
+    width: 100%;
+  }
+
+  .sfc-open-card__list {
+    justify-content: center;
   }
 
   .sfc-payment-methods {

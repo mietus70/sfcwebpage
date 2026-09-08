@@ -4,137 +4,193 @@
 
       <!-- Header -->
       <div class="sfc-section__header">
+        <div class="sfc-contact__badge">
+          <i class="fa fa-map-marker"></i> 4 lokalizacje
+        </div>
         <h1>Kontakt</h1>
         <div class="sfc-section__divider"></div>
         <p class="sfc-section__lead">
-          Odwiedź nas lub skontaktuj się telefonicznie
+          Odwiedź nas, zadzwoń lub napisz – jesteśmy dostępni Pn-Pt 11:00-21:00, a siłownia 24/7
         </p>
       </div>
 
-      <!-- Quick contact bar -->
+      <!-- Quick contact -->
       <div class="sfc-quick-contact" sfcScrollAnim>
-        <a href="tel:" class="sfc-quick-contact__item">
-          <i class="fa fa-phone"></i>
-          <div>
+        <a href="tel:" class="sfc-quick-contact__item sfc-quick-contact__item--phone">
+          <div class="sfc-quick-contact__icon">
+            <i class="fa fa-phone"></i>
+          </div>
+          <div class="sfc-quick-contact__info">
             <strong>XXX XXX XXX</strong>
-            <span>Zadzwoń do nas</span>
+            <span>Zadzwoń Pn-Pt 11:00-21:00</span>
           </div>
+          <i class="fa fa-arrow-right sfc-quick-contact__arrow"></i>
         </a>
-        <a href="mailto:klub@silka.pl" class="sfc-quick-contact__item">
-          <i class="fa fa-envelope"></i>
-          <div>
+
+        <a href="mailto:klub@silka.pl" class="sfc-quick-contact__item sfc-quick-contact__item--email">
+          <div class="sfc-quick-contact__icon sfc-quick-contact__icon--email">
+            <i class="fa fa-envelope"></i>
+          </div>
+          <div class="sfc-quick-contact__info">
             <strong>klub@silka.pl</strong>
-            <span>Napisz do nas</span>
+            <span>Napisz do nas – odpowiadamy w 24h</span>
           </div>
+          <i class="fa fa-arrow-right sfc-quick-contact__arrow"></i>
         </a>
+
+        <div class="sfc-quick-contact__item sfc-quick-contact__item--hours">
+          <div class="sfc-quick-contact__icon sfc-quick-contact__icon--hours">
+            <i class="fa fa-clock-o"></i>
+          </div>
+          <div class="sfc-quick-contact__info">
+            <strong>Siłownia 24/7</strong>
+            <span>Klub bezobsługowy – karta lub kod</span>
+          </div>
+        </div>
       </div>
 
-      <!-- Locations -->
+      <!-- Main map + locations -->
       <div class="sfc-locations-section" sfcScrollAnim>
-        <h2 class="sfc-locations-section__title">
-          <i class="fa fa-map-marker text-primary"></i> Nasze lokalizacje
-        </h2>
+        <div class="sfc-locations__top">
+          <h2><i class="fa fa-map-marker text-primary"></i> Nasze kluby</h2>
+          <p>Wybierz lokalizację, zobacz udogodnienia i nawiguj</p>
+        </div>
 
+        <!-- Big map placeholder (overview) -->
+        <div class="sfc-map-overview">
+          <div class="sfc-map-overview__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152496.348!2d21.3!3d51.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!5e0!3m2!1spl!2spl!4v1"
+              width="100%" height="100%" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+          <div class="sfc-map-overview__pins">
+            <button
+              *ngFor="let loc of locations"
+              class="sfc-map-pin"
+              [class.sfc-map-pin--active]="selectedLocation === loc.id"
+              [class.sfc-map-pin--featured]="loc.featured"
+              (click)="selectLocation(loc.id)">
+              <i class="fa fa-map-marker"></i> {{loc.name}}
+            </button>
+          </div>
+        </div>
+
+        <!-- Locations grid - modern cards with image -->
         <div class="sfc-locations-grid">
+          <div
+            class="sfc-location-card"
+            *ngFor="let loc of locations"
+            [class.sfc-location-card--active]="selectedLocation === loc.id"
+            [class.sfc-location-card--featured]="loc.featured"
+            (click)="selectLocation(loc.id)">
 
-          <!-- Dęblin -->
-          <div class="sfc-location-card">
-            <div class="sfc-location-card__map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.5!2d21.878!3d51.546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDMyJzQ2LjQiTiAyMcKwNTInNDMuOSJF!5e0!3m2!1spl!2spl!4v1"
-                width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
-              </iframe>
-            </div>
-            <div class="sfc-location-card__body">
-              <div class="sfc-location-card__pin">
+            <div class="sfc-location-card__image">
+              <img [src]="loc.image" [alt]="loc.name + ' siłka'" loading="lazy">
+              <div class="sfc-location-card__image-overlay"></div>
+              <div class="sfc-location-card__pin" [class.sfc-location-card__pin--featured]="loc.featured">
                 <i class="fa fa-map-marker"></i>
               </div>
-              <h3>Dęblin</h3>
-              <p class="sfc-location-card__address">
-                ul. Kowalskiego 20<br>
-                08-530 Dęblin
-              </p>
-              <p class="sfc-location-card__note">
-                <i class="fa fa-info-circle"></i> Budynek szkoły SP4
-              </p>
-              <a href="https://maps.google.com/?q=Dęblin+Kowalskiego+20" target="_blank" class="sfc-location-card__nav">
-                <i class="fa fa-location-arrow"></i> Nawiguj
-              </a>
+              <span class="sfc-location-card__city-badge">{{loc.name}}</span>
             </div>
-          </div>
 
-          <!-- Ryki -->
-          <div class="sfc-location-card">
-            <div class="sfc-location-card__map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.5!2d21.93!3d51.62!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDM3JzEyLjAiTiAyMcKwNTUnNDguMCJF!5e0!3m2!1spl!2spl!4v1"
-                width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
-              </iframe>
-            </div>
             <div class="sfc-location-card__body">
-              <div class="sfc-location-card__pin">
-                <i class="fa fa-map-marker"></i>
-              </div>
-              <h3>Ryki</h3>
+              <h3>{{loc.name}} <span *ngIf="loc.featured" class="sfc-location-card__featured-tag">Główna</span></h3>
               <p class="sfc-location-card__address">
-                ul. Warszawska 3b<br>
-                08-500 Ryki
+                {{loc.address}}<br>
+                {{loc.city}}
               </p>
-              <p class="sfc-location-card__note">
-                <i class="fa fa-info-circle"></i> Budynek szkoły LSW
+              <p class="sfc-location-card__note" *ngIf="loc.note">
+                <i class="fa fa-info-circle"></i> {{loc.note}}
               </p>
-              <a href="https://maps.google.com/?q=Ryki+Warszawska+3b" target="_blank" class="sfc-location-card__nav">
-                <i class="fa fa-location-arrow"></i> Nawiguj
-              </a>
+
+              <div class="sfc-location-card__facilities">
+                <span *ngFor="let fac of loc.facilities" class="sfc-facility">
+                  <i class="fa fa-check"></i> {{fac}}
+                </span>
+              </div>
+
+              <div class="sfc-location-card__actions">
+                <a href="https://maps.google.com/?q={{loc.name}}+{{loc.address}}" target="_blank" class="sfc-location-card__nav" (click)="$event.stopPropagation()">
+                  <i class="fa fa-location-arrow"></i> Nawiguj
+                </a>
+                <a routerLink="/galeria" class="sfc-location-card__link" (click)="$event.stopPropagation()">
+                  Zdjęcia <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Garwolin -->
-          <div class="sfc-location-card">
-            <div class="sfc-location-card__map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.5!2d21.62!3d51.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDU0JzAwLjAiTiAyMcKwMzcnMTIuMCJF!5e0!3m2!1spl!2spl!4v1"
-                width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
-              </iframe>
-            </div>
-            <div class="sfc-location-card__body">
-              <div class="sfc-location-card__pin sfc-location-card__pin--featured">
-                <i class="fa fa-map-marker"></i>
+      <!-- Contact form + info -->
+      <div class="sfc-contact__bottom" sfcScrollAnim>
+        <div class="sfc-contact__form-wrap">
+          <h3><i class="fa fa-envelope text-primary"></i> Napisz do nas</h3>
+          <p>Formularz kontaktowy – odpowiemy w ciągu 24h</p>
+
+          <form class="sfc-form" (ngSubmit)="submitForm()" #contactForm="ngForm">
+            <div class="sfc-form__row">
+              <div class="sfc-form__group">
+                <label>Imię i nazwisko</label>
+                <input type="text" [(ngModel)]="formData.name" name="name" placeholder="Jan Kowalski" required>
               </div>
-              <h3>Garwolin</h3>
-              <p class="sfc-location-card__address">
-                ul. Mazowiecka 22<br>
-                08-400 Garwolin
-              </p>
-              <a href="https://maps.google.com/?q=Garwolin+Mazowiecka+22" target="_blank" class="sfc-location-card__nav">
-                <i class="fa fa-location-arrow"></i> Nawiguj
-              </a>
+              <div class="sfc-form__group">
+                <label>Email</label>
+                <input type="email" [(ngModel)]="formData.email" name="email" placeholder="jan@example.com" required>
+              </div>
             </div>
+
+            <div class="sfc-form__group">
+              <label>Wybierz klub (opcjonalnie)</label>
+              <select [(ngModel)]="formData.location" name="location">
+                <option value="">Wybierz lokalizację</option>
+                <option *ngFor="let loc of locations" [value]="loc.name">{{loc.name}} – {{loc.address}}</option>
+              </select>
+            </div>
+
+            <div class="sfc-form__group">
+              <label>Wiadomość</label>
+              <textarea [(ngModel)]="formData.message" name="message" rows="4" placeholder="Cześć, chciałbym zapytać o..." required></textarea>
+            </div>
+
+            <button type="submit" class="sfc-btn sfc-btn--primary sfc-btn--lg" [disabled]="formSent">
+              <i class="fa" [class.fa-paper-plane]="!formSent" [class.fa-check]="formSent"></i>
+              {{formSent ? 'Wysłano! Dziękujemy' : 'Wyślij wiadomość'}}
+            </button>
+
+            <p class="sfc-form__note">
+              <i class="fa fa-lock"></i> Dane bezpieczne, nie spamujemy. RODO – <a routerLink="/rodo">polityka</a>
+            </p>
+          </form>
+        </div>
+
+        <div class="sfc-contact__info-wrap">
+          <div class="sfc-info-box">
+            <h4><i class="fa fa-id-card text-primary"></i> Jak zacząć?</h4>
+            <ol>
+              <li><strong>Kup karnet</strong> – BLIK XXX XXX XXX lub przelew PL XX XXXX XXXX...</li>
+              <li><strong>Odbierz kartę/kod</strong> – wyślemy na maila</li>
+              <li><strong>Wejdź 24/7</strong> – karta lub kod przy drzwiach</li>
+            </ol>
           </div>
 
-          <!-- Warszawa -->
-          <div class="sfc-location-card">
-            <div class="sfc-location-card__map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.5!2d20.95!3d52.23!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDEzJzQ4LjAiTiAyMMKwNTcnMDAuMCJF!5e0!3m2!1spl!2spl!4v1"
-                width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
-              </iframe>
-            </div>
-            <div class="sfc-location-card__body">
-              <div class="sfc-location-card__pin">
-                <i class="fa fa-map-marker"></i>
-              </div>
-              <h3>Warszawa</h3>
-              <p class="sfc-location-card__address">
-                ul. Wolska 19/25<br>
-                01-201 Warszawa
-              </p>
-              <a href="https://maps.google.com/?q=Warszawa+Wolska+19" target="_blank" class="sfc-location-card__nav">
-                <i class="fa fa-location-arrow"></i> Nawiguj
-              </a>
-            </div>
+          <div class="sfc-info-box">
+            <h4><i class="fa fa-clock-o text-primary"></i> Godziny</h4>
+            <p><strong>Siłownia:</strong> 24/7 – klub bezobsługowy</p>
+            <p><strong>Telefon:</strong> Pn-Pt 11:00-21:00 – XXX XXX XXX</p>
+            <p><strong>Email:</strong> klub@silka.pl</p>
           </div>
 
+          <div class="sfc-info-box sfc-info-box--social">
+            <h4><i class="fa fa-share-alt text-primary"></i> Sociale</h4>
+            <p>Linki do uzupełnienia później:</p>
+            <div class="sfc-social-placeholder">
+              <a href="" class="sfc-social-link"><i class="fa fa-facebook"></i> Facebook</a>
+              <a href="" class="sfc-social-link"><i class="fa fa-users"></i> Grupa FB</a>
+              <a href="" class="sfc-social-link"><i class="fa fa-instagram"></i> Instagram</a>
+            </div>
+          </div>
         </div>
       </div>
 
