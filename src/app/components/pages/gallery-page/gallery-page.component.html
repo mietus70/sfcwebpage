@@ -1,15 +1,91 @@
 <app-page>
-  <div class="sfc-placeholder">
-    <div class="sfc-placeholder__icon">
-      <i class="fa fa-camera"></i>
+  <div class="sfc-gallery">
+
+    <!-- Header -->
+    <div class="sfc-container">
+      <div class="sfc-section__header">
+        <div class="sfc-gallery__badge">
+          <i class="fa fa-camera"></i> siłka
+        </div>
+        <h1>Galeria</h1>
+        <div class="sfc-section__divider"></div>
+        <p class="sfc-section__lead">
+          Zobacz nasze kluby – nowoczesny sprzęt, strefy treningowe i atmosfera siłka
+        </p>
+      </div>
+
+      <!-- Category filter -->
+      <div class="sfc-gallery__filters">
+        <button
+          *ngFor="let cat of categories"
+          class="sfc-gallery__filter"
+          [class.sfc-gallery__filter--active]="activeCategory === cat"
+          (click)="filterByCategory(cat)">
+          {{cat}}
+        </button>
+      </div>
     </div>
-    <h1>Galeria</h1>
-    <p>Galeria zdjęć z naszych klubów będzie wkrótce dostępna.</p>
-    <p class="sfc-placeholder__sub">
-      Tymczasem zapraszamy na naszą stronę na Facebooku!
-    </p>
-    <a routerLink="/kontakt" class="sfc-placeholder__btn">
-      <i class="fa fa-map-marker"></i> Zobacz nasze lokalizacje
-    </a>
+
+    <!-- Image grid -->
+    <div class="sfc-container">
+      <div class="sfc-gallery__grid" sfcScrollAnim>
+        <div
+          class="sfc-gallery__item"
+          *ngFor="let img of filteredImages; let i = index"
+          (click)="openLightbox(i)">
+          <img [src]="img.src" [alt]="img.alt" loading="lazy">
+          <div class="sfc-gallery__overlay">
+            <span class="sfc-gallery__cat">{{img.category}}</span>
+            <span class="sfc-gallery__zoom"><i class="fa fa-search-plus"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty state -->
+      <div class="sfc-gallery__empty" *ngIf="filteredImages.length === 0">
+        <i class="fa fa-picture-o"></i>
+        <p>Brak zdjęć w tej kategorii</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="sfc-container">
+      <div class="sfc-gallery__cta" sfcScrollAnim>
+        <h3>Chcesz zobaczyć kluby na żywo?</h3>
+        <p>Wpadnij na bezpłatną wizytę – pokażemy Ci wszystkie strefy</p>
+        <div class="sfc-gallery__cta-actions">
+          <a routerLink="/kontakt" class="sfc-btn sfc-btn--primary">
+            <i class="fa fa-map-marker"></i> Znajdź klub
+          </a>
+          <a routerLink="/cennik" class="sfc-btn sfc-btn--outline">
+            <i class="fa fa-bolt"></i> Zobacz cennik
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="sfc-lightbox" *ngIf="lightboxOpen" (click)="closeLightbox()">
+    <button class="sfc-lightbox__close" (click)="closeLightbox()" aria-label="Zamknij">
+      <i class="fa fa-times"></i>
+    </button>
+
+    <button class="sfc-lightbox__nav sfc-lightbox__nav--prev" (click)="prevImage($event)" aria-label="Poprzednie">
+      <i class="fa fa-chevron-left"></i>
+    </button>
+
+    <div class="sfc-lightbox__content" (click)="$event.stopPropagation()">
+      <img *ngIf="currentImage" [src]="currentImage.src" [alt]="currentImage.alt">
+      <div class="sfc-lightbox__info" *ngIf="currentImage">
+        <span class="sfc-lightbox__cat">{{currentImage.category}}</span>
+        <span class="sfc-lightbox__caption">{{currentImage.alt}}</span>
+        <span class="sfc-lightbox__counter">{{currentIndex + 1}} / {{filteredImages.length}}</span>
+      </div>
+    </div>
+
+    <button class="sfc-lightbox__nav sfc-lightbox__nav--next" (click)="nextImage($event)" aria-label="Następne">
+      <i class="fa fa-chevron-right"></i>
+    </button>
   </div>
 </app-page>
