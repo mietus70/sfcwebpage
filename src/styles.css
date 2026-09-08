@@ -1976,6 +1976,188 @@ html.dark a {
   color: var(--color-primary, #FF8C5A);
 }
 
+/* -----------------------------------------------------------------------
+   Dark mode: New Pricing Page (toggle, hero, open, payment)
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-pricing__badge,
+html.dark .sfc-contact__badge,
+html.dark .sfc-gallery__badge {
+  background: rgba(255, 107, 53, 0.12) !important;
+  border-color: rgba(255, 107, 53, 0.3) !important;
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-pricing__toggle {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+html.dark .sfc-pricing__toggle-btn {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-pricing__toggle-btn:hover {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-pricing__toggle-btn--active {
+  background: var(--color-surface-overlay, #283548) !important;
+  color: var(--color-text-primary, #F9FAFB) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+html.dark .sfc-price-card--hero {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+html.dark .sfc-price-card--hero:not(.sfc-price-card--featured) .sfc-price-card__header h3 {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-price-card__trust {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-open-card__list li {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+html.dark .sfc-open-card__price {
+  color: rgba(255,255,255,0.5) !important;
+}
+
+html.dark .sfc-payment-method__info span {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-payment-method__iban {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-transfer-details__note a {
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: New Contact Page
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-quick-contact__item--hours {
+  background: var(--color-surface-raised, #1F2937) !important;
+}
+
+html.dark .sfc-quick-contact__icon--email {
+  background: rgba(96, 165, 250, 0.15) !important;
+  color: #60A5FA !important;
+}
+
+html.dark .sfc-quick-contact__icon--hours {
+  background: rgba(52, 211, 153, 0.15) !important;
+  color: #34D399 !important;
+}
+
+html.dark .sfc-map-overview {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+html.dark .sfc-map-overview__pins {
+  background: var(--color-surface-overlay, #283548) !important;
+  border-color: rgba(255,255,255,0.06) !important;
+}
+
+html.dark .sfc-map-pin {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-map-pin--active {
+  background: var(--color-primary, #FF8C5A) !important;
+  color: #ffffff !important;
+}
+
+html.dark .sfc-location-card__image-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%) !important;
+}
+
+html.dark .sfc-location-card__facilities {
+  background: transparent !important;
+}
+
+html.dark .sfc-facility {
+  background: rgba(255,255,255,0.06) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-contact__form-wrap h3,
+html.dark .sfc-contact__info-wrap h4 {
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-form__group label {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-form__group input,
+html.dark .sfc-form__group select,
+html.dark .sfc-form__group textarea {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: var(--color-text-primary, #F9FAFB) !important;
+}
+
+html.dark .sfc-form__group input::placeholder,
+html.dark .sfc-form__group textarea::placeholder {
+  color: var(--color-text-muted, #9CA3AF) !important;
+}
+
+html.dark .sfc-info-box {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
+html.dark .sfc-info-box ol li,
+html.dark .sfc-info-box p {
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-social-link {
+  background: var(--color-surface-overlay, #283548) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+/* -----------------------------------------------------------------------
+   Dark mode: Gallery filters - fix white buttons
+   ----------------------------------------------------------------------- */
+
+html.dark .sfc-gallery__filter {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: var(--color-text-secondary, #D1D5DB) !important;
+}
+
+html.dark .sfc-gallery__filter:hover {
+  background: var(--color-surface-overlay, #283548) !important;
+  border-color: var(--color-primary, #FF8C5A) !important;
+  color: var(--color-primary, #FF8C5A) !important;
+}
+
+html.dark .sfc-gallery__filter--active {
+  background: var(--color-primary, #FF8C5A) !important;
+  color: #ffffff !important;
+  border-color: var(--color-primary, #FF6B35) !important;
+}
+
+html.dark .sfc-gallery__cta {
+  background: var(--color-surface-raised, #1F2937) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+
 /* ==========================================================================
    24. GLOBAL FIX - Remove horizontal scrollbar completely
    ========================================================================== */
