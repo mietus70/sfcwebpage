@@ -288,12 +288,13 @@
   text-align: center;
 }
 
-.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__features {
-  border-color: rgba(255,255,255,0.1);
+.sfc-price-card--hero .sfc-price-card__features {
+  border-color: var(--color-gray-100, #F3F4F6);
 }
 
-.sfc-price-card--hero.sfc-price-card--featured .sfc-price-card__features li {
-  color: rgba(255,255,255,0.8);
+.sfc-price-card--hero .sfc-price-card__features li {
+  color: var(--color-gray-700, #374151);
+  font-weight: 500;
 }
 
 .sfc-price-card__cta {
