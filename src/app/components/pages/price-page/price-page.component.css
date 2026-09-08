@@ -35,7 +35,7 @@
 
 .sfc-section__lead {
   font-size: 1.1rem;
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -137,11 +137,12 @@
 .sfc-price-card__trust {
   margin-top: var(--space-4, 1rem);
   font-size: 0.75rem;
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-700, #374151);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
+  font-weight: 500;
 }
 
 /* Pricing Grid */
@@ -244,13 +245,14 @@
 .sfc-price-card__currency {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
 }
 
 .sfc-price-card__period {
   font-size: 0.8rem;
-  color: var(--color-gray-400, #9CA3AF);
+  color: var(--color-gray-600, #4B5563);
   margin-bottom: var(--space-2, 0.5rem);
+  font-weight: 500;
 }
 
 .sfc-price-card__save {
@@ -517,14 +519,16 @@
 
 .sfc-payment-method__info span {
   font-size: 0.75rem;
-  color: var(--color-gray-400, #9CA3AF);
+  color: var(--color-gray-600, #4B5563);
+  font-weight: 500;
 }
 
 .sfc-payment-method__iban {
   font-family: monospace;
   font-size: 0.8rem !important;
   letter-spacing: 0.05em;
-  color: var(--color-gray-500, #6B7280) !important;
+  color: var(--color-gray-700, #374151) !important;
+  font-weight: 600;
 }
 
 .sfc-payment-method__badge {
@@ -569,7 +573,7 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-gray-400, #9CA3AF);
+  color: var(--color-gray-600, #4B5563);
   margin-bottom: 0.25rem;
   font-weight: 600;
 }

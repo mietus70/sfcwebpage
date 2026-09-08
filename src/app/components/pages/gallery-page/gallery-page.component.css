@@ -36,9 +36,10 @@
 
 .sfc-section__lead {
   font-size: 1.1rem;
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
   max-width: 600px;
   margin: 0 auto;
+  font-weight: 500;
 }
 
 .sfc-gallery__badge {
@@ -192,7 +193,8 @@
 .sfc-gallery__empty {
   text-align: center;
   padding: var(--space-16, 4rem) 0;
-  color: var(--color-gray-400, #9CA3AF);
+  color: var(--color-gray-600, #4B5563);
+  font-weight: 500;
 }
 
 .sfc-gallery__empty i {
@@ -217,8 +219,9 @@
 }
 
 .sfc-gallery__cta p {
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
   margin-bottom: var(--space-6, 1.5rem);
+  font-weight: 500;
 }
 
 .sfc-gallery__cta-actions {

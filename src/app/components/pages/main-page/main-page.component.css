@@ -71,7 +71,7 @@
 
 .sfc-section__lead {
   font-size: 1.1rem;
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
   max-width: 500px;
   margin: 0 auto;
 }
@@ -110,7 +110,7 @@
 
 .sfc-intro__subtitle {
   font-size: 1rem;
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
   max-width: 500px;
   margin: 0 auto var(--space-8, 2rem);
 }
@@ -166,7 +166,7 @@
 
 .sfc-info-card__text span {
   font-size: 0.8rem;
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
 }
 
 /* -----------------------------------------------------------------------
@@ -228,7 +228,7 @@
 }
 
 .sfc-payment-card p {
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
   font-size: 0.85rem;
   margin-bottom: var(--space-2, 0.5rem);
 }
@@ -482,7 +482,7 @@
 
 .sfc-location-card p {
   font-size: 0.8rem;
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
   margin: 0;
   line-height: 1.5;
 }

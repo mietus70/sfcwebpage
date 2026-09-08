@@ -65,7 +65,7 @@
 }
 
 .sfc-faq-item__header i {
-  color: var(--color-gray-400, #9CA3AF);
+  color: var(--color-gray-600, #4B5563);
   font-size: 0.85rem;
   transition: transform var(--transition-base, 250ms ease);
   flex-shrink: 0;
@@ -202,7 +202,7 @@
 }
 
 .sfc-faq__cta p {
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
   margin-bottom: var(--space-6, 1.5rem);
 }
 

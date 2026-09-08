@@ -115,7 +115,7 @@
 
 .sfc-service-card p {
   font-size: 0.9rem;
-  color: var(--color-gray-500, #6B7280);
+  color: var(--color-gray-600, #4B5563);
   line-height: 1.6;
   margin-bottom: var(--space-5, 1.25rem);
 }
